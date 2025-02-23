@@ -1,0 +1,86 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0px auto;
+}
+
+h2 {
+  font-family: Inika, sans-serif;
+  font-size: 40px;
+  font-weight: 400; /*убрал жирность букв по умолчанию стояло 700*/
+  margin: 0;
+  color: #499A18;
+}
+
+main {
+  position: relative;
+  top: -1px;
+}
+
+.header,
+.welcome,
+.service,
+.contacts  {
+  background-color: #EDF2EC;
+}
+
+header {
+  position: relative; /*подгон подгон подгон подгон подгон подгон */
+  top: -1px;
+}
+
+.header-wrapper {
+  align-items: baseline; /*выравнивание элементов в хедере по одной линии, 1,5 часа на это убил*/
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1440px;
+  padding: 42px 109px 42px 111px;
+}
+
+.flex-row {
+  display: flex;
+}
+
+.flex-collum {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (max-width:1258px) {
+  h2 {
+    font-size: 35px;
+    line-height: 46px;
+  }
+
+  main {
+    top: -6px;
+  }
+
+  h1 {
+    font-size: 35px;
+  }
+}
+
+@media screen and (max-width:765px) {
+  h1 {
+    font-size: 25px;
+    line-height: 35px;
+  }
+
+h2 {
+    font-size: 25px;
+    line-height: 32.5px;
+  }
+
+  main {
+    top: 0px;
+  }
+}
