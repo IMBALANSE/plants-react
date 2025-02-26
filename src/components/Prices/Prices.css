@@ -1,0 +1,245 @@
+.prices-wrapper {
+  max-width: 1440px;
+  height: 560px;
+  margin: 0 auto;
+  padding: 40px 109px 115px 109px;
+  justify-content: space-between;
+}
+
+.prices-content {
+  justify-content: space-between;
+}
+
+.prices-content > h2 {
+  position: relative;
+  top: -2px;
+  font-family: Inter, sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  color: black;
+}
+
+.prices-list {
+  position: relative;
+  bottom: 16px;
+  width: 332px;
+  min-height: 282px;
+  border: 1px solid #E3E1D5;
+  border-radius: 20px;
+  padding: 34px 41px;
+  justify-content: space-between;
+}
+
+.text-call-us {
+  justify-content: space-between;
+}
+
+.prices-list__item {
+  width: 250px;
+  height: 50px;
+  background-color: #EDF2EC;
+  border-radius: 20px;
+  padding: 0px 40px 0px 40px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.prices-list__item:hover {
+  box-shadow: 2px 2px 10px #4a9a1874;
+  transition: 0.5s;
+}
+
+.prices-list__item > p {
+  text-align: start;
+  font-family: Inter, sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  color: #000;
+}
+
+.icon-arrow {
+  background: #D9D9D9;
+  padding: 6px 5px ; /*стрелка стрелка стрелка */
+  border-radius: 9px;
+}
+
+.prices-call-us {
+  position: relative;
+  top: -2px;
+  width: 452px;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.prices-call-us > p {
+  font-family: Inter, sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 50px;
+  color: #000;
+  text-align: end;
+}
+
+/* 14 января 25 **************************/
+
+
+.accordion__item {
+  width: 250px;
+  min-height: 50px;            /* вот где главная загвоздка была, чтобы */
+  background-color: #EDF2EC; 
+  border-radius: 20px;
+}
+
+.accordion__item span{
+  color: red;
+}
+
+/* .accordion__item_active {
+  background-color: #35d610; 
+} */
+
+.accordion__header {
+  height: 50px;
+  padding: 0px 40px 0px 40px;
+  justify-content: space-between;
+  align-items: center; /*центрирование по вертикали*/
+}
+
+.accordion__header :first-child {  /* для <p> Basics, Standart, Pro care<*/
+  font-family: Inter, sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  color: #000;
+}
+
+
+
+.accordion__body_desription{
+  font-size: 10px;
+  text-align: start;
+  line-height: 10px;
+}
+.accordion__body_desription-price{
+  margin-top: 6px;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: start;
+}
+.accordion__body_btn {
+  margin: 12px 0px;
+  width: 86px;
+  height: 25px;
+  background-color: #fff;
+  color: #717171;
+  border-radius: 10px;
+}
+
+.accordion__body {
+  display: none;
+  
+}
+
+.accordion__item_show .accordion__body  {
+  height: 104px;
+  display: block;
+  padding: 0px 40px 0px 40px;
+  /* background-color: red; */
+
+}
+
+/* Предложения по доработке*/
+/* 1) При нажатии на аккордион блок расширяется вверх изменить высоту на min-heigth  
+2) уточнить xmk lexit для адаптивности у ГПТ margin или padding */
+
+/* в элементах accordion__item в которых нет класса accordion__item_show, его потомки с классом accordion__body примут свойства  display: none;  */
+/* .accordion__item:not(.accordion__item_show) .accordion__body {
+  display: none; 
+}  */
+
+@media screen and (max-width:1258px) {
+
+  .prices-wrapper {
+    height: 585px;
+    padding: 40px 50px 88px 50px;
+  }
+
+  .prices-content {
+    height: 397px;
+  }
+
+  .prices-content > h2 {
+    font-size: 35px;
+    width: 135px;
+    text-align: center;
+  }
+
+  .prices-call-us > p {
+    font-size: 25px;
+    line-height: 35px;
+  }
+
+  .prices-call-us {
+    padding-top: 101px;
+  }
+}
+
+@media screen and (max-width:632px) {
+
+  .prices-wrapper {
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width:765px) {
+
+  .prices-wrapper {
+    height: 512px;
+    padding: 25px 79px 40px;
+    flex-wrap: wrap;
+  }
+
+  .prices-call-us__image {
+    display: none;
+  }
+
+  .prices-content {
+    height: 318px;
+    align-items: center;
+  }
+
+  .prices-content > h2 {
+    font-size: 25px;
+    padding-bottom: 21px;
+  }
+
+  .prices-list {
+    width: 224px;
+    height: 235px;
+    padding: 29px 22px;
+  }
+
+  .prices-list__item {
+    width: 180px;
+    padding: 0px 40px 0px 30px;
+  }
+
+  .prices-list__item > p {
+    font-size: 15px;
+  }
+
+  .prices-call-us {
+    top: 0px;
+    width: 230px;
+    align-items: center;
+    padding: 0;
+    margin-top: -15px;
+    margin-left: -2px;
+  }
+
+  .prices-call-us > p {
+    text-align: center;
+    font-size: 20px;
+    line-height: 35px;
+    width: 230px;
+  }
+}

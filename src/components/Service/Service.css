@@ -1,0 +1,203 @@
+
+.service-wrapper {
+  max-width: 1440px;
+  height: 1300px;
+  margin: 0 auto;
+  padding: 40px 109px 121px 109px;
+}
+
+.service_header {
+  max-width: 1007px;
+  height: 94px;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 90px;
+}
+
+.service-buttons {
+  position: relative;
+  top: 7px;
+  width: 559px;
+  height: 50px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.service-button {
+  font-family: Inika, sans-serif;
+  font-size: 20px;
+  color: #E06733;
+  width: 161px;
+  height: 50px;
+  background-color: #EDF2EC;
+  border-radius: 5px;
+  border-width: 1px;
+  border-color: #E06733;
+  border-style: solid;
+}
+
+.service-button:hover {
+
+  /*color: #fff;*/
+  cursor: pointer;
+  transition: 0.5s;
+  text-shadow: 0px 1px 5px #E06733; /*для 3 задания*/
+}
+
+.service-button-active {
+  color: #FFFFFF;
+ /* background: #E06733;*/
+  transition: 0.3s;
+  background-color: #E06733; /*для 3 задания перенес*/
+}
+
+.service_header > h2 {
+  width: 306px;
+  height: 94px;
+}
+
+.service-body {
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.service-item {
+  width: 330px;
+  height: 450px;
+  margin-bottom: 55px;
+}
+
+.service-item__image:hover {
+  border-radius: 20px 20px 0px 0px;
+  box-shadow: 0px 4px 4px rgba(1, 2, 1, 0.25);
+  transition: 0.7s;
+}
+
+.service-item__image>img {
+  display: block; /*без него идет отступ по умолчанию для строчных элементов*/
+}
+
+.service-item__discription {
+  width: 330px;
+  height: 100px;
+   /* background-color: rgb(182, 127, 255);*/
+  border-radius: 0px 0px 20px 20px;
+  border: 1px solid #E3E1D5; /*забыл solid, поэтому не видел границы */
+}
+
+.service-item__discription > h3, p{
+  margin: 0;
+  text-align: center;
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  color: #717171;
+}
+
+.service-item__discription > h3 {
+  font-size: 20px;
+  color: #E06733;
+  margin: 10px 0px 14px 0px;
+}
+
+.blur {
+  filter: blur(3px);
+  transition: 0.5s;
+}
+
+.activeBtn {
+  color: #EDF2EC;
+  background-color: #E06733;
+}
+
+@media screen and (max-width:1258px) {
+
+  .service-wrapper {
+    height: 1780px;
+    padding: 60px 50px 70px 50px;
+  }
+
+  .service_header {
+    flex-direction: column;
+    align-items: flex-start;
+    height: 177px;
+    margin-bottom: 47px;
+  }
+
+  .service-buttons {
+    top: 7px;
+  }
+
+  .service-item {
+    width: 280px;
+    margin-bottom: 37px;
+  }
+
+  .service-item__discription {
+    width: 280px;
+    height: 100px;
+  }
+
+  .service-item__discription > p{
+    margin: 0 auto;
+    width: 201px;
+  }
+
+  .care {
+    position: relative;
+    top: -4px;
+  }
+}
+
+@media screen and (max-width:632px) {
+
+  .service-buttons {
+    width: 252px;
+  }
+}
+
+@media screen and (max-width:765px) {
+
+  .service-wrapper {
+    height: 3150px;
+    padding: 30px 25px 0px 25px;
+  }
+
+  .service_header {
+    height: 176px;
+
+  }
+
+  .service_header > h2 {
+    max-width: 187px;
+    height: 69px;
+  }
+
+  .service-buttons {
+    width: 252px;
+    height: 89px;
+    align-items: end;
+  }
+
+  .service-button {
+    font-size: 15px;
+    width: 121px;
+    height: 35px;
+  }
+
+  .service-item {
+    padding-left: 25px;
+    margin-bottom: 34px;
+  }
+}
+
+
+@media screen and (max-width:330px) {
+  .service-item__image>img {
+    width: 210px;
+  }
+
+  .service-item__discription {
+    width: 210px;
+  }
+}

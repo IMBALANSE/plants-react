@@ -1,8 +1,8 @@
 @import url(global.css);
 @import url(../components/Header/Header.css);
-/* @import url(welcome.css); */
-/* @import url(about.css); */
-/* @import url(service.css); */
-/* @import url(prices.css); */
-/* @import url(contact.css); */
-/* @import url(footer.css); */
+@import url(../components/Welcome/Welcome.css);
+@import url(../components/About/About.css);
+@import url(../components/Service/Service.css);
+@import url(../components/Prices/Prices.css);
+@import url(../components/Contacts/Contacts.css);
+@import url(../components/Footer/Footer.css);
