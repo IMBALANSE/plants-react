@@ -1,15 +1,17 @@
 import React from "react";
+import arrowSvgWhite from '../../assets/images/icons/arrow_white.svg'; 
+import gardener_womanImage from '../../assets/images/contact_woman.png';
 
 const Contacts = () => {
   return (
     <section className="contacts" id="contacts">
       <div className="contacts-wrapper flex-row">
-        <img className="contact_woman" src="assets/img/contact_woman.png" alt="gardener-woman" />
+        <img className="contact_woman" src={gardener_womanImage} alt="gardener-woman" />
         <h2>Contact us</h2>
         <div className="contact__container-select">
           <div className="contacts-dropdown flex-row" id="contacts-dropdown">
             <p className="contacts-dropdown_text">City</p>
-            <img className="icon-arrow contacts-arrow" src="assets/svg/arrow_white.svg" alt="arrow" />
+            <img className="icon-arrow contacts-arrow" src={arrowSvgWhite} alt="arrow" />
           </div>
           {/** <!-- ниже идут скрытые блоки -->*/}
           <div className="contacts-options" id="contacts-options">

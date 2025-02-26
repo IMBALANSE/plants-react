@@ -1,4 +1,6 @@
 import React from "react";
+import leafsSmallImage from '../../assets/images/leafs_small.png';
+import arrowSvg from '../../assets/images/icons/arrow.svg'; 
 
 const Price = () => {
   return (
@@ -10,7 +12,7 @@ const Price = () => {
             <div className="accordion__item ">
               <div className="accordion__header flex-row">
                 <p className="">Basics</p>
-                <img className="icon-arrow" src="assets/svg/arrow.svg" alt="arrow" />
+                <img className="icon-arrow" src={arrowSvg} alt="arrow" />
               </div>
               <div className="accordion__body">
                 <p className="accordion__body_desription">Release of Letraset sheets containing Lorem Ipsum passages, and more recently</p>
@@ -23,7 +25,7 @@ const Price = () => {
             <div className="accordion__item" >
               <div className="prices-list__item flex-row accordion__header">
                 <p className="list__item_text">Standard</p>
-                <img className="icon-arrow" src="assets/svg/arrow.svg" alt="arrow" />
+                <img className="icon-arrow" src={arrowSvg} alt="arrow" />
               </div>
               <div className="accordion__body">
                 <div className="accordion__body_wrap">
@@ -38,7 +40,7 @@ const Price = () => {
             <div className="accordion__item" >
               <div className="prices-list__item flex-row accordion__header">
                 <p className="list__item_text">Pro care</p>
-                <img className="icon-arrow" src="assets/svg/arrow.svg" alt="arrow" />
+                <img className="icon-arrow" src={arrowSvg} alt="arrow" />
               </div>
               <div className="accordion__body">
                 <div className="accordion__body_wrap">
@@ -55,7 +57,7 @@ const Price = () => {
         <div className="prices-call-us flex-collum">
           <p>Our best <span className="green-highlight">gardeners</span> are ready to help you</p>
           <button className="service-button contact-us__button">Contact us</button>
-          <img className="prices-call-us__image" src="assets/img/leafs_small.png" alt="leafs_small" />
+          <img className="prices-call-us__image" src={leafsSmallImage} alt="leafs_small" />
         </div>
       </div>
     </section>

@@ -1,4 +1,11 @@
 import React from "react";
+import Garden_careImage_1 from '../../assets/images/img_1.png';
+import Garden_careImage_2 from '../../assets/images/img_2.png';
+import Garden_careImage_3 from '../../assets/images/img_3.png';
+import Garden_careImage_4 from '../../assets/images/img_4.png';
+import Garden_careImage_5 from '../../assets/images/img_5.png';
+import Garden_careImage_6 from '../../assets/images/img_6.png';
+
 
 const Service = () => {
   return (
@@ -16,7 +23,7 @@ const Service = () => {
           <div className="service-item flex-collum" data-name="garden">
             <picture className="service-item__image">
               <source media="(max-width: 768px)" srcset="assets/img/img_1_768.png" />
-              <img src="assets/img/img_1.png" alt="Garden care" />
+              <img src={Garden_careImage_1} alt="Garden care" />
             </picture>
             <div classNameName="service-item__discription">
               <h3 className="service-item__type">Garden care</h3>
@@ -26,7 +33,7 @@ const Service = () => {
           <div className="service-item flex-collum" data-name="planting">
             <picture className="service-item__image">
               <source media="(max-width: 768px)" srcset="assets/img/img_2_768.png" />
-              <img src="assets/img/img_2.png" alt="Planting" />
+              <img src={Garden_careImage_2} alt="Planting" />
             </picture>
             <div className="service-item__discription">
               <h3 className="service-item__type">Planting</h3>
@@ -36,7 +43,7 @@ const Service = () => {
           <div className="service-item flex-collum" data-name="lawn">
             <picture className="service-item__image">
               <source media="(max-width: 768px)" srcset="assets/img/img_3_768.png" />
-              <img src="assets/img/img_3.png" alt="Lawn care" />
+              <img src={Garden_careImage_3} alt="Lawn care" />
             </picture>
             <div className="service-item__discription">
               <h3 className="service-item__type">Lawn care</h3>
@@ -46,7 +53,7 @@ const Service = () => {
           <div className="service-item flex-collum" data-name="planting">
             <picture className="service-item__image">
               <source media="(max-width: 768px)" srcset="assets/img/img_4_768.png" />
-              <img src="assets/img/img_4.png" alt="Planting" />
+              <img src={Garden_careImage_4} alt="Planting" />
             </picture>
             <div className="service-item__discription">
               <h3 className="service-item__type">Planting</h3>
@@ -56,7 +63,7 @@ const Service = () => {
           <div className="service-item flex-collum" data-name="garden">
             <picture className="service-item__image">
               <source media="(max-width: 768px)" srcset="assets/img/img_5_768.png" />
-              <img src="assets/img/img_5.png" alt="Garden care" />
+              <img src={Garden_careImage_5} alt="Garden care" />
             </picture>
             <div className="service-item__discription">
               <h3 className="service-item__type">Garden care</h3>
@@ -66,7 +73,7 @@ const Service = () => {
           <div className="service-item flex-collum" data-name="planting">
             <picture className="service-item__image">
               <source media="(max-width: 768px)" srcset="assets/img/img_6_768.png" />
-              <img src="assets/img/img_6.png" alt="Planting" />
+              <img src={Garden_careImage_6} alt="Planting" />
             </picture>
             <div className="service-item__discription">
               <h3 className="service-item__type">Planting</h3>
