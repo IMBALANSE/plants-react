@@ -1,22 +1,29 @@
-import React from 'react';
+
+import React, { useState } from 'react';
 import logo from '../../assets/images/icons/logo_plant.svg'; 
 
 const Header = () => {
-  return (
-    <header className="header" id="home">
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
+  return ( 
+    <header className={`header ${isOpen ? "open" : ""}`}  id="home">,
       <div className="header-wrapper flex-row">
         <div className="logo flex-row">
-          <a className="logo-link" href="#">
+          <a className="logo-link" href="/">
             <img src={logo} alt="logo-plant" />Plants
           </a> {/**<!-- внутри ссылки svg логотип и текст рядом --> */}
         </div>
-        <div className="navbar-burger-item" id="navbar-burger-item"> {/** <!-- бургер меню, скорей всего скрыто, пока размер не уменьшится и не скроет блок навигации ниже -->*/}
-          <a className="navbar-burger-icon flex-column" href="javascript:void(0);" id="navbar-burger-icon">
+        <div onClick={toggleMenu} className="navbar-burger-item" id="navbar-burger-item"> {/** <!-- бургер меню, скорей всего скрыто, пока размер не уменьшится и не скроет блок навигации ниже -->*/}
+          <button className="navbar-burger-icon flex-column" id="navbar-burger-icon">
             <span className="line"></span>
             <span className="line"></span>
             <span className="line"></span>
             <span className="line"></span>
-          </a>
+          </button>
         </div>
         <nav className="header__nav" id="navbar"> {/**<!-- блок навигации --> */}
           <ul className="navigation flex-row">
