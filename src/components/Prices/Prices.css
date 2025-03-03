@@ -139,7 +139,7 @@
   
 }
 
-.accordion__item_show .accordion__body  {
+.accordion__item.active .accordion__body  {
   height: 104px;
   display: block;
   padding: 0px 40px 0px 40px;
@@ -147,14 +147,64 @@
 
 }
 
-/* Предложения по доработке*/
-/* 1) При нажатии на аккордион блок расширяется вверх изменить высоту на min-heigth  
-2) уточнить xmk lexit для адаптивности у ГПТ margin или padding */
+/*REACT REACT REACT REACT REACT REACT REACT REACT REACT REACT REACT*/
+.accordion__item {
+  border: 1px solid #ddd;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
 
-/* в элементах accordion__item в которых нет класса accordion__item_show, его потомки с классом accordion__body примут свойства  display: none;  */
-/* .accordion__item:not(.accordion__item_show) .accordion__body {
-  display: none; 
-}  */
+.accordion__item.active {
+  border-color: #4CAF50;
+}
+
+.accordion__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  cursor: pointer;
+  background-color: #fff;
+}
+
+.accordion__body {
+  padding: 1rem;
+  background-color: #f1f1f1;
+}
+
+.accordion__body_description {
+  margin: 0;
+  font-size: 1rem;
+  color: #333;
+}
+
+.accordion__body_description-price {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+  color: #4CAF50;
+}
+
+.accordion__body_btn {
+  margin-top: 1rem;
+}
+
+.accordion__body_btn p {
+  margin: 0;
+  padding: 0.5rem 1rem;
+  background-color: #4CAF50;
+  color: #fff;
+  text-align: center;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+
+
+
+
 
 @media screen and (max-width:1258px) {
 
