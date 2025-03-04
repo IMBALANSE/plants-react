@@ -27,15 +27,17 @@ const Contacts = () => {
     setIsOptionsVisible(false);
   };
 
+  // {`accordion__item ${activeIndex === index ? "active" : ""}`}
   return (
     <section className="contacts" id="contacts">
       <div className="contacts-wrapper flex-row">
-        {/* */} <img className="contact_woman" src={gardener_womanImage} alt="gardener-woman" />
+        <img className="contact_woman" src={gardener_womanImage} alt="gardener-woman" />
         <h2>Contact us</h2>
         <div className="contact__container-select">
-          <div className="contacts-dropdown flex-row" id="contacts-dropdown" onClick={handleDropdownClick}>
+          {/*<div className="contacts-dropdown flex-row" id="contacts-dropdown" onClick={handleDropdownClick}> */}
+          <div className={`contacts-dropdown flex-row ${ (selectedCity) || (isOptionsVisible !== false)  ? "open" : "" } `} id="contacts-dropdown" onClick={handleDropdownClick}> {/* Добавим стили изменяющие цвет блока contacts-dropdown при нажатии и чтобы не менялсяцвет при выборе города (select-option) */}
             <p className="contacts-dropdown_text">{selectedCity ? cities[selectedCity].name : 'City'}</p> {/*Квадратные скобки [] в JavaScript используются для доступа к свойствам объекта по ключу, который может быть динамическим (например, переменной). это обрабатывается с помощью тернарного оператора: Если выбран один из городов, то текст будет равен cities[selectedCity].name , иначе строка 'City' */}
-            {/* */} <img className="icon-arrow contacts-arrow" src={arrowSvgWhite} alt="arrow" />
+            <img className="icon-arrow contacts-arrow" style={{ transform: isOptionsVisible !== false ? "rotate(180deg)" : "rotate(0deg)" }} src={arrowSvgWhite} alt="arrow" />
           </div>
           {isOptionsVisible && ( 
             <div className="contacts-options" id="contacts-options">
@@ -55,14 +57,14 @@ const Contacts = () => {
             </div>
           )}
           {selectedCity && (
-            <div className="city-container" data-name={selectedCity}>
+            <div className="city-container" >
               <p>City</p>
               <p className="grey">{cities[selectedCity].name}</p>
               <p>Phone:</p>
               <p className="grey">{cities[selectedCity].phone}</p>
               <p>Office address:</p>
               <p className="grey">{cities[selectedCity].address}</p>
-              <button className="button1" onClick={() => window.open(`tel: ${cities[selectedCity].phone}`, '_self')}>Call us</button> {/* При клике на кнопку "Call us" открывается стандартное приложение для звонков на номер выбранного города. Почему то стили срабатывают только обновления стр.*/}
+              <button className="button1" onClick={() => window.open(`tel: ${cities[selectedCity].phone}`, '_self')}>CALL US</button> {/* При клике на кнопку "Call us" открывается стандартное приложение для звонков на номер выбранного города. Почему то стили срабатывают только обновления стр.*/}
               {/*<button className="button1" >Call us</button>*/} 
             </div>
           )}

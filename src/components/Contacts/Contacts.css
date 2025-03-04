@@ -39,10 +39,11 @@
   align-items: center;
 } */
 
-.contacts-dropdown.active {
+/* .contacts-dropdown.active {
   background-color: #86df72;
-}
+} */
 
+/*Этот hover влияет на изменение цвета внутри contact-dropdown   */
 .contacts-dropdown:hover {
   box-shadow: 2px 2px 15px #4a9a1874;
   transition: 0.5s;
@@ -67,10 +68,10 @@
 /*******************Внутренности кнопки Select ************************/
 
 
-.contacts-options {
+/* .contacts-options {
   height: 0px;
   transition: 0.3s ease-out;
-}
+} */
 
 .select-option {
   font-size: 0px;
@@ -83,11 +84,11 @@
   box-shadow: none;
 }
 
-.contacts-options.visible { /*сработает при нажатии когда скриптом добавится класс visible*/
+/* .contacts-options.visible { сработает при нажатии когда скриптом добавится класс visible
   height: 234px;
   background: #DCE9D9;
   transition: all 0.4s ease-in-out;
-}
+} */
 
 .contacts-options.visible .select-options {
   height: 100%;
@@ -96,7 +97,7 @@
 }
 
 
-.contacts-options.visible .select-option {
+/* .contacts-options.visible .select-option {
   font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
@@ -106,28 +107,28 @@
   color: #499A18;
   border-bottom: 1px solid #D9D9D9;
   transition: all 0.4s ease-in-out;
-}
+} */
 
-.contacts-options.visible .select-option:hover {
+/* .contacts-options.visible .select-option:hover {
   color: #717171;
   border-color: #717171;
   cursor: pointer;
-}
+} */
 
-.contacts-selector-button.choosen { /*choosen  - выбранный */
+/* .contacts-selector-button.choosen { choosen  - выбранный
   box-shadow: none;
   background: #C1E698;
-}
+} */
 
 /*******************************************************************************************/
 /* .city-container */
-.city-container {
+/* .city-container {
   height: 0px;
   opacity: 0;
   transition: opacity 0.5s ease-in;
-}
+} */
 
-.city-container.visible {
+/* .city-container.visible {
   display: grid;
   grid-template-columns: 1fr 1.5fr;
   width: 100%;
@@ -138,30 +139,30 @@
   border: 1px solid #000000;
   border-radius: 20px;
   opacity: 1;
-}
+} */
 
-.city-container p {
+/* .city-container p {
   font-size: 0px;
   line-height: 0px;
-}
+} */
 
-.city-container.visible p {
+/* .city-container.visible p {
   font-size: 16px;
   line-height: 40px;
   letter-spacing: 0.05em;
   color: #000000;
   opacity: 1;
-}
+} */
 
-.city-container.visible .grey {
+/* .city-container.visible .grey {
   color: #717171;
-}
+} */
 
 /* .city-container button {
   opacity: 0;
 } */
 
-.city-container.visible button {
+/* .city-container.visible button {
   grid-column-start: 2;
   width: 122px;
   height: 26px;
@@ -171,12 +172,12 @@
   margin-top: 20px;
   color: #717171;
   opacity: 1;
-}
-.city-container.visible button:hover {
+} */
+/* .city-container.visible button:hover {
 cursor: pointer;
 background-color: #E06733;
 color: #ffffff;
-}
+} */
 
 /***************** Медиазапросы ***************************/
 
@@ -198,6 +199,10 @@ color: #ffffff;
   
 }
 
+.contacts-dropdown.open {
+  background-color: #86df72;
+}
+
 .contacts-dropdown > p {
   text-align: start;
   font-family: Inter, sans-serif;
@@ -207,24 +212,15 @@ color: #ffffff;
 }
 
 .contacts-options {
-  
   height: 234px;
   background: #DCE9D9;
-  transition: all 0.4s ease-in-out;
   width: 100%;
-  
+  margin: 16px 0;
   border: 1px solid #ddd;
-  border-radius: 5px;
+  /* border-radius: 5px; */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-
+  
 }
-
- /* .select-options {
-  height: 100%;
-  justify-content: space-between;
-  padding: 27px 35px 31px 35px;
-} */
-
 
 .select-option {
   font-family: 'Inter';
@@ -235,15 +231,26 @@ color: #ffffff;
   letter-spacing: 0.05em;
   color: #499A18;
   border-bottom: 1px solid #D9D9D9;
-  transition: all 0.4s ease-in-out;
+  cursor: pointer;
+  animation: fadeIn 1s; /*анимация через animation, через transition мучался долго не получалось - забил*/
 }
 
+.select-option:hover {
+  font-size: 1.1rem;
+  font-weight: 700; 
+  color: #E06733;
+  transition: 0.7s;
+}
 
-
-.city-container {
-  height: 0px;
-  opacity: 0;
-  transition: opacity 0.5s ease-in;
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .city-container {
@@ -257,12 +264,9 @@ color: #ffffff;
   border: 1px solid #000000;
   border-radius: 20px;
   opacity: 1;
+  
+  animation: fadeIn 1s; /*анимация через animation, через transition мучался долго не получалось - забил*/
 }
-
-/* .city-container p {
-  font-size: 0px;
-  line-height: 0px;
-} */
 
 .city-container {
   font-size: 16px;
@@ -271,31 +275,6 @@ color: #ffffff;
   color: #000000;
   opacity: 1;
 }
-
-.city-container.visible .grey {
-  color: #717171;
-}
-/* 
-.city-container button {
-  opacity: 0;
-} */
-
-.city-container.visible {
-  grid-column-start: 2;
-  width: 122px;
-  height: 26px;
-  font-weight: 700;
-  font-size: 10px;
-  line-height: 13px;
-  margin-top: 20px;
-  color: #717171;
-  opacity: 1;
-}
-/* .city-container.visible button:hover {
-cursor: pointer;
-background-color: #E06733;
-color: #ffffff;
-} */
 
 
 
@@ -312,20 +291,23 @@ color: #ffffff;
 
 /* Стили для кнопки звонка */
 .button1 {
-  /* display: inline-block; */
-  padding: 0.75rem 1.5rem;
-  background-color: #333;
-  color: #e61c1c;
-  border: 1px solid #717171;
-  border-radius: 5px;
-  /* font-size: 1rem; */
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  width: 158px;
+  height: 44px;
+  border-radius: 10px;
+  border-color: #E06733;
+  border-width: 2px;
+  border-style: solid;
+  box-shadow: 0px 4px 4px rgba(1, 2, 1, 0.25); /*расшифр x, y, размытие, растяжение (размер тени)-тут его нет rgba(r, g, b, a)*/
 }
 
-.button:hover {
-  background-color: #555;
+.button1:hover {
+  border-color: #4e4c4c;
+  background-color: #1cb116;
+  color: #EDF2EC;
+  cursor: pointer;
+  transition: 0.5s;
 }
 
 

@@ -15,7 +15,8 @@ body {
 h2 {
   font-family: Inika, sans-serif;
   font-size: 40px;
-  font-weight: 400; /*убрал жирность букв по умолчанию стояло 700*/
+  font-weight: 400; 
+  /*убрал жирность букв по умолчанию стояло 700*/
   margin: 0;
   color: #499A18;
 }
