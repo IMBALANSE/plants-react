@@ -26,7 +26,9 @@
   display: block;
 }
 
-.contacts-dropdown {
+/*Теперь он лежит в реакте*/
+
+/* .contacts-dropdown {
   width: 450px;
   height: 50px;
   margin-top: 95px;
@@ -35,7 +37,7 @@
   justify-content: space-between;
   box-shadow: 0px 4px 4px rgba(1, 2, 1, 0.25);
   align-items: center;
-}
+} */
 
 .contacts-dropdown.active {
   background-color: #86df72;
@@ -46,13 +48,15 @@
   transition: 0.5s;
 }
 
-.contacts-dropdown > p {
+/*Теперь он лежит в реакте*/
+
+/* .contacts-dropdown > p {
   text-align: start;
   font-family: Inter, sans-serif;
   font-size: 20px;
   font-weight: 400;
   letter-spacing: 0.05rem;
-}
+} */
 
 .contacts-arrow {
   background-color: #AEA1A1;
@@ -153,9 +157,9 @@
   color: #717171;
 }
 
-.city-container button {
+/* .city-container button {
   opacity: 0;
-}
+} */
 
 .city-container.visible button {
   grid-column-start: 2;
@@ -177,7 +181,161 @@ color: #ffffff;
 /***************** Медиазапросы ***************************/
 
 
-@media screen and (max-width:1258px) {
+
+/* REACT REACT REACT REACT REACT REACT REACT REACT REACT REACT */
+
+/* Стили для выпадающего списка */
+.contacts-dropdown {
+  width: 450px;
+  height: 50px;
+  margin-top: 95px;
+  padding: 0px 35px 0px 20px;
+  background-color: #D6E7D2;
+  justify-content: space-between;
+  box-shadow: 0px 4px 4px rgba(1, 2, 1, 0.25);
+  align-items: center;
+  cursor: pointer;
+  
+}
+
+.contacts-dropdown > p {
+  text-align: start;
+  font-family: Inter, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 0.05rem;
+}
+
+.contacts-options {
+  
+  height: 234px;
+  background: #DCE9D9;
+  transition: all 0.4s ease-in-out;
+  width: 100%;
+  
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+}
+
+ /* .select-options {
+  height: 100%;
+  justify-content: space-between;
+  padding: 27px 35px 31px 35px;
+} */
+
+
+.select-option {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 40px;
+  letter-spacing: 0.05em;
+  color: #499A18;
+  border-bottom: 1px solid #D9D9D9;
+  transition: all 0.4s ease-in-out;
+}
+
+
+
+.city-container {
+  height: 0px;
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+}
+
+.city-container {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  width: 100%;
+  height: fit-content;
+  padding: 17px 76px 32px 33px;
+  margin-top: 47px;
+  background: #EDF2EC;
+  border: 1px solid #000000;
+  border-radius: 20px;
+  opacity: 1;
+}
+
+/* .city-container p {
+  font-size: 0px;
+  line-height: 0px;
+} */
+
+.city-container {
+  font-size: 16px;
+  line-height: 40px;
+  letter-spacing: 0.05em;
+  color: #000000;
+  opacity: 1;
+}
+
+.city-container.visible .grey {
+  color: #717171;
+}
+/* 
+.city-container button {
+  opacity: 0;
+} */
+
+.city-container.visible {
+  grid-column-start: 2;
+  width: 122px;
+  height: 26px;
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 13px;
+  margin-top: 20px;
+  color: #717171;
+  opacity: 1;
+}
+/* .city-container.visible button:hover {
+cursor: pointer;
+background-color: #E06733;
+color: #ffffff;
+} */
+
+
+
+
+.city-container p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  color: #333;
+}
+
+.city-container .grey {
+  color: #666;
+}
+
+/* Стили для кнопки звонка */
+.button1 {
+  /* display: inline-block; */
+  padding: 0.75rem 1.5rem;
+  background-color: #333;
+  color: #e61c1c;
+  border: 1px solid #717171;
+  border-radius: 5px;
+  /* font-size: 1rem; */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+
+
+
+
+
+
+
+/* @media screen and (max-width:1258px) {
 
   .contacts {
     bottom: 0px;
@@ -242,4 +400,4 @@ color: #ffffff;
     height: 124px;
     margin: 132px 24px 0px 21px;
   }
-}
+} */
