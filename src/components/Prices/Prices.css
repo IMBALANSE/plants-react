@@ -6,9 +6,10 @@
   justify-content: space-between;
 }
 
-.prices-content {
-  justify-content: space-between;
-}
+/* .prices-content {
+  margin-top: 20px;
+
+} */
 
 .prices-content > h2 {
   position: relative;
@@ -21,7 +22,7 @@
 
 .prices-list {
   position: relative;
-  bottom: 16px;
+  /* bottom: 16px; */
   width: 332px;
   min-height: 282px;
   border: 1px solid #E3E1D5;
@@ -80,15 +81,19 @@
   text-align: end;
 }
 
+.prices-call-us > a :hover  {
+  cursor: pointer;
+}
+
 /* 14 января 25 **************************/
 
 
-.accordion__item {
+/* .accordion__item {
   width: 250px;
-  min-height: 50px;            /* вот где главная загвоздка была, чтобы */
+  min-height: 50px;            
   background-color: #EDF2EC; 
   border-radius: 20px;
-}
+} */
 
 .accordion__item span{
   color: red;
@@ -148,60 +153,80 @@
 }
 
 /*REACT REACT REACT REACT REACT REACT REACT REACT REACT REACT REACT*/
+
 .accordion__item {
-  border: 1px solid #ddd;
-  margin-bottom: 1rem;
-  border-radius: 8px;
+  /* border: 1px solid #ddd; */
+  border: 1px solid #EDF2EC ;
+  /* margin-bottom: 1rem; */
+  border-radius: 20px;
   overflow: hidden;
-  transition: all 0.3s ease;
+  transition: all 0.5s ease;
+  justify-content: space-between;
 }
 
-.accordion__item.active {
-  border-color: #4CAF50;
-}
+
 
 .accordion__header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
-  cursor: pointer;
-  background-color: #fff;
+  padding: 0px 40px 0px 40px;
+  cursor: pointer; 
+  /* background-color: rgb(237, 242, 236); */
+  background-color: #EDF2EC;
 }
 
 .accordion__body {
   padding: 1rem;
-  background-color: #f1f1f1;
+  background-color: #D6E7D2;
 }
 
 .accordion__body_description {
-  margin: 0;
-  font-size: 1rem;
-  color: #333;
+  font-size: 10px;
+  text-align: start;
+  line-height: 10px;
 }
 
 .accordion__body_description-price {
-  margin: 0.5rem 0;
-  font-size: 1.1rem;
-  color: #4CAF50;
+  margin-top: 6px;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: start;
 }
 
 .accordion__body_btn {
-  margin-top: 1rem;
+  margin-top: 12px;
+  width: 86px;
+  height: 25px; 
 }
 
 .accordion__body_btn p {
-  margin: 0;
-  padding: 0.5rem 1rem;
-  background-color: #4CAF50;
-  color: #fff;
-  text-align: center;
-  border-radius: 4px;
+  padding-top: 2px ;
+  
+  color: #717171;
+  border-radius: 10px;
   cursor: pointer;
 }
 
+.accordion__item.active {
+  border: 1px solid #EDF2EC ;
+  border-color: #4CAF50;
+  background-color: #D6E7D2;
+  
+}
 
-
+.price-button {
+  font-family: Inika, sans-serif;
+  font-size: 20px;
+  color: #E06733;
+  width: 161px;
+  height: 50px;
+  background-color: #EDF2EC;
+  border-radius: 5px;
+  border-width: 1px;
+  border-color: #E06733;
+  border-style: solid;
+}
 
 
 

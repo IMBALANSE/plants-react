@@ -1,7 +1,6 @@
-
+import React, { useState } from 'react';
 import leafsSmallImage from '../../assets/images/leafs_small.png';
 import arrowSvg from '../../assets/images/icons/arrow.svg';
-import React, { useState } from 'react';
 
 const Price = () => {
   const [activeIndex, setActiveIndex] = useState(null); //useState для управл. состоянием активного элем. аккордеона. • activeIndex — это переменная состояния, которая хранит индекс текущего активного элемента аккордеона. Если ни один элемент не активен, значение будет null
@@ -31,7 +30,7 @@ const Price = () => {
           <div className="prices-list flex-collum">
             {accordionData.map((item, index) => (
               <div key={index} className={`accordion__item ${activeIndex === index ? "active" : ""}`}> {/* Активный элемент аккордеона получает класс active, который может использоваться для стилизации. Т.е. если активный элем совпадает с индексом, то присовим этому элем. класс active */}
-                <div className="accordion__header flex-row" onClick={() => toggleAccordion(index)}>  {/*Заголовок каждого элемента аккордеона (accordion__header) содержит обработчик клика onClick, который вызывает функцию toggleAccordion с индексом текущего элемента.  */}
+                <div className="accordion__header flex-row" style={{ backgroundColor:  activeIndex === index ?  "#D6E7D2" : "" }} onClick={() => toggleAccordion(index)}>  {/*Заголовок каждого элемента аккордеона (accordion__header) содержит обработчик клика onClick, который вызывает функцию toggleAccordion с индексом текущего элемента.  */}
                   <p>{item.title}</p>
                   <img className="icon-arrow" src={arrowSvg} alt="arrow" style={{ transform: activeIndex === index ? "rotate(180deg)" : "rotate(0deg)" }} /> {/*Иконка стрелки (icon-arrow) поворачивается на 180 градусов, когда элемент аккордеона раскрыт */}
                 </div>
@@ -51,7 +50,7 @@ const Price = () => {
         </div>
         <div className="prices-call-us flex-collum">
           <p>Our best <span className="green-highlight">gardeners</span> are ready to help you</p>
-          <button className="service-button contact-us__button">Contact us</button>
+          <a href="#contacts"><button className="price-button contact-us__button" >Contact us</button></a>
           <img className="prices-call-us__image" src={leafsSmallImage} alt="leafs_small" />
         </div>
       </div>

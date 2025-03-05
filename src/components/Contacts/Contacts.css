@@ -256,16 +256,15 @@ color: #ffffff;
 .city-container {
   display: grid;
   grid-template-columns: 1fr 1.5fr;
-  width: 100%;
+  width: 450px;
   height: fit-content;
-  padding: 17px 76px 32px 33px;
+  padding: 17px 55px 32px 55px;
   margin-top: 47px;
   background: #EDF2EC;
   border: 1px solid #000000;
   border-radius: 20px;
   opacity: 1;
-  
-  animation: fadeIn 1s; /*анимация через animation, через transition мучался долго не получалось - забил*/
+  animation: fadeIn 1s; /*анимация через animation, через transition мучался долго не получалось - временно забил*/
 }
 
 .city-container {
@@ -283,6 +282,7 @@ color: #ffffff;
   margin: 0.5rem 0;
   font-size: 1rem;
   color: #333;
+  text-align: start;
 }
 
 .city-container .grey {
@@ -291,8 +291,10 @@ color: #ffffff;
 
 /* Стили для кнопки звонка */
 .button1 {
+  grid-column: 1 / -1; /* Объединяет две колонки */
   font-family: Inter, sans-serif;
   font-size: 16px;
+  margin: 0 auto;
   width: 158px;
   height: 44px;
   border-radius: 10px;
@@ -307,7 +309,7 @@ color: #ffffff;
   background-color: #1cb116;
   color: #EDF2EC;
   cursor: pointer;
-  transition: 0.5s;
+  transition: 0.3s;
 }
 
 

@@ -56,9 +56,10 @@ const Contacts = () => {
               </ul>
             </div>
           )}
-          {selectedCity && (
+          {selectedCity && ( 
+          
             <div className="city-container" >
-              <p>City</p>
+              <p>City:</p>
               <p className="grey">{cities[selectedCity].name}</p>
               <p>Phone:</p>
               <p className="grey">{cities[selectedCity].phone}</p>
