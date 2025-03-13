@@ -50,7 +50,7 @@ const Price = () => {
         </div>
         <div className="prices-call-us flex-collum">
           <p>Our best <span className="green-highlight">gardeners</span> are ready to help you</p>
-          <a href="#contacts"><button className="price-button contact-us__button" >Contact us</button></a>
+          <a href="#contacts"><button className="button" >CONTACT US</button></a>
           <img className="prices-call-us__image" src={leafsSmallImage} alt="leafs_small" />
         </div>
       </div>

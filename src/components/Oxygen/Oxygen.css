@@ -1,0 +1,45 @@
+.welcome-wrapper {
+    max-width: 1440px;
+    height: 532px;
+    margin: 0 auto;
+    padding: 62px 109px 62px 109px;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .welcome-image {
+    position: relative; /*подгон подгон подгон подгон подгон подгон Welcome*/
+    right: 8px;
+    bottom: 1px;
+  }
+  
+  .green-highlight{
+    color: #499A18;
+  }
+  
+  .content {
+    width: 549px;
+    height: 340px;
+    margin: 0;
+    /*  background-color: rgb(142, 127, 255);*/
+    justify-content: space-between;
+  }
+  
+  h1 {
+    position: relative;
+    top: 2px;
+    margin: 0;
+    font-family: Inter, sans-serif;
+    font-size: 45px;
+    line-height: 50px;
+    color: #717171;
+  }
+  .content > p {
+    text-align: start;
+    font-family: Inter, sans-serif;
+    font-size: 20px;
+    line-height: 35px;
+    color: #636060;
+  }
+  

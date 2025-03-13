@@ -43,27 +43,7 @@ h1 {
   color: #636060;
 }
 
-.welcome-button {
-  position: relative;
-  top: 2px;
-  font-family: Inter, sans-serif;
-  font-size: 16px;
-  width: 158px;
-  height: 44px;
-  border-radius: 10px;
-  border-color: #E06733;
-  border-width: 2px;
-  border-style: solid;
-  box-shadow: 0px 4px 4px rgba(1, 2, 1, 0.25); /*расшифр x, y, размытие, растяжение (размер тени)-тут его нет rgba(r, g, b, a)*/
-}
 
-.welcome-button:hover { /*обязательно ставить :hover в притык*/
-  border-color: #E06733;
-  background-color: #E06733;
-  color: #EDF2EC;
-  cursor: pointer;
-  transition: 0.5s;
-}
 
 main { /* !!!!!!!!! почему второй раз повторяется, проверить убрав его с пиксель перфектом*/
   position: relative;

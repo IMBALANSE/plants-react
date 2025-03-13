@@ -1,5 +1,6 @@
 
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom'; // Импортируем Link для возможности перехода по страницам 
 import logo from '../../assets/images/icons/logo_plant.svg'; 
 
 const Header = () => {
@@ -27,8 +28,8 @@ const Header = () => {
         </div>
         <nav className="header__nav" id="navbar"> {/**<!-- блок навигации --> */}
           <ul className="navigation flex-row">
-            <li className="nav__item"><a href="#home">Home</a></li>
-            <li className="nav__item"><a href="#about-us">About us</a></li>
+            <li className="nav__item"><Link to="/">Home</Link></li>
+            <li className="nav__item"><a href="#about-us">About us</a></li> {/*Если в хедере ссылки на другие страницы, то для перехода по страницам, посмотри файл "Другие страницы" */}
             <li className="nav__item"><a href="#service">Service</a></li>
             <li className="nav__item"><a href="#price">Price</a></li>
             <li className="nav__item"><a href="#contacts">Contacts</a></li>
