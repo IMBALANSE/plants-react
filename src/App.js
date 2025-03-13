@@ -10,7 +10,7 @@ import Consultation from './components/Consultation/Consultation';
 import Contacts from './components/Contacts/Contacts';
 import Footer from './components/Footer/Footer';
 
-import LearnMorePage from './components/api/api'; // Импортируйте новую страницу
+import LearnMorePage from './components/ClientsApi/ClientsApi'; // Импортируйте новую страницу
 import ConsultationForm from './components/OrderForm/OrderForm'; // Импортируйте новую страницу
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
@@ -18,9 +18,9 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 const App = () => {
   return (
     <BrowserRouter>
-      <div>
+      <div className='app-container'>
         <Header />
-        <main>
+        <main className="main-content">
           <Routes>
             <Route path="/" element={
               <>

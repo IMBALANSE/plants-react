@@ -31,7 +31,7 @@ const Price = () => {
             {accordionData.map((item, index) => (
               <div key={index} className={`accordion__item ${activeIndex === index ? "active" : ""}`}> {/* Активный элемент аккордеона получает класс active, который может использоваться для стилизации. Т.е. если активный элем совпадает с индексом, то присовим этому элем. класс active */}
                 <div className="accordion__header flex-row" style={{ backgroundColor:  activeIndex === index ?  "#D6E7D2" : "" }} onClick={() => toggleAccordion(index)}>  {/*Заголовок каждого элемента аккордеона (accordion__header) содержит обработчик клика onClick, который вызывает функцию toggleAccordion с индексом текущего элемента.  */}
-                  <p>{item.title}</p>
+                  <p style={{ color: activeIndex === index ? "#E06733" : "" }}>{item.title}</p>
                   <img className="icon-arrow" src={arrowSvg} alt="arrow" style={{ transform: activeIndex === index ? "rotate(180deg)" : "rotate(0deg)" }} /> {/*Иконка стрелки (icon-arrow) поворачивается на 180 градусов, когда элемент аккордеона раскрыт */}
                 </div>
                 {/*  В JS выражение a && b работает так: если a истинно, то возвращается b. Если a ложно, то возвращается a. Если activeIndex === index истинно (то есть текущий элем. аккордеона активен), то будет отрисован блок <div className="accordion__body">...</div> */}

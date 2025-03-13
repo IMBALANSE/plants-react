@@ -26,11 +26,11 @@ main {
   top: -1px;
 }
 
-
-.welcome,
-.service,
-.clients,
-.contacts
+.header,
+.about,
+.prices,
+.consultation,
+.footer
 {
   background-color: #EDF2EC;
 }
@@ -78,6 +78,17 @@ header {
   cursor: pointer;
   transition: 0.5s;
 }
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Минимальная высота контейнера равна высоте viewport */
+}
+
+.main-content {
+  flex: 1; /* Основной контент занимает все доступное пространство */
+}
+
 
 @media screen and (max-width:1258px) {
   h2 {

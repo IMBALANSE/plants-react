@@ -6,7 +6,7 @@ import pinterestSvg from '../../assets/images/icons/pinterest.svg';
 
 const Footer = () => {
   return (
-    <div class="footer-wrapper">
+    <div class="footer">
       <div class="footer-content flex-row">
         <div class="footer-data flex-row">
           <p>©</p>

@@ -1,7 +1,8 @@
-.footer-wrapper {
+
+.footer {
   position: relative;
   top: -5px;
-  max-width: 1440px;
+  width: 100%; /*до 13,03,25 была max-width: 1440px;, что мешало работать Flex внутри footer-content Намучался с этим даже с ИИ */
   height: 130px;
   margin: 0px auto;
   padding: 40px 109px;
