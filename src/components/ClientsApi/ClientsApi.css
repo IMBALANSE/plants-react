@@ -1,0 +1,25 @@
+.clients-container {
+  padding: 20px;
+  text-align: center;
+  align-items: center;
+}
+
+.clients-container > h1 {
+  margin-bottom: 30px;
+}
+
+.clients-list {
+  width: 100%; /* Для адаптивности блоков связка width и max-width. Занимает 100% ширины родительского элемента */
+  max-width: 500px; /* Для адаптивности блоков связка width и max-width */
+}
+
+.client-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 10px;
+  width: 100%;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+

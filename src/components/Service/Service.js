@@ -122,13 +122,14 @@ const Service = () => {
             <button className="service-button" data-name="planting">Planting</button>
           </div>
         </div>
+
         <div className="service-body flex-row">
           <div className="service-item flex-collum" data-name="garden">
             <picture className="service-item__image">
               <source media="(max-width: 768px)" srcset={Garden_careImage_1_768} />
               <img src={Garden_careImage_1} alt="Garden care" />
             </picture>
-            <div classNameName="service-item__discription">
+            <div className="service-item__discription">
               <h3 className="service-item__type">Garden care</h3>
               <p className="service-item__text care">Lorem Ipsum has been the industry</p>
             </div>

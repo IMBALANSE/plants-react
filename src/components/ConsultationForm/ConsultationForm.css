@@ -1,10 +1,12 @@
 .consultation-form {
     max-width: 400px;
-    margin: 0 auto;
+    width: 100%;
+    margin: 20px auto;
     padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    background-color: #f9f9f9;
+    /* border: 1px solid #ccc; */
+    border-radius: 10px;
+    background-color: #EDF2EC;
+
   }
   
   .consultation-form h1 {
@@ -34,23 +36,14 @@
   }
   
   .consultation-form input:focus {
-    border-color: #66afe9;
+    border-color: #E06733;
     outline: none;
-    box-shadow: 0 0 5px rgba(102, 175, 233, 0.5);
+    box-shadow: 0 0 5px #E06733;
   }
   
-  .consultation-form button {
-    width: 100%;
-    padding: 10px;
-    background-color: #28a745;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    font-size: 16px;
-    cursor: pointer;
+  .consultation-button  {
+    display: block; /*чтобы кнопку выравнить по центру связка display: block; и margin: 0 auto; */
+    margin: 0 auto; /*чтобы кнопку выравнить по центру связка display: block; и margin: 0 auto; */
+    background-color: #fff;
   }
-  
-  .consultation-form button:hover {
-    background-color: #218838;
-  }
-  
+

@@ -10,8 +10,8 @@ import Consultation from './components/Consultation/Consultation';
 import Contacts from './components/Contacts/Contacts';
 import Footer from './components/Footer/Footer';
 
-import LearnMorePage from './components/ClientsApi/ClientsApi'; // Импортируйте новую страницу
-import ConsultationForm from './components/OrderForm/OrderForm'; // Импортируйте новую страницу
+import ClientsApi from './components/ClientsApi/ClientsApi'; // Импортируйте новую страницу
+import ConsultationForm from './components/ConsultationForm/ConsultationForm'; // Импортируйте новую страницу
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 
@@ -34,7 +34,7 @@ const App = () => {
               </>
             } />
             <Route path="/oxygen" element={<Oxygen />} />
-            <Route path="/learn-more" element={<LearnMorePage />} />
+            <Route path="/learn-more" element={<ClientsApi />} />
             <Route path="/consultation" element={<ConsultationForm />} />
           </Routes>
         </main>
