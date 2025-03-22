@@ -1,24 +1,33 @@
 .clients-container {
+  align-items: center;
   padding: 20px;
   text-align: center;
-  align-items: center;
 }
 
 .clients-container > h1 {
   margin-bottom: 30px;
 }
 
-.clients-list {
-  width: 100%; /* Для адаптивности блоков связка width и max-width. Занимает 100% ширины родительского элемента */
-  max-width: 500px; /* Для адаптивности блоков связка width и max-width */
+.loading {
+  font-family: Inter, sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #E06733 ; 
 }
 
-.client-card {
+/* Для адаптивности блоков связка width и max-width. Занимает 100% ширины родительского элемента */
+/* Для адаптивности блоков связка width и max-width */
+.clients__list {
+  width: 100%; 
+  max-width: 500px; 
+}
+
+.client__card {
+  width: 100%;
   border: 1px solid #ccc;
   border-radius: 8px;
+  margin: 10px 0;
   padding: 16px;
-  margin: 10px;
-  width: 100%;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import arrowSvgWhite from '../../assets/images/icons/arrow_white.svg'; 
 import gardener_womanImage from '../../assets/images/contact_woman.png';
+import './Contacts.css';
 
 const Contacts = () => {
   const [isOptionsVisible, setIsOptionsVisible] = useState(false); //isOptionsVisible — переменная состояния, которая определяет, виден ли выпадающий список городов.
@@ -30,21 +31,21 @@ const Contacts = () => {
   // {`accordion__item ${activeIndex === index ? "active" : ""}`}
   return (
     <section className="contacts" id="contacts">
-      <div className="contacts-wrapper flex-row">
-        <img className="contact_woman" src={gardener_womanImage} alt="gardener-woman" />
+      <div className={`contacts__wrapper flex__row `}>
+        <img className={`contact__woman  ${ (selectedCity) || (isOptionsVisible !== false)  ? "open" : "" }`} src={gardener_womanImage} alt="gardener-woman" />
         <h2>Contact us</h2>
-        <div className="contact__container-select">
-          {/*<div className="contacts-dropdown flex-row" id="contacts-dropdown" onClick={handleDropdownClick}> */}
-          <div className={`contacts-dropdown flex-row ${ (selectedCity) || (isOptionsVisible !== false)  ? "open" : "" } `} id="contacts-dropdown" onClick={handleDropdownClick}> {/* Добавим стили изменяющие цвет блока contacts-dropdown при нажатии и чтобы не менялсяцвет при выборе города (select-option) */}
-            <p className="contacts-dropdown_text">{selectedCity ? cities[selectedCity].name : 'City'}</p> {/*Квадратные скобки [] в JavaScript используются для доступа к свойствам объекта по ключу, который может быть динамическим (например, переменной). это обрабатывается с помощью тернарного оператора: Если выбран один из городов, то текст будет равен cities[selectedCity].name , иначе строка 'City' */}
-            <img className="icon-arrow contacts-arrow" style={{ transform: isOptionsVisible !== false ? "rotate(180deg)" : "rotate(0deg)" }} src={arrowSvgWhite} alt="arrow" />
+        <div className= {`contact__container-select ${  (selectedCity) || (isOptionsVisible !== false)  ? "open" : "" }`}>
+          {/*<div className="contacts-dropdown flex__row" id="contacts-dropdown" onClick={handleDropdownClick}> */}
+          <div className={`contacts-dropdown flex__row ${ (selectedCity) || (isOptionsVisible !== false)  ? "open" : "" } `} id="contacts-dropdown" onClick={handleDropdownClick}> {/* Добавим стили изменяющие цвет блока contacts-dropdown при нажатии и чтобы не менялсяцвет при выборе города (select__option) */}
+            <p >{selectedCity ? cities[selectedCity].name : 'City'}</p> {/*Квадратные скобки [] в JavaScript используются для доступа к свойствам объекта по ключу, который может быть динамическим (например, переменной). это обрабатывается с помощью тернарного оператора: Если выбран один из городов, то текст будет равен cities[selectedCity].name , иначе строка 'City' */}
+            <img className="icon__arrow contacts__arrow" style={{ transform: isOptionsVisible !== false ? "rotate(180deg)" : "rotate(0deg)" }} src={arrowSvgWhite} alt="arrow" />
           </div>
           {isOptionsVisible && ( 
-            <div className="contacts-options" id="contacts-options">
-              <ul className="select-options flex-columm">
+            <div className="contacts__options" id="contacts__options">
+              <ul className="select__options flex-columm">
                  {/* Object.keys(cities) возвращает массив ключей объекта cities. В данном случае это будут строки: ['canandaigua', 'new-york', 'yonkers', 'sherrill']. А Метод map проходит по каждому ключу и создает новый массив элементов <li>, которые будут отображаться в списке. */}
                 {Object.keys(cities).map(key => ( 
-                  <li key={key} className="select-option" onClick={() => handleOptionClick(key)}> {/* 
+                  <li key={key} className="select__option" onClick={() => handleOptionClick(key)}> {/* 
                     Каждый элемент списка (<li>) имеет:
                     - Атрибут key={key}, который необходим для идентификации каждого элемента в React. Это помогает React эффективно обновлять и управлять списком.
                     - Обработчик события onClick, который вызывает функцию handleOptionClick с аргументом key (ключ города) при клике на элемент списка.
@@ -58,14 +59,14 @@ const Contacts = () => {
           )}
           {selectedCity && ( 
           
-            <div className="city-container" >
+            <div className="city__container" >
               <p>City:</p>
               <p className="grey">{cities[selectedCity].name}</p>
               <p>Phone:</p>
               <p className="grey">{cities[selectedCity].phone}</p>
               <p>Office address:</p>
               <p className="grey">{cities[selectedCity].address}</p>
-              <button className="button1" onClick={() => window.open(`tel: ${cities[selectedCity].phone}`, '_self')}>CALL US</button> {/* При клике на кнопку "Call us" открывается стандартное приложение для звонков на номер выбранного города. Почему то стили срабатывают только обновления стр.*/}
+              <button className="button1" onClick={() => window.open(`tel: ${cities[selectedCity].phone}`, '_self')}>Call us</button> {/* При клике на кнопку "Call us" открывается стандартное приложение для звонков на номер выбранного города. Почему то стили срабатывают только обновления стр.*/}
               {/*<button className="button1" >Call us</button>*/} 
             </div>
           )}
@@ -77,3 +78,5 @@ const Contacts = () => {
 
 
 export default Contacts
+
+

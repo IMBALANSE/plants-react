@@ -1,131 +1,208 @@
-.navigation {
-  width: 452px;
-  padding: 0;
+/* header {
+  position: relative; 
+  top: -1px;
+} */
+
+/*align-items: baseline; выравнивание элементов в хедере по одной линии, 1,5 часа на это убил*/
+.header__wrapper {
+  align-items: baseline; 
   justify-content: space-between;
-  list-style: none;
-  font-family: Inika, sans-serif;
-  color: #010201;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 42px 109px 42px 111px;
 }
 
-a {
-  text-decoration: none;
+.header__nav-list {
+  justify-content: space-between;
+  width: 452px;
+  padding: 0;
   font-family: Inika, sans-serif;
   color: #010201;
+  list-style: none;
+}
+
+.header__nav-list a {
   transition: 0.5s;
 }
 
-.navbar-burger-icon {
+.burger-icon {
   border: none;
 }
 
-.nav__item :hover {
-  color: #E06733;
+.header__nav-item :hover {
   font-weight: 700;
+  color: #E06733;
 }
 
-@media screen and (max-width:1258px) {
+@media screen and (max-width:1439px) {
 
-  .header-wrapper {
-    padding: 35px 50px;
+  .header__wrapper {
     max-width: 768px;
+    height: 117px;
+    padding: 35px 50px;
   }
 }
 
-@media screen and (max-width:1000px) {
-  .contacts-wrapper {
+@media screen and (max-width:767px) {
+
+  .header__nav-list {
     flex-wrap: wrap;
-  }
-}
-
-@media screen and (max-width:632px) {
-  .navigation {
     width: 252px;
-    flex-wrap: wrap;
+  }
+
+  .header__wrapper {
+    height: 96px;
+    padding: 32px 25px;
   }
 
   /************************* BURGER MENU ***********************/
-
-  .header.open .navbar-burger-icon > span:nth-child(1){
+/* классы через пробел означают потомки, т.е. Когда хедер открыт (header.open) потомки т.е. вложенные теги среди которых .burger-icon внутри которого только span  */
+/*  :nth-child описание в конце */
+  .header.open .burger-icon > span:nth-child(1){
     opacity: 0;
   }
 
-  .header.open .navbar-burger-icon > span:nth-child(4){
-    opacity: 0;
-  }
-
-  .header.open .navbar-burger-icon > span:nth-child(2){
+  .header.open .burger-icon > span:nth-child(2){
     position: relative;
     top: 3px;
     transform: rotate(45deg);
   }
 
-  .header.open .navbar-burger-icon > span:nth-child(3){
+  .header.open .burger-icon > span:nth-child(3){
     position: relative;
     top: -6px;
     transform: rotate(-45deg);
   }
 
-  .header.open .navbar-burger-icon {
-    height: 35px;
+  .header.open .burger-icon > span:nth-child(4){
+    opacity: 0;
+  }
+
+/* крестик лежит внутри header__burger-icon*/
+  .header.open .burger-icon { 
     position: fixed;
-    right: 25px;
+    top: 25px;
+    right: 27px;
+    height: 35px;
     border: 1px solid #717171;
     border-radius: 5px;
   }
 
-  .header__nav {
+  /*плашка, которая выходит из закулисья*/ 
+  .header__nav { 
     position: fixed;
-    top: 0;
     right: -100px;
-    top: 50px;
+    top: 42px;
     z-index: 1;
-    background-color: rgba(139, 160, 126, 0.5);;
+    width: 98px;
     padding: 20px 20px 20px 20px;
-    width: 100px;
-    transition: transform 0.5s;
-  }
-
-  .navigation {
-    display: block;
-  }
-
-  .nav__item > a{
-    display: block;
-  }
-
-  .navbar-burger-item {
-    display: block;
-    position: relative;
-    bottom: 20px;
-    z-index: 2;
-  }
-
-  .navbar-burger-icon {
-    width: 40px;
-    height: 26px;
-    
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: space-between;
-  }
-
-  .navbar-burger-icon .line {
-    width: 100%;
-    height: 2px;
-    background-color: #717171;
-    transition: 0.3s;
+    border-radius: 5px;
+    background-color: rgba(139, 160, 126, 0.6);
+    transition: transform 0.5s; /*плавный выход из закулистья*/
   }
 
   .header.open .header__nav {
     transform: translateX(-100%);
   }
-}
 
-@media screen and (max-width:765px) {
+  .header__nav-list {
+    display: block;
+  }
 
-  .header-wrapper {
-    height: 96px;
-    padding: 36px 25px;
+  /*Расположение Иконка палочек т.е. до нажатия*/
+  .header__burger-icon { 
+    position: relative;
+    bottom: 20px;
+    z-index: 2;
+    display: block;
+  }
+
+  .burger-icon {
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 40px;
+    height: 26px;
+  }
+
+  /*полоски бургер меню*/
+  /*  transition: 0.3s; тут время превращения в крестик*/
+  .burger-icon .burger-icon__line { 
+    width: 100%;
+    height: 2px;
+    background-color: #717171;
+    transition: 0.3s; 
   }
 }
+
+
+
+/* nth-child класс означает ?
+
+Псевдокласс :nth-child в CSS используется для выбора элементов на основе их позиции среди соседних элементов внутри одного родителя. Он позволяет задавать стили для элементов, которые находятся на определённой позиции в дереве документа.
+
+Синтаксис:
+css
+Copy
+:nth-child(формула | ключевое слово)
+Примеры использования:
+Выбор каждого второго элемента:
+
+css
+Copy
+li:nth-child(2n) {
+    background-color: lightgray;
+}
+Это применит стиль ко всем чётным элементам списка (2n означает "каждый второй элемент").
+
+Выбор каждого третьего элемента, начиная с первого:
+
+css
+Copy
+div:nth-child(3n+1) {
+    color: red;
+}
+Это применит стиль к каждому третьему элементу, начиная с первого (3n+1 означает "1, 4, 7, 10, ...").
+
+Использование ключевых слов:
+
+odd (нечётные элементы):
+
+css
+Copy
+tr:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+even (чётные элементы):
+
+css
+Copy
+tr:nth-child(even) {
+    background-color: #e6e6e6;
+}
+Выбор конкретного элемента:
+
+css
+Copy
+p:nth-child(5) {
+    font-weight: bold;
+}
+Это применит стиль к пятому элементу <p> внутри его родителя.
+
+Как работает:
+:nth-child считает все элементы внутри родителя, независимо от их типа.
+
+Если элемент на указанной позиции не соответствует селектору (например, вы используете p:nth-child(3), но третий элемент не <p>), стиль не применится.
+
+Важно:
+:nth-child работает только с элементами, которые являются дочерними по отношению к одному родителю.
+
+Если вам нужно выбирать элементы определённого типа (например, только <p>), используйте :nth-of-type.
+
+Пример:
+
+css
+Copy
+p:nth-of-type(2) {
+    color: blue;
+}
+Это выберет второй элемент <p> внутри его родителя, игнорируя другие типы элементов.*/

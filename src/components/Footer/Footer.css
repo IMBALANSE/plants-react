@@ -1,91 +1,102 @@
-
+/*width: 100%; до 13,03,25 была max-width: 1440px;, что мешало работать Flex внутри footer__wrapper Намучался с этим даже с ИИ */
 .footer {
   position: relative;
   top: -5px;
-  width: 100%; /*до 13,03,25 была max-width: 1440px;, что мешало работать Flex внутри footer-content Намучался с этим даже с ИИ */
+  width: 100%; 
   height: 130px;
   margin: 0px auto;
   padding: 40px 109px;
 }
 
-.footer-content {
+.footer__wrapper {
+  justify-content: space-between;
+  align-items: center;
   max-width: 1222px;
   height: 50px;
   margin: 0px auto;
-  justify-content: space-between;
-  align-items: center;
 }
 
-.footer-data {
-  width: 182px;
-  height: 50px;
+.footer__content {
   justify-content: space-between;
   align-items: center;
+  width: 182px;
+  height: 50px;
   padding-right: 13px;
 }
 
-.footer-link:hover {
-  text-shadow: 0px 1px 5px #E06733;
+.footer__link:hover {
   transition: 0.5s;
+  text-shadow: 0px 1px 5px #E06733;
 }
 
-.footer-data > p, .footer-link {
+.footer__content > p, 
+.footer__link {
   font-family: Inter, sans-serif;
   font-weight: 400;
   font-size: 20px;
   color: #000;
 }
 
-.rss {
+.cv {
   padding-left: 3px;
 }
 
-.social-list {
+.footer__social-list {
+  justify-content: space-between;
   width: 188px;
   height: 50px;
   padding: 9px 0px 9px 0px;
-  justify-content: space-between;
   list-style: none;
 }
 
-.social-list_item:hover {
-  box-shadow: 0px 1px 10px #E06733;
+.footer__social-link:hover {
   transition: 0.7s;
+  box-shadow: 0px 1px 10px #E06733;
 }
 
-@media screen and (max-width:1258px) {
+@media screen and (max-width:1439px) {
+  .footer {
+    padding: 0px;
+  }
 
   .footer-wrapper {
     padding: 24px 0px 0px 0px;
   }
 
-  .footer-content {
+  .footer__wrapper {
     flex-direction: column;
     height: 130px;
   }
 
-  .social-list {
-  margin: 0px;
-  padding: 17px 0px 0px 0px;
+  .footer__social-list {
+    margin: 0px;
+    padding: 0px;
   }
 
-  .footer-data {
-    width: 171px;
+  .footer__social-link {
+    width: 26.6px;
+  }
+
+  .footer__content {
+    width: 173px;
     height: 40px;
     padding-right: 0px;
   }
 }
 
-@media screen and (max-width:765px) {
+@media screen and (max-width:767px) {
+
+  .footer {
+    padding: 4px 25px;
+  }
 
   .footer-wrapper {
     padding: 19px 4px 0px 0px;
     height: 146px;
   }
 
-  .social-list {
+  .footer__social-list {
     margin: 0px;
     padding: 4px 0px 0px 0px;
     }
-
 }

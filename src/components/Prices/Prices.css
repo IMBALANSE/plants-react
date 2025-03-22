@@ -1,17 +1,17 @@
-.prices-wrapper {
+.prices__wrapper {
+  justify-content: space-between;
   max-width: 1440px;
   height: 560px;
   margin: 0 auto;
   padding: 40px 109px 115px 109px;
-  justify-content: space-between;
 }
 
-/* .prices-content {
-  margin-top: 20px;
+.prices__content {
+  justify-content: space-between;
+  height: 391px;
+}
 
-} */
-
-.prices-content > h2 {
+.prices__content > h2 {
   position: relative;
   top: -2px;
   font-family: Inter, sans-serif;
@@ -20,61 +20,59 @@
   color: black;
 }
 
-.prices-list {
+.prices__list {
   position: relative;
-  /* bottom: 16px; */
+  justify-content: space-between;
   width: 332px;
   min-height: 282px;
-  background-color: #fff;
+  padding: 34px 41px;
   border: 1px solid #4CAF50;;
   border-radius: 20px;
-  padding: 34px 41px;
-  justify-content: space-between;
+  background-color: #fff;
 }
 
-.text-call-us {
-  justify-content: space-between;
-}
-
-.prices-list__item {
-  width: 250px;
-  height: 50px;
-  background-color: #ffffff;
-  border-radius: 20px;
-  padding: 0px 40px 0px 40px;
+.prices__list__item {
   justify-content: space-between;
   align-items: center;
+  width: 250px;
+  height: 50px;
+  border-radius: 20px;
+  padding: 0px 40px 0px 40px;
+  background-color: #ffffff;
 }
 
-.prices-list__item:hover {
+.prices__list__item:hover {
   box-shadow: 2px 2px 10px #4a9a1874;
   transition: 0.5s;
 }
 
-.prices-list__item > p {
-  text-align: start;
+.prices__list__item > p {
   font-family: Inter, sans-serif;
   font-weight: 700;
   font-size: 20px;
   color: #000;
+  text-align: start;
 }
 
-.icon-arrow {
-  background: #D9D9D9;
-  padding: 6px 5px ; /*стрелка стрелка стрелка */
+/* padding: 6px 5px ; стрелка стрелка стрелка */
+.icon__arrow {
+  width: 18px;
+  height: 20px;
+  padding: 6px 5px ;
   border-radius: 9px;
-  border: 1px solid #4CAF50;;
+  border: 1px solid #4CAF50;
+  background: #D9D9D9;
 }
 
-.prices-call-us {
+.prices__call-us {
+  justify-content: space-between;
+  align-items: flex-end;
   position: relative;
   top: -2px;
   width: 452px;
-  align-items: flex-end;
-  justify-content: space-between;
 }
 
-.prices-call-us > p {
+.prices__call-us > p {
   font-family: Inter, sans-serif;
   font-size: 40px;
   font-weight: 700;
@@ -83,103 +81,98 @@
   text-align: end;
 }
 
-.prices-call-us > a :hover  {
+.prices__call-us > a :hover  {
   cursor: pointer;
 }
 
-/* 14 января 25 **************************/
-
-
-/* .accordion__item {
-  width: 250px;
-  min-height: 50px;            
-  background-color: #EDF2EC; 
+.accordion__item {
+  justify-content: space-between;
+  max-height: 154px;
+  border: 1px solid #4CAF50; 
   border-radius: 20px;
-} */
+  overflow: hidden;
+}
 
 .accordion__item span{
-  color: red;
+  color: #E06733;
 }
 
-/* .accordion__item_active {
-  background-color: #35d610; 
-} */
-
-.accordion__header {
-  height: 50px;
-  padding: 0px 40px 0px 40px;
-  justify-content: space-between;
-  align-items: center; /*центрирование по вертикали*/
+.accordion__item.active {
+  display: block;
+  height: 154px;
+  border: 1px solid #EDF2EC ;
+  border-color: #4CAF50;
+  background-color: #D6E7D2;
 }
 
-.accordion__header :first-child {  /* для <p> Basics, Standart, Pro care<*/
+/* для <p> Basics, Standart, Pro care<*/
+.accordion__header > p {  
   font-family: Inter, sans-serif;
   font-weight: 700;
   font-size: 20px;
   color: #000;
 }
 
+/* #D6E7D2 */
+.accordion__header.active {  
+  background-color: #D6E7D2;
+}
 
+@keyframes fadeInPrices {
+  from {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.accordion__body {
+  justify-content: space-between;
+  height: 90px;
+  font-family: Inter, sans-serif;
+  color: #717171;
+  text-align: center;
+  animation: fadeInPrices 0.5s;
+}
 
 .accordion__body_desription{
   font-size: 10px;
-  text-align: start;
   line-height: 10px;
+  text-align: start;
 }
 .accordion__body_desription-price{
-  margin-top: 6px;
   font-size: 16px;
   font-weight: 700;
   text-align: start;
 }
 .accordion__body_btn {
-  margin: 12px 0px;
   width: 86px;
   height: 25px;
-  background-color: #fff;
-  color: #717171;
   border-radius: 10px;
+  color: #717171;
+  background-color: #fff;
+  cursor: pointer;
 }
-
-.accordion__body {
-  display: none;
-  
-}
-
-.accordion__item.active .accordion__body  {
-  height: 104px;
-  display: block;
-  padding: 0px 40px 0px 40px;
-  /* background-color: red; */
-
+.accordion__body_btn > p {
+  margin-top: 2px;
 }
 
 /*REACT REACT REACT REACT REACT REACT REACT REACT REACT REACT REACT*/
 
-.accordion__item {
-  /* border: 1px solid #ddd; */
-  border: 1px solid #4CAF50; ;
-  /* margin-bottom: 1rem; */
-  border-radius: 20px;
-  overflow: hidden;
-  transition: all 0.5s ease;
-  justify-content: space-between;
-}
-
-
-
 .accordion__header {
-  display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: center; 
+  height: 50px;
   padding: 0px 40px 0px 40px;
-  cursor: pointer; 
-  /* background-color: rgb(237, 242, 236); */
   background-color: #EDF2EC;
+  cursor: pointer; 
 }
 
 .accordion__body {
-  padding: 1rem;
+  padding: 0px 40px 0px 40px;
   background-color: #D6E7D2;
 }
 
@@ -190,133 +183,121 @@
 }
 
 .accordion__body_description-price {
-  margin-top: 6px;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 700;
   text-align: start;
 }
 
-.accordion__body_btn {
-  margin-top: 12px;
-  width: 86px;
-  height: 25px; 
-}
+@media screen and (max-width:1439px) {
 
-.accordion__body_btn p {
-  padding-top: 2px ;
-  
-  color: #717171;
-  border-radius: 10px;
-  cursor: pointer;
-}
-
-.accordion__item.active {
-  border: 1px solid #EDF2EC ;
-  border-color: #4CAF50;
-  background-color: #D6E7D2;
-  
-}
-
-.price-button {
-  font-family: Inika, sans-serif;
-  font-size: 20px;
-  color: #E06733;
-  width: 161px;
-  height: 50px;
-  background-color: #EDF2EC;
-  border-radius: 5px;
-  border-width: 1px;
-  border-color: #E06733;
-  border-style: solid;
-}
-
-
-
-
-@media screen and (max-width:1258px) {
-
-  .prices-wrapper {
+  .prices__wrapper {
+    max-width: 768px;
     height: 585px;
-    padding: 40px 50px 88px 50px;
+    padding: 40px 50px 50px 50px;
   }
 
-  .prices-content {
-    height: 397px;
+  .prices__content {
+    height: 381px;
   }
 
-  .prices-content > h2 {
-    font-size: 35px;
+  .prices__content > h2 {
     width: 135px;
+    font-size: 35px;
     text-align: center;
   }
 
-  .prices-call-us > p {
+  .prices__call-us > p {
     font-size: 25px;
     line-height: 35px;
   }
 
-  .prices-call-us {
+  .prices__call-us {
     padding-top: 101px;
   }
 }
 
-@media screen and (max-width:632px) {
+@media screen and (max-width:767px) {
 
-  .prices-wrapper {
+  .prices__wrapper {
     flex-wrap: wrap;
-  }
-}
-
-@media screen and (max-width:765px) {
-
-  .prices-wrapper {
-    height: 512px;
-    padding: 25px 79px 40px;
-    flex-wrap: wrap;
+    height: 600px;
+    width: 300px;
+    padding: 40px 50px 50px 45px;
   }
 
-  .prices-call-us__image {
+  .prices__image {
     display: none;
   }
 
-  .prices-content {
-    height: 318px;
+  .prices__content {
     align-items: center;
+    height: 318px;
   }
 
-  .prices-content > h2 {
+  .prices__content > h2 {
     font-size: 25px;
     padding-bottom: 21px;
   }
 
-  .prices-list {
+  .prices__list {
     width: 224px;
-    height: 235px;
+    min-height: 235px;
     padding: 29px 22px;
   }
 
-  .prices-list__item {
-    width: 180px;
-    padding: 0px 40px 0px 30px;
+  .accordion__item.active {
+    display: block;
+    height: 122px;
   }
 
-  .prices-list__item > p {
+  .accordion__body {
+    height: 80px;
+    padding: 0px 20px;
+    background-color: #D6E7D2;
+  }
+
+  .accordion__body_btn {
+    width: 86px;
+    height: 22px;
+    margin: 0px 0px 3px 0px;
+    border-radius: 10px;
+    color: #717171;
+    background-color: #fff;
+  }
+  
+  .accordion__body_btn > p {
+    font-size: 14px;
+  }
+
+  .accordion__body_description {
+    font-size: 10px;
+  }
+
+  .accordion__header {
+    height: 40px;
+    padding: 0px 20px ;
+  }  
+
+  .accordion__header > p {  
     font-size: 15px;
   }
 
-  .prices-call-us {
+  .prices__call-us {
+    justify-content: space-between ;
+    align-items: center;
     top: 0px;
     width: 230px;
-    align-items: center;
-    padding: 0;
+    height: 120px;
     margin-top: -15px;
     margin-left: -2px;
+    padding: 0;
   }
 
-  .prices-call-us > p {
-    text-align: center;
+  .prices__call-us > p {
+    width: 230px;
     font-size: 20px;
     line-height: 35px;
-    width: 230px;
+    text-align: center;
   }
 }
+

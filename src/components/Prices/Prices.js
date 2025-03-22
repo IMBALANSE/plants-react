@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import leafsSmallImage from '../../assets/images/leafs_small.png';
 import arrowSvg from '../../assets/images/icons/arrow.svg';
+import './Prices.css';
 
 const Price = () => {
   const [activeIndex, setActiveIndex] = useState(null); //useState для управл. состоянием активного элем. аккордеона. • activeIndex — это переменная состояния, которая хранит индекс текущего активного элемента аккордеона. Если ни один элемент не активен, значение будет null
@@ -24,23 +25,23 @@ const Price = () => {
 */
   return (
     <section className="prices" id="price">
-      <div className="prices-wrapper flex-row">
-        <div className="prices-content flex-collum">
+      <div className="prices__wrapper flex__row">
+        <div className="prices__content flex__column">
           <h2>Prices</h2>
-          <div className="prices-list flex-collum">
+          <div className="prices__list flex__column">
             {accordionData.map((item, index) => (
               <div key={index} className={`accordion__item ${activeIndex === index ? "active" : ""}`}> {/* Активный элемент аккордеона получает класс active, который может использоваться для стилизации. Т.е. если активный элем совпадает с индексом, то присовим этому элем. класс active */}
-                <div className="accordion__header flex-row" style={{ backgroundColor:  activeIndex === index ?  "#D6E7D2" : "" }} onClick={() => toggleAccordion(index)}>  {/*Заголовок каждого элемента аккордеона (accordion__header) содержит обработчик клика onClick, который вызывает функцию toggleAccordion с индексом текущего элемента.  */}
+                <div className={`accordion__header flex__row ${activeIndex === index ? "active" : ""} `}  onClick={() => toggleAccordion(index)}>  {/*Заголовок каждого элемента аккордеона (accordion__header) содержит обработчик клика onClick, который вызывает функцию toggleAccordion с индексом текущего элемента.  */}
                   <p style={{ color: activeIndex === index ? "#E06733" : "" }}>{item.title}</p>
-                  <img className="icon-arrow" src={arrowSvg} alt="arrow" style={{ transform: activeIndex === index ? "rotate(180deg)" : "rotate(0deg)" }} /> {/*Иконка стрелки (icon-arrow) поворачивается на 180 градусов, когда элемент аккордеона раскрыт */}
+                  <img className="icon__arrow" src={arrowSvg} alt="arrow" style={{ transform: activeIndex === index ? "rotate(180deg)" : "rotate(0deg)" }} /> {/*Иконка стрелки (icon__arrow) поворачивается на 180 градусов, когда элемент аккордеона раскрыт */}
                 </div>
                 {/*  В JS выражение a && b работает так: если a истинно, то возвращается b. Если a ложно, то возвращается a. Если activeIndex === index истинно (то есть текущий элем. аккордеона активен), то будет отрисован блок <div className="accordion__body">...</div> */}
                 {activeIndex === index && (
-                  <div className="accordion__body">
+                  <div className="accordion__body flex__column">
                     <p className="accordion__body_description">{item.description}</p>
                     <p className="accordion__body_description-price"><span>{item.price}</span> / per hour</p>
                     <div className="accordion__body_btn">
-                      <p>Order</p>
+                      <p>Order</p> 
                     </div>
                   </div>
                 )}
@@ -48,10 +49,10 @@ const Price = () => {
             ))}
           </div>
         </div>
-        <div className="prices-call-us flex-collum">
+        <div className="prices__call-us flex__column">
           <p>Our best <span className="green-highlight">gardeners</span> are ready to help you</p>
           <a href="#contacts"><button className="button" >CONTACT US</button></a>
-          <img className="prices-call-us__image" src={leafsSmallImage} alt="leafs_small" />
+          <img className="prices__image" src={leafsSmallImage} alt="leafs_small" />
         </div>
       </div>
     </section>

@@ -1,15 +1,16 @@
 import React from "react";
 import Garden_careImage_4 from "../../assets/images/img_4.png";
+import './Oxygen.css';
 
-const Welcome = () => {
+const Oxygen = () => {
   return (
-    <section className="welcome">
-      <div className="welcome-wrapper flex-row">
-        <img className="welcome-image" src={Garden_careImage_4} alt="leafs" />
-        <div className="content flex-collum">
+    <section className="oxygen">
+      <div className="oxygen__wrapper flex__row">
+        <img className="oxygen__image" src={Garden_careImage_4} alt="leafs" />
+        <div className="oxygen__content flex__column">
           <h1>
             Useful amount of <span className="green-highlight">oxygen</span> in
-            the room{" "}
+            the room
           </h1>
           <p>
             In a small room, 1-3 plants are enough to avoid overloading the
@@ -25,4 +26,4 @@ const Welcome = () => {
   );
 };
 
-export default Welcome;
+export default Oxygen;

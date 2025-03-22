@@ -6,12 +6,12 @@ import About from './components/About/About';
 import Service from './components/Service/Service';
 import Price from './components/Prices/Prices';
 import Clients from './components/Clients/Clients';
+import ClientsApi from './components/ClientsApi/ClientsApi'; 
 import Consultation from './components/Consultation/Consultation';
+import ConsultationForm from './components/ConsultationForm/ConsultationForm';
 import Contacts from './components/Contacts/Contacts';
 import Footer from './components/Footer/Footer';
 
-import ClientsApi from './components/ClientsApi/ClientsApi'; // Импортируйте новую страницу
-import ConsultationForm from './components/ConsultationForm/ConsultationForm'; // Импортируйте новую страницу
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 

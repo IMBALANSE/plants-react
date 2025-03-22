@@ -1,15 +1,21 @@
-.welcome-wrapper {
-  max-width: 1440px;
-  height: 532px;
-  margin: 0 auto;
-  padding: 62px 109px 62px 109px;
+/*В блоке welcome и Consultation не получается резиновость изза того что картинка не уходит вниз по макету, соответственно у меня пока не получается додуматься как этот вопрос решить, сроки поджимают*/
+
+.welcome {
+   justify-content: center;
+}
+
+.welcome__wrapper {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  width: 100%;
+  max-width: 1440px;
+  height: 532px;
+  padding: 62px 109px 62px 109px;
 }
 
-.welcome-image {
-  position: relative; /*подгон подгон подгон подгон подгон подгон Welcome*/
+.welcome__image {
+  position: relative; /*подгон подгон подгон подгон подгон подгон Welcome*/ 
   right: 8px;
   bottom: 1px;
 }
@@ -18,118 +24,70 @@
   color: #499A18;
 }
 
-.content {
+.welcome__content {
+  justify-content: space-between;
   width: 549px;
   height: 340px;
   margin: 0;
-  /*  background-color: rgb(142, 127, 255);*/
-  justify-content: space-between;
 }
 
-h1 {
-  position: relative;
-  top: 2px;
-  margin: 0;
-  font-family: Inter, sans-serif;
-  font-size: 45px;
-  line-height: 50px;
-  color: #717171;
-}
-.content > p {
-  text-align: start;
+
+.welcome__content > p {
   font-family: Inter, sans-serif;
   font-size: 20px;
   line-height: 35px;
   color: #636060;
+  text-align: start;
 }
 
+@media screen and (max-width:1439px) {
 
-
-main { /* !!!!!!!!! почему второй раз повторяется, проверить убрав его с пиксель перфектом*/
-  position: relative;
-  top: -3px;
-}
-
-@media screen and (max-width:1258px) {
-
-  .welcome-wrapper {
+  .welcome__wrapper {
+    align-items: flex-start;
+    width: 100%;
     max-width: 768px;
     height: 420px;
     padding: 40px 50px 70px 50px;
-    align-items: flex-start;
   }
 
-  .content {
+  .welcome__content {
     max-width: 346px;
     height: 310px;
   }
 
-  .content > p {
+  .welcome__content > p {
     font-size: 16px;
     line-height: 25px;
     position: relative;
     left: 4px;
   }
 
-  .welcome-image {
+  .welcome__image {
     right: 0px;
     bottom: 0px;
     max-width: 280px;
     max-height: 254px;
-    order: 1;
-  }
-
-  .welcome-button {
-    position: relative;
-    top: 1px;
+    order: 1; 
   }
 }
 
-@media screen and (max-width:765px) {
-
-  .welcome-wrapper {
-    padding: 25px 24px;
+@media screen and (max-width:767px) {
+ 
+  .welcome__wrapper {
+    justify-content: center;
     height: 300px;
+    padding: 25px 24px;
   }
 
-  .welcome-image {
+  .welcome__image {
     display: none;
   }
 
-  .content {
+  .welcome__content {
     max-width: 346px;
     height: 250px;
   }
-
-  .content > p {
-    left: 0px;
-  }
-
-  .welcome-button {
-    font-size: 10px;
-    width: 100px;
-    height: 34px;
-  }
 }
 
-@media screen and (max-width:765px) {
 
-  .about-wrapper{
-    height: 516px;
-    padding: 30px 25px 28px;
-  }
-
-  .about-content {
-    height: 287px;
-  }
-
-  .about-content > p{
-    font-size: 15px;
-    line-height: 25px;
-  }
-
-  .about-img {
-    width: 150px;
-    height: 154px;
-  }
-}
+/* order: 1; отвечает за порядок расположения элементов внутри контейнера*/

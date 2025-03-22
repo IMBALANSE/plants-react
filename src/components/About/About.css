@@ -1,74 +1,99 @@
 
-.about-wrapper {
+.about__wrapper {
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
   max-width: 1440px;
   height: 666px;
   margin: 0 auto;
   padding: 93px 109px 94px 109px;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
 }
 
-.about-content >h2 {
-  position: relative;
-  top: 3px;
-}
-.about-content {
+.about__content {
+  justify-content: space-between;
   max-width: 605px;
   height: 350px;
   margin: 0;
-  justify-content: space-between;
-   /* justify-content: center;*/
 }
 
-.about-content > p{
+.about__content >h2 {
+  position: relative;
+  top: 3px;
+}
+
+.about__content > p{
+  position: relative;
+  top: 5px;
+  margin: 0;
   font-family: Inter, sans-serif;
   font-size: 20px;
   line-height: 30px;
   color: #636060;
-  margin: 0;
   text-align: start;
-  position: relative;
-  top: 5px;
 }
 
-.about-highlight {
+.about__highlight {
   color: #E06733;
 }
 
-@media screen and (max-width:1258px) {
+@media screen and (max-width:1439px) {
 
-  .about-wrapper{
+  .about__wrapper{
+    flex-direction: column;   /*ПОЧЕМУ не использован flex__column ???????????????????????*/ 
     max-width: 768px;
     height: 783px;
     padding: 40px 50px 95px 50px;
-    flex-direction: column;
   }
 
-  .about-content > h2{
-    top: 0px;
-    margin: 0 auto;
-    max-width: 605px;
-  }
-
-  .about-content > p{
-    height: 208px;
-    top: 0px;
-  }
-
-  .about-header {
-    text-align: center;
-  }
-
-  .about-content {
-    height: 350px;
+  .about__content {
     justify-content: space-between;
-    max-width: 668px;
+    max-width: 668px;    
+    height: 350px;
   }
 
-  .about-img {
+  .about__content > h2{
+    top: 0px;
+    max-width: 605px;
+    margin: 0 auto;
+  }
+
+  .about__content > p{
+    top: 0px;
+    height: 208px;
+  }
+
+  .about__header {
+    text-align: center; 
+  }
+
+  .about__img {
     display: block;
     width: 250px;
     height: 258px;
   }
 }
+
+ @media screen and (max-width:767px) {
+
+  .about__wrapper{
+    max-width: 366px;
+    height: 516px;
+    padding: 30px 25px 28px;
+  }
+
+  .about__content {
+    max-width: 346px;
+    height: 287px;
+  }
+
+  .about__content > p{
+    font-size: 15px;
+    line-height: 25px;
+  }
+
+  .about__img {
+    width: 150px;
+    height: 147px;
+  }
+} 
+

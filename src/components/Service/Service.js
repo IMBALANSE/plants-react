@@ -11,6 +11,7 @@ import Garden_careImage_5 from '../../assets/images/img_5.png';
 import Garden_careImage_5_768 from '../../assets/images/img_5_768.png';
 import Garden_careImage_6 from '../../assets/images/img_6.png';
 import Garden_careImage_6_768 from '../../assets/images/img_6_768.png';
+import './Service.css';
 
 
 /* - useState: Используется для хранения активных фильтров. activeFilters — это массив, который содержит текущие выбранные фильтры.
@@ -22,11 +23,11 @@ const Service = () => {
   const cardsRef = useRef([]);
 
   /*     В первом useEffect (который выполняется только при монтировании компонента) происходит инициализация рефов:
-    - filterBtnsRef.current получает все элементы с классом .service-button (кнопки фильтров).
-    - cardsRef.current получает все элементы с классом .service-item (карточки). */
+    - filterBtnsRef.current получает все элементы с классом .service__button (кнопки фильтров).
+    - cardsRef.current получает все элементы с классом .service__item (карточки). */
   useEffect(() => {
-    filterBtnsRef.current = document.querySelectorAll('.service-button');
-    cardsRef.current = document.querySelectorAll('.service-item');
+    filterBtnsRef.current = document.querySelectorAll('.service__button');
+    cardsRef.current = document.querySelectorAll('.service__item');
 
     const handleFilterClick = (itemBtn) => { //Здесь itemBtn — это параметр функции, который передается при вызове handleFilterClick. Этот параметр представляет собой элемент DOM (кнопку), на который был совершен клик.
       //Описание функции handleFilterClick
@@ -43,7 +44,7 @@ const Service = () => {
             return [...prevFilters, filterDataValue]; //это создание нового массива, который включает все элементы из сущ. массива prevFilters, куда добавляет новый элемент filterDataValue, так же ... это оператор расширения, мы расширяем массив добавив новый элемент filterDataValue
           } else { // Если >2 элементов в массиве prevFilters
             const removedFilter = prevFilters[0]; //выбираем самый первый элемент массмва prevFilters
-            document.querySelector(`.service-button[data-name="${removedFilter}"]`).classList.remove('activeBtn'); //удаляем его класс
+            document.querySelector(`.service__button[data-name="${removedFilter}"]`).classList.remove('activeBtn'); //удаляем его класс
             itemBtn.classList.add('activeBtn'); //Добавим CSS класс у текущей кнопки фильтра
             return [...prevFilters.slice(1), filterDataValue]; // slice(1) — метод массива, который возвращает новый массив, начиная с индекса 1 и до конца исходного массива. То есть, он удаляет первый элемент массива. После выполнения метода добавится новый элемент filterDataValue
           }
@@ -113,75 +114,75 @@ const Service = () => {
 
   return (
     <section className="service" id="service">
-      <div className="service-wrapper">
-        <div className="service_header flex-row">
+      <div className="service__wrapper">
+        <div className="service__header flex__row">
           <h2>Service and our projects</h2>
-          <div className="service-buttons flex-row">
-            <button className="service-button" data-name="garden">Gardens</button>
-            <button className="service-button" data-name="lawn">Lawn</button>
-            <button className="service-button" data-name="planting">Planting</button>
+          <div className="service__buttons flex__row">
+            <button className="service__button" data-name="garden">Gardens</button>
+            <button className="service__button" data-name="lawn">Lawn</button>
+            <button className="service__button" data-name="planting">Planting</button>
           </div>
         </div>
 
-        <div className="service-body flex-row">
-          <div className="service-item flex-collum" data-name="garden">
-            <picture className="service-item__image">
-              <source media="(max-width: 768px)" srcset={Garden_careImage_1_768} />
+        <div className="service__body flex__row">
+          <div className="service__item flex__column" data-name="garden">
+            <picture className="service__item__image">
+              <source media="(max-width: 1440px)" srcset={Garden_careImage_1_768} />
               <img src={Garden_careImage_1} alt="Garden care" />
             </picture>
-            <div className="service-item__discription">
-              <h3 className="service-item__type">Garden care</h3>
-              <p className="service-item__text care">Lorem Ipsum has been the industry</p>
+            <div className="service__item__discription">
+              <h3 className="service__item__type">Garden care</h3>
+              <p className="service__item__text">Lorem Ipsum has been the industry</p>
             </div>
           </div>
-          <div className="service-item flex-collum" data-name="planting">
-            <picture className="service-item__image">
-              <source media="(max-width: 768px)" srcset={Garden_careImage_2_768} />
+          <div className="service__item flex__column" data-name="planting">
+            <picture className="service__item__image">
+              <source media="(max-width: 1440px)" srcset={Garden_careImage_2_768} />
               <img src={Garden_careImage_2} alt="Planting" />
             </picture>
-            <div className="service-item__discription">
-              <h3 className="service-item__type">Planting</h3>
-              <p className="service-item__text">Lorem Ipsum has been the industry</p>
+            <div className="service__item__discription">
+              <h3 className="service__item__type">Planting</h3>
+              <p className="service__item__text">Lorem Ipsum has been the industry</p>
             </div>
           </div>
-          <div className="service-item flex-collum" data-name="lawn">
-            <picture className="service-item__image">
-              <source media="(max-width: 768px)" srcset={Garden_careImage_3_768} />
+          <div className="service__item flex__column" data-name="lawn">
+            <picture className="service__item__image">
+              <source media="(max-width: 1440px)" srcset={Garden_careImage_3_768} />
               <img src={Garden_careImage_3} alt="Lawn care" />
             </picture>
-            <div className="service-item__discription">
-              <h3 className="service-item__type">Lawn care</h3>
-              <p className="service-item__text care">Lorem Ipsum has been the industry</p>
+            <div className="service__item__discription">
+              <h3 className="service__item__type">Lawn care</h3>
+              <p className="service__item__text">Lorem Ipsum has been the industry</p>
             </div>
           </div>
-          <div className="service-item flex-collum" data-name="planting">
-            <picture className="service-item__image">
-              <source media="(max-width: 768px)" srcset={Garden_careImage_4_768} />
+          <div className="service__item flex__column" data-name="planting">
+            <picture className="service__item__image">
+              <source media="(max-width: 1440px)" srcset={Garden_careImage_4_768} />
               <img src={Garden_careImage_4} alt="Planting" />
             </picture>
-            <div className="service-item__discription">
-              <h3 className="service-item__type">Planting</h3>
-              <p className="service-item__text">Lorem Ipsum has been the industry</p>
+            <div className="service__item__discription">
+              <h3 className="service__item__type">Planting</h3>
+              <p className="service__item__text">Lorem Ipsum has been the industry</p>
             </div>
           </div>
-          <div className="service-item flex-collum" data-name="garden">
-            <picture className="service-item__image">
-              <source media="(max-width: 768px)" srcset={Garden_careImage_5_768} />
+          <div className="service__item flex__column" data-name="garden">
+            <picture className="service__item__image">
+              <source media="(max-width: 1440px)" srcset={Garden_careImage_5_768} />
               <img src={Garden_careImage_5} alt="Garden care" />
             </picture>
-            <div className="service-item__discription">
-              <h3 className="service-item__type">Garden care</h3>
-              <p className="service-item__text care">Lorem Ipsum has been the industry</p>
+            <div className="service__item__discription">
+              <h3 className="service__item__type">Garden care</h3>
+              <p className="service__item__text ">Lorem Ipsum has been the industry</p>
             </div>
           </div>
-          <div className="service-item flex-collum" data-name="planting">
-            <picture className="service-item__image">
-              <source media="(max-width: 768px)" srcset={Garden_careImage_6_768} />
+          <div className="service__item flex__column" data-name="planting">
+            <picture className="service__item__image">
+              <source media="(max-width: 1440px)" srcset={Garden_careImage_6_768} />
               <img src={Garden_careImage_6} alt="Planting" />
             </picture>
-            <div className="service-item__discription">
-              <h3 className="service-item__type">Planting</h3>
-              <p className="service-item__text">Lorem Ipsum has been the industry</p>
+            <div className="service__item__discription">
+              <h3 className="service__item__type">Planting</h3>
+              <p className="service__item__text">Lorem Ipsum has been the industry</p>
             </div>
           </div>
         </div>

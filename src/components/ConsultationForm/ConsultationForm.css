@@ -1,49 +1,47 @@
-.consultation-form {
-    max-width: 400px;
-    width: 100%;
-    margin: 20px auto;
-    padding: 20px;
-    /* border: 1px solid #ccc; */
-    border-radius: 10px;
-    background-color: #EDF2EC;
+.consultation__form {
+  width: 100%;
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #EDF2EC;
+}
 
-  }
-  
-  .consultation-form h1 {
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 24px;
-    color: #333;
-  }
-  
-  .consultation-form div {
-    margin-bottom: 15px;
-  }
-  
-  .consultation-form label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-    color: #555;
-  }
-  
-  .consultation-form input {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-  }
-  
-  .consultation-form input:focus {
-    border-color: #E06733;
-    outline: none;
-    box-shadow: 0 0 5px #E06733;
-  }
-  
-  .consultation-button  {
-    display: block; /*чтобы кнопку выравнить по центру связка display: block; и margin: 0 auto; */
-    margin: 0 auto; /*чтобы кнопку выравнить по центру связка display: block; и margin: 0 auto; */
-    background-color: #fff;
-  }
+.consultation__form h1 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+  text-align: center;
+}
 
+.consultation__form div {
+  margin-bottom: 15px;
+}
+
+.consultation__form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #555;
+}
+
+.consultation__form input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.consultation__form input:focus {
+  border-color: #E06733;
+  box-shadow: 0 0 5px #E06733;
+  outline: none;
+}
+
+/*чтобы кнопку выравнить по центру связка display: block; и margin: 0 auto; */
+.consultation__button  {
+  display: block; 
+  margin: 0 auto; 
+  background-color: #fff;
+}

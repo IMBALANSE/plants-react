@@ -1,6 +1,5 @@
 
 import React, {useState} from 'react'; // React — основная библиотека для создания компонентов. 
-
 import './ConsultationForm.css';
 
 //1. Используем хук useState для хранения данных формы. В formData хранятся значения всех полей. Изначально все поля пустые.
@@ -40,7 +39,7 @@ const ConsultationForm = () => {
   };
 
   return (
-    <div className="consultation-form">
+    <div className="consultation__form">
       <h1>Request for consultation</h1>
       <form onSubmit={handleSubmit}>
         <div>
@@ -87,7 +86,7 @@ const ConsultationForm = () => {
             required
           />
         </div>
-        <button className='button consultation-button' type="submit">SEND</button>
+        <button className='button consultation__button' type="submit">SEND</button>
       </form>
     </div>
   );

@@ -12,12 +12,34 @@ body {
   margin: 0px auto;
 }
 
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  font-family: Inika, sans-serif;
+  color: #010201;
+}
+
+/*В большинстве случаев рекомендуется использовать один заголовок H1 на странице. Он должен отражать основную тему или цель страницы. Это помогает поисковым системам лучше понять содержание страницы и улучшает её ранжирование.*/
+h1 {
+  position: relative;
+  top: 2px;
+  margin: 0;
+  font-family: Inter, sans-serif;
+  font-size: 45px;
+  line-height: 50px;
+  color: #717171;
+}
+
+/*убрал жирность букв по умолчанию стояло 700*/
 h2 {
+  margin: 0;
   font-family: Inika, sans-serif;
   font-size: 40px;
   font-weight: 400; 
-  /*убрал жирность букв по умолчанию стояло 700*/
-  margin: 0;
+  line-height: normal;
   color: #499A18;
 }
 
@@ -35,88 +57,108 @@ main {
   background-color: #EDF2EC;
 }
 
-header {
-  position: relative; /*подгон подгон подгон подгон подгон подгон */
-  top: -1px;
-}
-
-.header-wrapper {
-  align-items: baseline; /*выравнивание элементов в хедере по одной линии, 1,5 часа на это убил*/
-  justify-content: space-between;
-  margin: 0 auto;
-  max-width: 1440px;
-  padding: 42px 109px 42px 111px;
-}
-
-.flex-row {
+/*это независимый класс, который просто добавляет стили flex*/
+.flex__row {
   display: flex;
 }
 
-.flex-collum {
+/*это независимый класс, который просто добавляет стили flex с расположением в колонку*/
+.flex__column {
   display: flex;
   flex-direction: column;
 }
 
+.grid {
+  display: grid;
+}
+
+/*box-shadow: 0px 4px 4px rgba(1, 2, 1, 0.25); /*расшифр x, y, размытие, растяжение (размер тени)-тут его нет rgba(r, g, b, a)*/
 .button {
   position: relative;
   top: 2px;
-  font-family: Inter, sans-serif;
-  font-size: 16px;
   width: 158px;
   height: 44px;
   border-radius: 10px;
   border-color: #E06733;
   border-width: 2px;
-  border-style: solid;
-  box-shadow: 0px 4px 4px rgba(1, 2, 1, 0.25); /*расшифр x, y, размытие, растяжение (размер тени)-тут его нет rgba(r, g, b, a)*/
+  border-style: solid; 
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  box-shadow: 0px 4px 4px rgba(1, 2, 1, 0.25);
 }
 
-.button:hover { /*обязательно ставить :hover в притык*/
+/*обязательно ставить :hover в притык*/
+.button:hover { 
   border-color: #E06733;
-  background-color: #E06733;
   color: #EDF2EC;
-  cursor: pointer;
+  background-color: #E06733;
   transition: 0.5s;
+  cursor: pointer;
 }
 
+/************************************ Поджатие футера к низу ******************************************/
+
+/* min-height: 100vh; Минимальная высота контейнера равна высоте viewport */
 .app-container {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Минимальная высота контейнера равна высоте viewport */
+  min-height: 100vh; 
 }
 
 .main-content {
   flex: 1; /* Основной контент занимает все доступное пространство */
 }
 
+@media screen and (max-width:1439px) {
+  h1 {
+    font-size: 35px;
+    line-height: 35px;
+  }
 
-@media screen and (max-width:1258px) {
   h2 {
     font-size: 35px;
-    line-height: 46px;
+    line-height: 32.5px;
   }
 
   main {
-    top: -6px;
-  }
-
-  h1 {
-    font-size: 35px;
+    top: 0px;
   }
 }
 
-@media screen and (max-width:765px) {
+@media screen and (max-width:767px) {
   h1 {
     font-size: 25px;
     line-height: 35px;
   }
 
-h2 {
+  h2 {
     font-size: 25px;
     line-height: 32.5px;
   }
 
   main {
     top: 0px;
+  }
+
+  .button {
+    position: relative;
+    top: 2px;
+    width: 100px;
+    height: 34px;
+    border-radius: 10px;
+    border-color: #E06733;
+    border-width: 2px;
+    border-style: solid;
+    font-family: Inter, sans-serif;
+    font-size: 12px;
+    box-shadow: 0px 4px 4px rgba(1, 2, 1, 0.25); 
+  }
+  
+  .button:hover { /*обязательно ставить :hover в притык*/
+    border-color: #E06733;
+    color: #EDF2EC;
+    background-color: #E06733;
+    transition: 0.5s;
+    cursor: pointer;
   }
 }

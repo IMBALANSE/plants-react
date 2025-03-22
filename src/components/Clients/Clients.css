@@ -1,76 +1,106 @@
+.clients__wrapper {
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1440px;
+  height: 666px;
+  margin: 0 auto;
+  padding: 93px 109px 94px 109px;
+}
 
-.clients-wrapper {
-    max-width: 1440px;
-    height: 666px;
-    margin: 0 auto;
-    padding: 93px 109px 94px 109px;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-  
-  .clients-content >h2 {
-    position: relative;
-    top: 3px;
-  }
-  .clients-content {
-    max-width: 605px;
-    height: 350px;
-    margin: 0;
-    justify-content: space-between;
-     /* justify-content: center;*/
-  }
-  
-  .clients-content > p{
-    font-family: Inter, sans-serif;
-    font-size: 20px;
-    line-height: 30px;
-    color: #636060;
-    margin: 0;
-    text-align: start;
-    position: relative;
-    top: 5px;
-  }
-  
-  .clients-highlight {
-    color: #E06733;
-  }
+.clients__content {
+  justify-content: space-between;
+  max-width: 605px;
+  height: 350px;
+  margin: 0; 
+}
 
+.clients__content >h2 {
+  position: relative;
+  top: 3px;
+}
 
+.clients__content > p{
+  position: relative;
+  top: 5px;
+  margin: 0;
+  font-family: Inter, sans-serif;
+  font-size: 20px;
+  line-height: 30px;
+  color: #636060;
+  text-align: start;    
+}
 
-  @media screen and (max-width:1258px) {
+.clients__highlight {
+  color: #E06733;
+}
 
-  .clients-wrapper{
+@media screen and (max-width:1439px) {
+
+  .clients__wrapper{
+    flex-direction: column; /*ПОЧЕМУ не использован flex__column ???????????????????????*/ 
     max-width: 768px;
     height: 783px;
     padding: 40px 50px 95px 50px;
-    flex-direction: column;
   }
 
-  .clients-content > h2{
-    top: 0px;
-    margin: 0 auto;
-    max-width: 605px;
-  }
-
-  .clients-content > p{
-    height: 208px;
-    top: 0px;
-  }
-
-  .clients-header {
-    text-align: center;
-  }
-
-  .clients-content {
-    height: 350px;
+  .clients__content {
     justify-content: space-between;
     max-width: 668px;
   }
 
-  .clients-img {
+  .clients__content > h2{
+    top: 0px;
+    margin: 0 auto;
+    max-width: 605px;
+  }
+
+  .clients__content > p{
+    height: 128px;
+    top: 0px;
+  }
+
+  .clients__header {
+    text-align: center;
+  }
+
+  .clients__img {
     display: block;
     width: 250px;
-    height: 258px;
+    height: 298px;
   }
 }
+
+@media screen and (max-width:767px) {
+
+  .clients__wrapper{
+    flex-direction: column; /*ПОЧЕМУ не использован flex__column ???????????????????????*/ 
+    max-width: 767px;
+    height: 750px;
+    padding: 40px 25px 55px 25px;
+  }
+
+  .clients__content {
+    justify-content: space-between;
+    max-width: 346px;
+    height: 300px;
+  }
+
+  .clients__content > p{
+    top: 0px;
+    height: 170px;
+    font-size: 15px ;
+    line-height: 25px;
+  }
+
+  .clients__header {
+    text-align: center;
+  }
+
+  .clients__img {
+    display: block;
+    width: 250px;
+    height: 298px;
+  }
+}
+

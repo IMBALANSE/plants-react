@@ -1,202 +1,72 @@
-.contact-us__button {
-  font-weight: 700;
-  background-color: #fff;
-}
-
 .contacts {
   position: relative;
   bottom: 2px;
 }
 
-.contacts-wrapper {
+.contacts__wrapper {
+  justify-content: space-between;
   max-width: 1440px;
   height: 550px;
   margin: 0 auto;
   padding: 53px 109px 0px 109px;
 }
 
-.contacts-wrapper > h2 {
-  margin: 7px 68px 0px 113px;
+.contacts__wrapper > h2 {
   font-family: Inika, sans-serif;
   font-size: 40px;
   font-weight: 700;
 }
 
-.contact_woman {
+.contact__woman {
   display: block;
 }
 
-/*Теперь он лежит в реакте*/
-
-/* .contacts-dropdown {
-  width: 450px;
-  height: 50px;
-  margin-top: 95px;
-  padding: 0px 35px 0px 20px;
-  background-color: #D6E7D2;
-  justify-content: space-between;
-  box-shadow: 0px 4px 4px rgba(1, 2, 1, 0.25);
-  align-items: center;
-} */
-
-/* .contacts-dropdown.active {
-  background-color: #86df72;
-} */
-
 /*Этот hover влияет на изменение цвета внутри contact-dropdown   */
+/*transition: 0.5s; Анимация на любые действия с этим блоком*/
 .contacts-dropdown:hover {
   box-shadow: 2px 2px 15px #4a9a1874;
   transition: 0.5s;
 }
 
-/*Теперь он лежит в реакте*/
-
-/* .contacts-dropdown > p {
-  text-align: start;
-  font-family: Inter, sans-serif;
-  font-size: 20px;
-  font-weight: 400;
-  letter-spacing: 0.05rem;
-} */
-
-.contacts-arrow {
-  background-color: #AEA1A1;
-  padding: 6px 5px ; /*стрелка стрелка стрелка */
+.contacts__arrow {
+  padding: 6px 5px ; 
   border-radius: calc(16px / 2);
+  background-color: #AEA1A1;
 }
 
 /*******************Внутренности кнопки Select ************************/
 
-
-/* .contacts-options {
-  height: 0px;
-  transition: 0.3s ease-out;
-} */
-
-.select-option {
+.select__option {
   font-size: 0px;
   line-height: 0px;
 }
 
-.contacts-selector-button.active { /*изменение кнопки select при нажатии*/
-  background: #C1E698;
+/*изменение кнопки select при нажатии*/
+.contacts-selector-button.active { 
   border: 1px solid #D6E7D2;
+  background: #C1E698;
   box-shadow: none;
 }
 
-/* .contacts-options.visible { сработает при нажатии когда скриптом добавится класс visible
-  height: 234px;
-  background: #DCE9D9;
-  transition: all 0.4s ease-in-out;
-} */
-
-.contacts-options.visible .select-options {
-  height: 100%;
+.contacts__options.visible .select__options {
   justify-content: space-between;
+  height: 100%;
   padding: 27px 35px 31px 35px;
 }
-
-
-/* .contacts-options.visible .select-option {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 40px;
-  letter-spacing: 0.05em;
-  color: #499A18;
-  border-bottom: 1px solid #D9D9D9;
-  transition: all 0.4s ease-in-out;
-} */
-
-/* .contacts-options.visible .select-option:hover {
-  color: #717171;
-  border-color: #717171;
-  cursor: pointer;
-} */
-
-/* .contacts-selector-button.choosen { choosen  - выбранный
-  box-shadow: none;
-  background: #C1E698;
-} */
-
-/*******************************************************************************************/
-/* .city-container */
-/* .city-container {
-  height: 0px;
-  opacity: 0;
-  transition: opacity 0.5s ease-in;
-} */
-
-/* .city-container.visible {
-  display: grid;
-  grid-template-columns: 1fr 1.5fr;
-  width: 100%;
-  height: fit-content;
-  padding: 17px 76px 32px 33px;
-  margin-top: 47px;
-  background: #EDF2EC;
-  border: 1px solid #000000;
-  border-radius: 20px;
-  opacity: 1;
-} */
-
-/* .city-container p {
-  font-size: 0px;
-  line-height: 0px;
-} */
-
-/* .city-container.visible p {
-  font-size: 16px;
-  line-height: 40px;
-  letter-spacing: 0.05em;
-  color: #000000;
-  opacity: 1;
-} */
-
-/* .city-container.visible .grey {
-  color: #717171;
-} */
-
-/* .city-container button {
-  opacity: 0;
-} */
-
-/* .city-container.visible button {
-  grid-column-start: 2;
-  width: 122px;
-  height: 26px;
-  font-weight: 700;
-  font-size: 10px;
-  line-height: 13px;
-  margin-top: 20px;
-  color: #717171;
-  opacity: 1;
-} */
-/* .city-container.visible button:hover {
-cursor: pointer;
-background-color: #E06733;
-color: #ffffff;
-} */
-
-/***************** Медиазапросы ***************************/
-
-
 
 /* REACT REACT REACT REACT REACT REACT REACT REACT REACT REACT */
 
 /* Стили для выпадающего списка */
 .contacts-dropdown {
+  justify-content: space-between;
+  align-items: center;
   width: 450px;
   height: 50px;
   margin-top: 95px;
   padding: 0px 35px 0px 20px;
   background-color: #D6E7D2;
-  justify-content: space-between;
   box-shadow: 0px 4px 4px rgba(1, 2, 1, 0.25);
-  align-items: center;
   cursor: pointer;
-  
 }
 
 .contacts-dropdown.open {
@@ -204,25 +74,37 @@ color: #ffffff;
 }
 
 .contacts-dropdown > p {
-  text-align: start;
   font-family: Inter, sans-serif;
   font-size: 20px;
   font-weight: 400;
   letter-spacing: 0.05rem;
+  color: #636060;
+  text-align: start;
 }
 
-.contacts-options {
-  height: 234px;
-  background: #DCE9D9;
+@keyframes fadeInContacts {
+  from {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.contacts__options {
   width: 100%;
+  height: 234px;
   margin: 16px 0;
   border: 1px solid #ddd;
-  /* border-radius: 5px; */
+  background: #DCE9D9;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  
 }
 
-.select-option {
+/*анимация через animation, через transition мучался долго не получалось - забил*/
+.select__option {
+  border-bottom: 1px solid #D9D9D9;
   font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
@@ -230,103 +112,83 @@ color: #ffffff;
   line-height: 40px;
   letter-spacing: 0.05em;
   color: #499A18;
-  border-bottom: 1px solid #D9D9D9;
+  animation: fadeInContacts 1s; 
   cursor: pointer;
-  animation: fadeIn 1s; /*анимация через animation, через transition мучался долго не получалось - забил*/
 }
 
-.select-option:hover {
+.select__option:hover {
   font-size: 1.1rem;
   font-weight: 700; 
   color: #E06733;
   transition: 0.7s;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.city-container {
+/*анимация через animation, через transition мучался долго не получалось - временно забил*/
+.city__container {
   display: grid;
   grid-template-columns: 1fr 1.5fr;
-  width: 450px;
-  height: fit-content;
-  padding: 17px 55px 32px 55px;
+  width: 448px;
+  height: 214px;
   margin-top: 47px;
-  background: #EDF2EC;
+  padding: 17px 35px 35px 35px;
   border: 1px solid #000000;
   border-radius: 20px;
-  opacity: 1;
-  animation: fadeIn 1s; /*анимация через animation, через transition мучался долго не получалось - временно забил*/
-}
-
-.city-container {
+  background: #EDF2EC;
   font-size: 16px;
   line-height: 40px;
   letter-spacing: 0.05em;
   color: #000000;
+  animation: fadeInContacts 1s; 
   opacity: 1;
 }
 
-
-
-
-.city-container p {
-  margin: 0.5rem 0;
-  font-size: 1rem;
-  color: #333;
+.city__container p {
+  margin: o;
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  color: #000000;
   text-align: start;
 }
-
-.city-container .grey {
+ 
+.city__container .grey {
   color: #666;
 }
 
 /* Стили для кнопки звонка */
+/* grid-column: 1 / -1; Объединяет две колонки */
 .button1 {
-  grid-column: 1 / -1; /* Объединяет две колонки */
-  font-family: Inter, sans-serif;
-  font-size: 16px;
+  grid-column: 1 / -1; 
+  width: 122px;
+  height: 26px;
   margin: 0 auto;
-  width: 158px;
-  height: 44px;
-  border-radius: 10px;
+  border-radius: 5px;
   border-color: #E06733;
-  border-width: 2px;
+  border-width: 1px;
   border-style: solid;
-  box-shadow: 0px 4px 4px rgba(1, 2, 1, 0.25); /*расшифр x, y, размытие, растяжение (размер тени)-тут его нет rgba(r, g, b, a)*/
+  font-family: Inter, sans-serif;
+  font-size: 12px;
+}
+
+.button1:last-child {
+  margin-top: 20px;
 }
 
 .button1:hover {
   border-color: #4e4c4c;
-  background-color: #1cb116;
   color: #EDF2EC;
-  cursor: pointer;
+  background-color: #1cb116;
   transition: 0.3s;
+  cursor: pointer;
 }
 
-
-
-
-
-
-
-
-/* @media screen and (max-width:1258px) {
+@media screen and (max-width:1439px) {
 
   .contacts {
     bottom: 0px;
   }
 
-  .contacts-wrapper {
-    flex-direction: column;
+  .contacts__wrapper {
+    flex-direction: column; 
     justify-content: space-between;
     align-items: center;
     height: 739px;
@@ -334,54 +196,102 @@ color: #ffffff;
     padding: 40px 109px 0px 109px;
   }
 
-  .contact_woman {
-    order: 3;
-    width: 200px;
-    height: 248px;
-    margin: 242px 1px 0px 21px;
+  .contacts__wrapper > h2 {
+    margin: 0px 113px ;
   }
 
-  .contacts-wrapper > h2 {
-    margin: 3px 113px 0px 113px;
+  .contact__container-select{
+    height: 316px;
   }
-}
-
-@media screen and (max-width:632px) {
 
   .contacts-dropdown {
-    width: 250px;
+    margin-top: 45px;
   }
 
-  .contacts-wrapper {
-    flex-wrap: nowrap;
+  .contacts-dropdown.open {
+    margin-top: 0px;
+  }
+
+  .contact__woman {
+    width: 200px;
+    height: 248px;
+    order: 3;
   }
 }
 
-@media screen and (max-width:765px) {
+@media screen and (max-width:767px) {
 
-  .contacts-wrapper {
+  .contacts__wrapper {
+    align-items: center;
     height: 445px;
     padding: 25px 42px 0px 42px;
-    align-items: center;
   }
 
-  .contacts-wrapper > h2{
-    font-size: 25px;
+  .contacts__wrapper > h2{
     width: 192px;
-    text-align: center;
     margin: 0px 117px 0px 113px;
+    font-size: 25px;
+    text-align: center;
+  }
+
+  .contact__container-select{
+    height: 180px;
+  }
+
+  .contact__container-select.open{
+    height: 350px;
+  }
+
+  .city__container {
+    grid-template-columns: 0.8fr 1.5fr;
+    width: 282px;
+    height: 212px;    
+    margin: 0 auto;
+    margin-top: 47px;
+    padding: 23px 36px;
+  }
+
+  .city__container p {
+    height: 16px;
+    font-size: 14px;
+    color: #333;
+    line-height: 20px ;
+    text-align: start;
   }
 
   .contacts-dropdown {
     width: 300px;
-    height: 50px;
-    margin-top: 82px;
+    margin-top: 50px;
     padding: 20px 20px 20px 20px;
   }
 
-  .contact_woman {
+  .contacts-dropdown.open {
+    margin-top: 0px;
+  }
+
+  .contact__woman {
     width: 100px;
     height: 124px;
-    margin: 132px 24px 0px 21px;
   }
-} */
+
+  .contact__woman.open {
+    display: none;
+  }
+
+  .button1{
+    width: 122px;
+    height: 26px;
+    margin: 0 auto;    
+    border-radius: 5px;
+    border-color: #E06733;
+    border-width: 1px;
+    border-style: solid;
+    font-size: 12px;
+  }
+
+  .button1:last-child {
+    margin-top: 40px;
+  }
+}
+ 
+

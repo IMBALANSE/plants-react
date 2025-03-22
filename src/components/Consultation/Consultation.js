@@ -11,10 +11,10 @@ const Consultation = () => {
   };
 
   return (
-    <section className="consultation">
-      <div className="consultation-wrapper flex-row">
-        <img className="consultation-image" src={leafsImage} alt="leafs" />
-        <div className="content flex-collum">
+    <section className="consultation ">
+      <div className="consultation__wrapper flex__row">
+        <img className="consultation__image" src={leafsImage} alt="leafs" />
+        <div className="consultation__content flex__column">
           <h1>We can advise <span className="green-highlight"> answer your questions</span> and help start</h1>
           <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
           <button className="button" onClick={handleLearnMoreClick}>CONSULTATION</button>
