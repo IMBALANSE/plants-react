@@ -1,0 +1,7 @@
+.DateTimeDisplay__wrapper {
+  justify-content: center;
+  position: absolute;
+  width: 100%;  
+  font-family: Inter, sans-serif;
+  color: #636060;
+}

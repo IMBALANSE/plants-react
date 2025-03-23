@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom'; // Импортируем Link для возможности перехода по страницам 
 import logo from '../../assets/images/icons/logo_plant.svg'; 
-
+import DateTimeDisplay from '../DateTimeDisplay/DateTimeDisplay'
 import './Header.css';
 
 const Header = () => {
@@ -17,7 +17,7 @@ const Header = () => {
 
   return ( 
     <header className={`header ${isOpen ? "open" : ""}`}  id="home">
-
+      <DateTimeDisplay />
       <div className="header__wrapper flex__row">
         <div className="flex__row">
           <a className="" href="/">
