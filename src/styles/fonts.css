@@ -1,0 +1,23 @@
+@font-face {
+  font-family: 'Inika';
+  src: url('../fonts/Inika-Regular.ttf') format('truetype');
+  font-weight: 400;  /* Обычное начертание (normal) */
+  font-style: normal;
+  font-display: swap; /* Чтобы текст не "моргал" при загрузке */
+}
+
+@font-face {
+  font-family: 'Inika';
+  src: url('../fonts/Inika-Bold.ttf') format('truetype');
+  font-weight: 700;  /* Обычное начертание (normal) */
+  font-style: normal;
+  font-display: swap; /* Чтобы текст не "моргал" при загрузке */
+}
+
+ /* font-display: swap; Чтобы текст не "моргал" при загрузке */
+@font-face {
+  font-family: 'Inter';
+  src: url('../fonts/Inter-VariableFont_opsz,wght.ttf') format('truetype-variations');
+  font-weight: 100 900;  /* Указываем диапазон весов для переменного шрифта */
+}
+
