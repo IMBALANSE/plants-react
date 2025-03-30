@@ -5,9 +5,11 @@ Plants — это веб-приложение для любителей дома
 ## Содержание
 - [Технологии](#технологии)
 - [Установка и запуск](#установка-и-запуск)
+- [Лицензия](#лицензия)
 - [Deploy](#deploy)
 - [To do](#to-do)
 - [Команда](#команда)
+- [Контакты](#контакты)
 
 ## Технологии
 
@@ -19,8 +21,8 @@ Plants — это веб-приложение для любителей дома
   - Маршрутизация (React Router DOM)
 - **JavaScript**
   - Интеграция с JSX
-  - Работа с `Date`
-  - Fetch API / Axios (получение и отправка данных)
+  - Работа с `Date объектами`
+  - Fetch API (получение и отправка данных)
   - Валидация и обработка форм
 - **HTML5** (семантическая верстка)
 - **CSS**
@@ -35,7 +37,7 @@ Plants — это веб-приложение для любителей дома
 
 1. **Клонирование репозитория**
    ```bash
-   git clone https://github.com/ваш-username/plants.git
+   git clone https://github.com/IMBALANSE/plants-react.git
    cd plants
 2. **Установка зависимостей** 
    ```bash
@@ -49,6 +51,8 @@ Plants — это веб-приложение для любителей дома
    ```bash
    npm run build
    ```
+## Лицензия
+MIT
 
 ## Deploy
 Приложение развернуто на Github 
@@ -59,4 +63,8 @@ Plants — это веб-приложение для любителей дома
 -  Добавить тесты (Jest + React Testing Library)
 
 ## Команда
-•  Razil Valiev — Frontend Developer
+-  Razil Valiev — Frontend Developer
+
+## Контакты
+-  Email: inlinz18@yandex.ru
+-  Telegram: @lambarzol
