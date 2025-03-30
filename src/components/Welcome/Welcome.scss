@@ -1,4 +1,5 @@
-/*В блоке welcome и Consultation не получается резиновость изза того что картинка не уходит вниз по макету, соответственно у меня пока не получается додуматься как этот вопрос решить, сроки поджимают*/
+//В блоке welcome и Consultation не получается резиновость изза того что картинка не уходит вниз по макету, соответственно у меня пока не получается додуматься как этот вопрос решить, сроки поджимают
+@import "../../styles/variable.scss";
 
 .welcome {
    justify-content: center;
@@ -20,24 +21,21 @@
   bottom: 1px;
 }
 
-.green-highlight{
-  color: #499A18;
-}
-
 .welcome__content {
   justify-content: space-between;
   width: 549px;
   height: 340px;
   margin: 0;
-}
-
-
-.welcome__content > p {
-  font-family: Inter, sans-serif;
-  font-size: 20px;
-  line-height: 35px;
-  color: #636060;
-  text-align: start;
+  span {
+    color: $h1-highlight-color;
+  }
+  p {
+    font-family: Inter, sans-serif;
+    font-size: 20px;
+    line-height: 35px;
+    color: #636060;
+    text-align: start;
+  }
 }
 
 @media screen and (max-width:1439px) {
@@ -53,15 +51,15 @@
   .welcome__content {
     max-width: 346px;
     height: 310px;
+    p {
+      font-size: 16px;
+      line-height: 25px;
+      position: relative;
+      left: 4px;
+    }
   }
 
-  .welcome__content > p {
-    font-size: 16px;
-    line-height: 25px;
-    position: relative;
-    left: 4px;
-  }
-
+  // order: 1; отвечает за порядок расположения элементов внутри контейнера
   .welcome__image {
     right: 0px;
     bottom: 0px;
@@ -90,4 +88,3 @@
 }
 
 
-/* order: 1; отвечает за порядок расположения элементов внутри контейнера*/

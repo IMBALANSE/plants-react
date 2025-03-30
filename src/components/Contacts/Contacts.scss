@@ -9,54 +9,27 @@
   height: 550px;
   margin: 0 auto;
   padding: 53px 109px 0px 109px;
-}
-
-.contacts__wrapper > h2 {
-  font-family: Inika, sans-serif;
-  font-size: 40px;
-  font-weight: 700;
+  h2 {
+    font-family: Inika, sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+  }
 }
 
 .contact__woman {
   display: block;
 }
 
-/*Этот hover влияет на изменение цвета внутри contact-dropdown   */
-/*transition: 0.5s; Анимация на любые действия с этим блоком*/
-.contacts-dropdown:hover {
-  box-shadow: 2px 2px 15px #4a9a1874;
-  transition: 0.5s;
-}
-
 .contacts__arrow {
   padding: 6px 5px ; 
-  border-radius: calc(16px / 2);
+  border-radius: 10px;
   background-color: #AEA1A1;
 }
 
-/*******************Внутренности кнопки Select ************************/
+// ********* Стили для выпадающего списка ******
 
-.select__option {
-  font-size: 0px;
-  line-height: 0px;
-}
-
-/*изменение кнопки select при нажатии*/
-.contacts-selector-button.active { 
-  border: 1px solid #D6E7D2;
-  background: #C1E698;
-  box-shadow: none;
-}
-
-.contacts__options.visible .select__options {
-  justify-content: space-between;
-  height: 100%;
-  padding: 27px 35px 31px 35px;
-}
-
-/* REACT REACT REACT REACT REACT REACT REACT REACT REACT REACT */
-
-/* Стили для выпадающего списка */
+//Этот hover влияет на изменение цвета внутри contact-dropdown   
+//transition: 0.5s; Анимация на любые действия с этим блоком
 .contacts-dropdown {
   justify-content: space-between;
   align-items: center;
@@ -67,21 +40,25 @@
   background-color: #D6E7D2;
   box-shadow: 0px 4px 4px rgba(1, 2, 1, 0.25);
   cursor: pointer;
+  p {
+    font-family: Inter, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 0.05rem;
+    color: #636060;
+    text-align: start;
+  }
+  &:hover {
+    box-shadow: 2px 2px 15px #4a9a1874;
+    transition: 0.5s;
+  }
 }
 
 .contacts-dropdown.open {
   background-color: #86df72;
 }
 
-.contacts-dropdown > p {
-  font-family: Inter, sans-serif;
-  font-size: 20px;
-  font-weight: 400;
-  letter-spacing: 0.05rem;
-  color: #636060;
-  text-align: start;
-}
-
+//анимация через animation, через transition мучался долго не получалось - изучить позже
 @keyframes fadeInContacts {
   from {
     transform: translateY(-10px);
@@ -102,7 +79,7 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/*анимация через animation, через transition мучался долго не получалось - забил*/
+
 .select__option {
   border-bottom: 1px solid #D9D9D9;
   font-family: 'Inter';
@@ -114,16 +91,15 @@
   color: #499A18;
   animation: fadeInContacts 1s; 
   cursor: pointer;
+  &:hover {
+    font-size: 1.1rem;
+    font-weight: 700; 
+    color: #E06733;
+    transition: 0.7s;
+  }
 }
 
-.select__option:hover {
-  font-size: 1.1rem;
-  font-weight: 700; 
-  color: #E06733;
-  transition: 0.7s;
-}
-
-/*анимация через animation, через transition мучался долго не получалось - временно забил*/
+//анимация через animation, через transition мучался долго не получалось - изучить позже
 .city__container {
   display: grid;
   grid-template-columns: 1fr 1.5fr;
@@ -140,22 +116,20 @@
   color: #000000;
   animation: fadeInContacts 1s; 
   opacity: 1;
+  p {
+    margin: o;
+    font-family: Inter, sans-serif;
+    font-size: 16px;
+    color: #000000;
+    text-align: start;
+  }
+  .grey {
+    color: #666;
+  }
 }
 
-.city__container p {
-  margin: o;
-  font-family: Inter, sans-serif;
-  font-size: 16px;
-  color: #000000;
-  text-align: start;
-}
- 
-.city__container .grey {
-  color: #666;
-}
-
-/* Стили для кнопки звонка */
-/* grid-column: 1 / -1; Объединяет две колонки */
+// Стили для кнопки звонка 
+// grid-column: 1 / -1; Объединяет две колонки 
 .button1 {
   grid-column: 1 / -1; 
   width: 122px;
@@ -167,18 +141,16 @@
   border-style: solid;
   font-family: Inter, sans-serif;
   font-size: 12px;
-}
-
-.button1:last-child {
-  margin-top: 20px;
-}
-
-.button1:hover {
-  border-color: #4e4c4c;
-  color: #EDF2EC;
-  background-color: #1cb116;
-  transition: 0.3s;
-  cursor: pointer;
+  &:last-child {
+    margin-top: 20px;
+  }
+  &:hover {
+    border-color: #4e4c4c;
+    color: #EDF2EC;
+    background-color: #1cb116;
+    transition: 0.3s;
+    cursor: pointer;
+  }
 }
 
 @media screen and (max-width:1439px) {
@@ -194,10 +166,9 @@
     height: 739px;
     margin: 0 auto;
     padding: 40px 109px 0px 109px;
-  }
-
-  .contacts__wrapper > h2 {
-    margin: 0px 113px ;
+    h2 {
+      margin: 0px 113px ;
+    }
   }
 
   .contact__container-select{
@@ -225,13 +196,12 @@
     align-items: center;
     height: 445px;
     padding: 25px 42px 0px 42px;
-  }
-
-  .contacts__wrapper > h2{
-    width: 192px;
-    margin: 0px 117px 0px 113px;
-    font-size: 25px;
-    text-align: center;
+    h2{
+      width: 192px;
+      margin: 0px 117px 0px 113px;
+      font-size: 25px;
+      text-align: center;
+    }
   }
 
   .contact__container-select{
@@ -249,14 +219,13 @@
     margin: 0 auto;
     margin-top: 47px;
     padding: 23px 36px;
-  }
-
-  .city__container p {
-    height: 16px;
-    font-size: 14px;
-    color: #333;
-    line-height: 20px ;
-    text-align: start;
+    p {
+      height: 16px;
+      font-size: 14px;
+      color: #333;
+      line-height: 20px ;
+      text-align: start;
+    }
   }
 
   .contacts-dropdown {
@@ -287,11 +256,9 @@
     border-width: 1px;
     border-style: solid;
     font-size: 12px;
-  }
-
-  .button1:last-child {
-    margin-top: 40px;
+    &:last-child {
+      margin-top: 40px;
+    }
   }
 }
  
-

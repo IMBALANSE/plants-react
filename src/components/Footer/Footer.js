@@ -3,7 +3,7 @@ import instagramSvg from '../../assets/images/icons/instagram.svg';
 import facebookSvg from '../../assets/images/icons/facebook.svg'; 
 import twitterSvg from '../../assets/images/icons/twitter.svg'; 
 import pinterestSvg from '../../assets/images/icons/pinterest.svg'; 
-import './Footer.css';
+import './Footer.scss';
 
 const Footer = () => {
   return (

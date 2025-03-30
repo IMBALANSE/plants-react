@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./ClientsApi.css"; // Импортируем файл стилей
+import "./ClientsApi.scss"; // Импортируем файл стилей
 
 const ClientsApi = () => {
   const [clients, setClients] = useState([]);
@@ -20,11 +20,12 @@ const ClientsApi = () => {
 
     fetchClients();
   }, []);
-
+  
+// Условный рендеринг: если isLoading равно true, показываем "Loading..."
   return (
     <div className="clients-container flex__column">
       <h1>Our clients</h1>
-      {isLoading ? ( // Условный рендеринг: если isLoading равно true, показываем "Loading..."
+      {isLoading ? ( 
         <div className="loading">Loading...</div>
       ) : (
         <div className="clients__list">

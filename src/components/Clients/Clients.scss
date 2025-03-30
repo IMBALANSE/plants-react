@@ -1,6 +1,8 @@
+@import "../../styles/variable.scss";
+
 .clients__wrapper {
   justify-content: space-between;
-  align-items: center;
+  align-items: center; 
   flex-wrap: wrap;
   max-width: 1440px;
   height: 666px;
@@ -13,32 +15,29 @@
   max-width: 605px;
   height: 350px;
   margin: 0; 
-}
-
-.clients__content >h2 {
-  position: relative;
-  top: 3px;
-}
-
-.clients__content > p{
-  position: relative;
-  top: 5px;
-  margin: 0;
-  font-family: Inter, sans-serif;
-  font-size: 20px;
-  line-height: 30px;
-  color: #636060;
-  text-align: start;    
-}
-
-.clients__highlight {
-  color: #E06733;
+  h2 {
+    position: relative;
+    top: 3px;
+  }
+  p{
+    position: relative;
+    top: 5px;
+    margin: 0;
+    font-family: Inter, sans-serif;
+    font-size: 20px;
+    line-height: 30px;
+    color: #636060;
+    text-align: start;    
+  }
+  span {
+    color: $h2-highlight-color;
+  }
 }
 
 @media screen and (max-width:1439px) {
 
   .clients__wrapper{
-    flex-direction: column; /*ПОЧЕМУ не использован flex__column ???????????????????????*/ 
+    flex-direction: column; 
     max-width: 768px;
     height: 783px;
     padding: 40px 50px 95px 50px;
@@ -47,17 +46,15 @@
   .clients__content {
     justify-content: space-between;
     max-width: 668px;
-  }
-
-  .clients__content > h2{
-    top: 0px;
-    margin: 0 auto;
-    max-width: 605px;
-  }
-
-  .clients__content > p{
-    height: 128px;
-    top: 0px;
+    h2{
+      top: 0px;
+      margin: 0 auto;
+      max-width: 605px;
+    }
+    p{
+      height: 128px;
+      top: 0px;
+    }
   }
 
   .clients__header {
@@ -74,7 +71,7 @@
 @media screen and (max-width:767px) {
 
   .clients__wrapper{
-    flex-direction: column; /*ПОЧЕМУ не использован flex__column ???????????????????????*/ 
+    flex-direction: column; 
     max-width: 767px;
     height: 750px;
     padding: 40px 25px 55px 25px;
@@ -84,13 +81,12 @@
     justify-content: space-between;
     max-width: 346px;
     height: 300px;
-  }
-
-  .clients__content > p{
-    top: 0px;
-    height: 170px;
-    font-size: 15px ;
-    line-height: 25px;
+    p{
+      top: 0px;
+      height: 170px;
+      font-size: 15px ;
+      line-height: 25px;
+    }
   }
 
   .clients__header {

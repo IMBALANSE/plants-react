@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import leafsSmallImage from '../../assets/images/leafs_small.png';
 import arrowSvg from '../../assets/images/icons/arrow.svg';
-import './Prices.css';
+import './Prices.scss';
 
 const Price = () => {
   const [activeIndex, setActiveIndex] = useState(null); //useState для управл. состоянием активного элем. аккордеона. • activeIndex — это переменная состояния, которая хранит индекс текущего активного элемента аккордеона. Если ни один элемент не активен, значение будет null
 
-  const toggleAccordion = (index) => { //•  Эта функция вызывается при клике на заголовок аккордеона.
-    setActiveIndex(activeIndex === index ? null : index); //• Если текущий активный элемент (activeIndex) совпадает с индексом элемента, на который кликнули, то аккордеон закрывается (устанавливается null). В противном случае открывается новый элемент (устанавливается новый индекс).
+  const toggleAccordion = (index) => { //  Эта функция вызывается при клике на заголовок аккордеона.
+    setActiveIndex(activeIndex === index ? null : index); //• Если текущий активный элемент (activeIndex) совпадает с индексом элемента, на который кликнули, то аккордеон закрывается (устанавливается null). В противном случае открывается новый элемент (устанавливается новый индекс в activeIndex).
   };
 
   //• Массив accordionData содержит данные для каждого элемента аккордеона: заголовок (title), цену (price) и описание (description).
@@ -30,8 +30,8 @@ const Price = () => {
           <h2>Prices</h2>
           <div className="prices__list flex__column">
             {accordionData.map((item, index) => (
-              <div key={index} className={`accordion__item ${activeIndex === index ? "active" : ""}`}> {/* Активный элемент аккордеона получает класс active, который может использоваться для стилизации. Т.е. если активный элем совпадает с индексом, то присовим этому элем. класс active */}
-                <div className={`accordion__header flex__row ${activeIndex === index ? "active" : ""} `}  onClick={() => toggleAccordion(index)}>  {/*Заголовок каждого элемента аккордеона (accordion__header) содержит обработчик клика onClick, который вызывает функцию toggleAccordion с индексом текущего элемента.  */}
+              <div key={index} className={`accordion__item ${activeIndex === index ? "active" : ""}`}> {/*start если активный элем совпадает с индексом, то присовим этому элем. класс active */}
+                <div className={`accordion__header flex__row ${activeIndex === index ? "active" : ""} `}  onClick={() => toggleAccordion(index)}>  {/*28,03,25 Все начинается с функции toggleAccordion, он меняет состояние activeIndex, Заголовок каждого элемента аккордеона (accordion__header) содержит обработчик клика onClick, который вызывает функцию toggleAccordion с индексом текущего элемента.  */}
                   <p style={{ color: activeIndex === index ? "#E06733" : "" }}>{item.title}</p>
                   <img className="icon__arrow" src={arrowSvg} alt="arrow" style={{ transform: activeIndex === index ? "rotate(180deg)" : "rotate(0deg)" }} /> {/*Иконка стрелки (icon__arrow) поворачивается на 180 градусов, когда элемент аккордеона раскрыт */}
                 </div>
@@ -50,7 +50,7 @@ const Price = () => {
           </div>
         </div>
         <div className="prices__call-us flex__column">
-          <p>Our best <span className="green-highlight">gardeners</span> are ready to help you</p>
+          <p>Our best <span>gardeners</span> are ready to help you</p>
           <a href="#contacts"><button className="button" >CONTACT US</button></a>
           <img className="prices__image" src={leafsSmallImage} alt="leafs_small" />
         </div>
@@ -63,7 +63,7 @@ const Price = () => {
 export default Price
 
 
-// Метод map Он вызывает функцию для каждого элемента массива и возвращает массив результатов выполнения этой функции.
+// Метод map Он вызывает функцию для каждого элемента массива и возвращает массив результатов выполнения этой функции. (как for of или for each для ванильного JS)
 // Метод map В REACT вызывает функцию для каждого элемента массива и возвращает массив результатов выполнения этой функции.
 
 /* УЛУЧШЕНИЯ 

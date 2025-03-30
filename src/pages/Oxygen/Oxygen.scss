@@ -1,3 +1,5 @@
+@import "../../styles/variable.scss";
+
 .oxygen__wrapper {
   justify-content: space-between;
   align-items: center;
@@ -13,27 +15,16 @@
   width: 549px;
   height: 450px;
   margin: 0;
-}
-
-.green-highlight{
-  color: #499A18;
-}
-
-.oxygen__wrapper h1 {
-  position: relative;
-  top: 2px;
-  margin: 0;
-  font-family: Inter, sans-serif;
-  line-height: 50px;
-  color: #717171;
-}
-
-.oxygen__content > p {
-  font-family: Inter, sans-serif;
-  font-size: 20px;
-  line-height: 35px;
-  color: #636060;
-  text-align: start;
+  span {
+    color: $h1-highlight-color;
+  }
+  p {
+    font-family: Inter, sans-serif;
+    font-size: 20px;
+    line-height: 35px;
+    color: #636060;
+    text-align: start;
+  }
 }
 
 @media screen and (max-width:1439px) {
@@ -43,22 +34,20 @@
     max-width: 768px;
     height: 520px;
     padding: 40px 50px 70px 50px;
+    h1 {
+      line-height: 35px;
+    }
   }
 
   .oxygen__content {
     max-width: 346px;
     height: 400px;
-  }
-
-  .oxygen__wrapper h1 {
-    line-height: 35px;
-  }
-
-  .oxygen__content > p {
-    font-size: 16px;
-    line-height: 25px;
-    position: relative;
-    left: 4px;
+    p {
+      font-size: 16px;
+      line-height: 25px;
+      position: relative;
+      left: 4px;
+    }
   }
 
   .oxygen__image {
@@ -69,7 +58,7 @@
 }
 
 @media screen and (max-width:767px) {
- 
+
   .oxygen__wrapper {
     flex-direction: column;
     height: 670px;

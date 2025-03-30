@@ -1,6 +1,6 @@
 import React from "react";
 import Garden_careImage_4 from "../../assets/images/img_4.png";
-import './Oxygen.css';
+import './Oxygen.scss';
 
 const Oxygen = () => {
   return (

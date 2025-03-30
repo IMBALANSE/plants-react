@@ -1,3 +1,4 @@
+@import "../../styles/variable.scss";
 
 .about__wrapper {
   justify-content: space-between;
@@ -14,32 +15,29 @@
   max-width: 605px;
   height: 350px;
   margin: 0;
-}
-
-.about__content >h2 {
-  position: relative;
-  top: 3px;
-}
-
-.about__content > p{
-  position: relative;
-  top: 5px;
-  margin: 0;
-  font-family: Inter, sans-serif;
-  font-size: 20px;
-  line-height: 30px;
-  color: #636060;
-  text-align: start;
-}
-
-.about__highlight {
-  color: #E06733;
+  h2 {
+    position: relative;
+    top: 3px;
+  }
+  p{
+    position: relative;
+    top: 5px;
+    margin: 0;
+    font-family: Inter, sans-serif;
+    font-size: 20px;
+    line-height: 30px;
+    color: #636060;
+    text-align: start;
+  }
+  span {
+    color: $h2-highlight-color;
+  }
 }
 
 @media screen and (max-width:1439px) {
 
   .about__wrapper{
-    flex-direction: column;   /*ПОЧЕМУ не использован flex__column ???????????????????????*/ 
+    flex-direction: column;   
     max-width: 768px;
     height: 783px;
     padding: 40px 50px 95px 50px;
@@ -49,19 +47,16 @@
     justify-content: space-between;
     max-width: 668px;    
     height: 350px;
+    h2{
+      top: 0px;
+      max-width: 605px;
+      margin: 0 auto;
+    }
+    p{
+      top: 0px;
+      height: 208px;
+    }
   }
-
-  .about__content > h2{
-    top: 0px;
-    max-width: 605px;
-    margin: 0 auto;
-  }
-
-  .about__content > p{
-    top: 0px;
-    height: 208px;
-  }
-
   .about__header {
     text-align: center; 
   }
@@ -84,11 +79,10 @@
   .about__content {
     max-width: 346px;
     height: 287px;
-  }
-
-  .about__content > p{
-    font-size: 15px;
-    line-height: 25px;
+    p{
+      font-size: 15px;
+      line-height: 25px;
+    }
   }
 
   .about__img {

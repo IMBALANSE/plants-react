@@ -1,4 +1,3 @@
-
 .service__wrapper {
   max-width: 1440px;
   height: 1300px;
@@ -12,12 +11,11 @@
   max-width: 1007px;
   height: 94px;
   margin-bottom: 90px;
-}
-
-.service__header > h2 {
-  width: 306px;
-  height: 94px;
-  line-height: normal;
+  h2 {
+    width: 306px;
+    height: 94px;
+    line-height: normal;
+  }
 }
 
 .service__buttons {
@@ -41,12 +39,11 @@
   font-family: Inika, sans-serif;
   font-size: 20px;
   color: #E06733;
-}
-
-.service__button:hover {
-  transition: 0.5s;
-  text-shadow: 0px 1px 5px #E06733; 
-  cursor: pointer;
+  &:hover {
+    transition: 0.5s;
+    text-shadow: 0px 1px 5px #E06733; 
+    cursor: pointer;
+  }
 }
 
 .service__button-active {
@@ -66,44 +63,37 @@
   margin-bottom: 55px;
 }
 
-.service__item__image:hover {
-  border-radius: 20px 20px 0px 0px;
-  transition: 0.7s;
-  box-shadow: 0px 4px 4px rgba(1, 2, 1, 0.25);
+//display: block; без него идет отступ по умолчанию для строчных элементов
+.service__item__image {
+  &:hover {
+    border-radius: 20px 20px 0px 0px;
+    transition: 0.7s;
+    box-shadow: 0px 4px 4px rgba(1, 2, 1, 0.25);
+  }
+  img {
+    display: block; 
+  }
 }
 
-/*display: block; без него идет отступ по умолчанию для строчных элементов*/
-.service__item__image>img {
-  display: block; 
-}
-
-/* border: 1px solid #E3E1D5; забыл solid, поэтому не видел границы */
+// border: 1px solid #E3E1D5; забыл solid, поэтому не видел границы 
 .service__item__discription {
   width: 330px;
   height: 100px;
   border: 1px solid #E3E1D5; 
   border-radius: 0px 0px 20px 20px;
-}
-
-.service__item__discription > h3{
-  margin: 0;
-  font-family: Inter, sans-serif;
-  font-size: 16px;
-  line-height: 20px;
-  color: #717171;
-  text-align: center;
-}
-
-.service__item__discription > p{
-  font-family: Inter, sans-serif;
-  color: #717171;
-  text-align: center;
-}
-
-.service__item__discription > h3 { 
-  margin: 10px 0px 14px 0px;
-  font-size: 20px;
-  color: #E06733;
+  h3{
+    margin: 10px 0px 14px 0px;
+    font-family: Inter, sans-serif;
+    font-size: 20px;
+    line-height: 20px;
+    color: #E06733;
+    text-align: center;
+  }
+  p{
+    font-family: Inter, sans-serif;
+    color: #717171;
+    text-align: center;
+  }
 }
 
 .blur {
@@ -118,7 +108,6 @@
 
 @media screen and (max-width:1439px) {
 
-  /*max-height: 1780px; комбинация max-height: и height: 100%; дает эффект резиновости при увеличении  */
   .service__wrapper {
     max-height: 1780px; 
     max-width: 768px;
@@ -145,17 +134,15 @@
   .service__item__discription {
     width: 280px;
     height: 100px;
-  }
-
-  .service__item__discription > p{
-    width: 201px;
-    margin: 0 auto;
+    p{
+      width: 201px;
+      margin: 0 auto;
+    }
   }
 }
 
 @media screen and (max-width:767px) {
 
-  /*max-height: 3150px; комбинация max-height: и height: 100%; дает эффект резиновости при увеличении  */
   .service__wrapper {
     max-width: 380px;
     max-height: 3150px; 
@@ -165,11 +152,10 @@
 
   .service__header {
     height: 176px;
-  }
-
-  .service__header > h2 {
-    width: 187px;
-    height: 69px;
+    h2 {
+      width: 187px;
+      height: 69px;
+    }
   }
 
   .service__buttons {
