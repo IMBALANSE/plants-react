@@ -1,11 +1,10 @@
-.clients-container {
+.clientsApi__container {
   align-items: center;
   padding: 20px;
   text-align: center;
-}
-
-.clients-container > h1 {
-  margin-bottom: 30px;
+  h1 {
+    margin-bottom: 30px;
+  }
 }
 
 .loading {
@@ -16,12 +15,12 @@
 }
 
 // Для адаптивности блоков связка width и max-width. Занимает 100% ширины родительского элемента 
-.clients__list {
+.clientsApi__list {
   width: 100%; 
   max-width: 500px; 
 }
 
-.client__card {
+.clientsApi__card {
   width: 100%;
   border: 1px solid #ccc;
   border-radius: 8px;

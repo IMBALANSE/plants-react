@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import arrowSvgWhite from '../../assets/images/icons/arrow_white.svg'; 
 import gardener_womanImage from '../../assets/images/contact_woman.png';
-import './Contacts.scss';
+// import './Contacts.scss';
+import styles from './Contacts.module.scss'; 
 
 const Contacts = () => {
   const [isOptionsVisible, setIsOptionsVisible] = useState(false); //isOptionsVisible — переменная состояния, которая определяет, виден ли выпадающий список городов.
@@ -29,21 +30,21 @@ const Contacts = () => {
   };
 
   return (
-    <section className="contacts" id="contacts">
-      <div className={`contacts__wrapper flex__row `}>
-        <img className={`contact__woman  ${ (selectedCity) || (isOptionsVisible !== false)  ? "open" : "" }`} src={gardener_womanImage} alt="gardener-woman" />
+    <section className={styles.contacts} id="contacts">
+      <div className={`${styles.contacts__wrapper} flex__row` } >
+        <img className={`${styles.contact__woman } ${ (selectedCity) || (isOptionsVisible !== false)  ? styles.open : "" }` } src={gardener_womanImage} alt="gardener-woman" />
         <h2>Contact us</h2>
-        <div className= {`contact__container-select ${  (selectedCity) || (isOptionsVisible !== false)  ? "open" : "" }`}>
-          <div className={`contacts-dropdown flex__row ${ (selectedCity) || (isOptionsVisible !== false)  ? "open" : "" } `} id="contacts-dropdown" onClick={handleDropdownClick}> {/* Добавим стили изменяющие цвет блока contacts-dropdown при нажатии и чтобы не менялся цвет при выборе города (select__option) */}
+        <div className={`${styles.contact__container_select  } ${ (selectedCity) || (isOptionsVisible !== false)  ? styles.open : "" }` }>
+          <div className={`${styles.contacts__dropdown } ${ (selectedCity) || (isOptionsVisible !== false)  ? styles.open : ""} flex__row ` }   id="contacts__dropdown" onClick={handleDropdownClick}> {/* Добавим стили изменяющие цвет блока contacts__dropdown при нажатии и чтобы не менялся цвет при выборе города (select__option) */}
             <p >{selectedCity ? cities[selectedCity].name : 'City'}</p> {/*Квадратные скобки [] в JavaScript используются для доступа к свойствам объекта по ключу, который может быть динамическим (например, переменной). это обрабатывается с помощью тернарного оператора: Если выбран один из городов, то текст будет равен cities[selectedCity].name , иначе строка 'City' */}
-            <img className="icon__arrow contacts__arrow" style={{ transform: isOptionsVisible !== false ? "rotate(180deg)" : "rotate(0deg)" }} src={arrowSvgWhite} alt="arrow" />
+            <img className={`${styles.contacts__arrow} ${isOptionsVisible !== false ? styles.contacts__arrow_active : ""} ` }  src={arrowSvgWhite} alt="arrow" />
           </div>
           {isOptionsVisible && ( 
-            <div className="contacts__options" id="contacts__options">
-              <ul className="select__options flex-columm">
+            <div className={styles.contacts__options} id="contacts__options">
+              <ul className={`${styles.select__options} flex__columm` } >
                  {/* Object.keys(cities) возвращает массив ключей объекта cities. В данном случае это будут строки: ['canandaigua', 'new-york', 'yonkers', 'sherrill']. А Метод map проходит по каждому ключу и создает новый массив элементов <li>, которые будут отображаться в списке. */}
                 {Object.keys(cities).map(key => ( 
-                  <li key={key} className="select__option" onClick={() => handleOptionClick(key)}> {/* 
+                  <li key={key} className={styles.select__option} onClick={() => handleOptionClick(key)}> {/* 
                     Каждый элемент списка (<li>) имеет:
                     - Атрибут key={key}, который необходим для идентификации каждого элемента в React. Это помогает React эффективно обновлять и управлять списком.
                     - Обработчик события onClick, который вызывает функцию handleOptionClick с аргументом key (ключ города) при клике на элемент списка.
@@ -58,14 +59,14 @@ const Contacts = () => {
           {/*  В JS выражение a && b работает так: если a истинно, то возвращается b. Если a ложно, то возвращается a.  */}
           {selectedCity && ( 
           
-            <div className="city__container" >
+            <div className={styles.city__container} >
               <p>City:</p>
-              <p className="grey">{cities[selectedCity].name}</p>
+              <p className={styles.grey}>{cities[selectedCity].name}</p>
               <p>Phone:</p>
-              <p className="grey">{cities[selectedCity].phone}</p>
+              <p className={styles.grey}>{cities[selectedCity].phone}</p>
               <p>Office address:</p>
-              <p className="grey">{cities[selectedCity].address}</p>
-              <button className="button1" onClick={() => window.open(`tel: ${cities[selectedCity].phone}`, '_self')}>Call us</button> {/* При клике на кнопку "Call us" открывается стандартное приложение для звонков на номер выбранного города. Почему то стили срабатывают только обновления стр.*/}
+              <p className={styles.grey}>{cities[selectedCity].address}</p>
+              <button className={styles.button1} onClick={() => window.open(`tel: ${cities[selectedCity].phone}`, '_self')}>Call us</button> {/* При клике на кнопку "Call us" открывается стандартное приложение для звонков на номер выбранного города. Почему то стили срабатывают только обновления стр.*/}
             </div>
           )}
         </div>

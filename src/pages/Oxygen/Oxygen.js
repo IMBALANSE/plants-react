@@ -1,15 +1,16 @@
 import React from "react";
 import Garden_careImage_4 from "../../assets/images/img_4.png";
-import './Oxygen.scss';
+// import './Oxygen.scss';
+import styles from './Oxygen.module.scss'; 
 
 const Oxygen = () => {
   return (
-    <section className="oxygen">
-      <div className="oxygen__wrapper flex__row">
-        <img className="oxygen__image" src={Garden_careImage_4} alt="leafs" />
-        <div className="oxygen__content flex__column">
+    <section className={styles.oxygen} >
+      <div className={`${styles.oxygen__wrapper} flex__row` } >
+        <img className={styles.oxygen__image} src={Garden_careImage_4} alt="leafs" />
+        <div className={`${styles.oxygen__content} flex__column`}  >
           <h1>
-            Useful amount of <span className="green-highlight">oxygen</span> in
+            Useful amount of <span >oxygen</span> in
             the room
           </h1>
           <p>

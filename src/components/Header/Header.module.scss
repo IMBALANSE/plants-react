@@ -1,4 +1,10 @@
+@import "../../styles/variables.scss";
+
 //align-items: baseline; выравнивание элементов в хедере по одной линии
+.header {
+  background-color: $Sections-color;
+}
+
 .header__wrapper {
   align-items: baseline; 
   justify-content: space-between;

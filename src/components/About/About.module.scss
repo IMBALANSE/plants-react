@@ -1,4 +1,8 @@
-@import "../../styles/variable.scss";
+@import "../../styles/variables.scss";
+
+.about{
+  background-color: $Sections-color;
+}
 
 .about__wrapper {
   justify-content: space-between;

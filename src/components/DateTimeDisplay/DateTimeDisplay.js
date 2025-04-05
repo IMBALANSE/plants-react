@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import './DateTimeDisplay.scss'; // Импортируем файл стилей
+// import './DateTimeDisplay.scss'; // Импортируем файл стилей
+import styles from './DateTimeDisplay.module.scss'; 
 
 const DateTimeDisplay = () => {
   const [currentTime, setCurrentTime] = useState(new Date());
@@ -19,7 +20,7 @@ const DateTimeDisplay = () => {
   const time = currentTime.toLocaleTimeString(); // ... время "15:30:45" (для русской локали), "3:30:45 PM" (для американской)
 
   return (
-    <div className = "DateTimeDisplay__wrapper flex__row">
+    <div className = {`${styles.DateTimeDisplay__wrapper} flex__row` } >
       <p>{dayOfWeek}  {date}  {time}</p>
     </div>
   );

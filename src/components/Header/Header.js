@@ -3,7 +3,8 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom'; // Импортируем Link для возможности перехода по страницам 
 import logo from '../../assets/images/icons/logo_plant.svg'; 
 import DateTimeDisplay from '../DateTimeDisplay/DateTimeDisplay'
-import './Header.scss';
+// import './Header.scss';
+import styles from './Header.module.scss'; 
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,29 +17,29 @@ const Header = () => {
   Сам класс хедер используется в глобальных стилях подкрашивается фон */
 
   return ( 
-    <header className={`header ${isOpen ? "open" : ""}`}  id="home">
+    <header className={`${styles.header} ${isOpen ? styles.open : ""}`}  id="home">
       <DateTimeDisplay />
-      <div className="header__wrapper flex__row">
+      <div className={`${styles.header__wrapper} flex__row`} >
         <div className="flex__row">
           <a className="" href="/">
             <img src={logo} alt="logo-plant" />Plants
           </a> {/**<!-- внутри ссылки svg логотип и текст рядом --> */}
         </div>
-        <div onClick={toggleMenu} className="header__burger-icon" id="navbar-burger-item"> 
-          <button className="burger-icon flex__column" id="navbar-burger-icon">
-            <span className="burger-icon__line"></span>
-            <span className="burger-icon__line"></span>
-            <span className="burger-icon__line"></span>
-            <span className="burger-icon__line"></span>
+        <div onClick={toggleMenu} className={styles['header__burger-icon']}  id="navbar-burger-item"> 
+          <button className={`${styles['burger-icon']} flex__column `} id="navbar-burger-icon">
+            <span className={styles['burger-icon__line']}></span>
+            <span className={styles['burger-icon__line']}></span>
+            <span className={styles['burger-icon__line']}></span>
+            <span className={styles['burger-icon__line']}></span>
           </button>
         </div>
-        <nav className="header__nav" id="navbar"> {/**<!-- блок навигации --> */}
-          <ul className="header__nav-list flex__row"> 
-            <li className="header__nav-item"><Link to="/">Home</Link></li>{/*Если в хедере ссылки на другие страницы, то для перехода по страницам, посмотри файл "Другие страницы" */}
-            <li className="header__nav-item"><a href="#about-us">About us</a></li> 
-            <li className="header__nav-item"><a href="#service">Service</a></li>
-            <li className="header__nav-item"><a href="#price">Price</a></li>
-            <li className="header__nav-item"><a href="#contacts">Contacts</a></li>
+        <nav className={`${styles.header__nav} `} id="navbar"> {/**<!-- блок навигации --> */}
+          <ul className={`${styles['header__nav-list']} flex__row `} > 
+            <li className={`${styles['header__nav-item']} `} ><Link to="/">Home</Link></li>{/*Если в хедере ссылки на другие страницы, то для перехода по страницам, посмотри файл "Другие страницы" */}
+            <li className={`${styles['header__nav-item']} `}><a href="#about-us">About us</a></li> 
+            <li className={`${styles['header__nav-item']} `}><a href="#service">Service</a></li>
+            <li className={`${styles['header__nav-item']} `}><a href="#price">Price</a></li>
+            <li className={`${styles['header__nav-item']} `}><a href="#contacts">Contacts</a></li>
           </ul>
         </nav>
       </div>
@@ -50,6 +51,7 @@ export default Header
 /* Компонент начинается с import React from 'react'; 
 Затем импортируем картинки которые хотим видеть внутри комп-та
 Затем стили
+Стили в SASS например className={styles['header__burger-icon']} в квадратных скобках т.к. нельзя использовать дефисы в JS
 с объявления константы именем будущего компонента, где используем стрелочную функцию, где в теле функции используем return и одну скобку, затем пишем весь код html который будет означаать этот компонент
 
 import React, { useState } from 'react'; хук useState импортируется из самого react 

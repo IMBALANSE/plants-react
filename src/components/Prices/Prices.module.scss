@@ -1,4 +1,8 @@
-@import "../../styles/variable.scss";
+@import "../../styles/variables.scss";
+
+.prices {
+  background-color: $Sections-color;
+}
 
 .prices__wrapper {
   justify-content: space-between;
@@ -41,7 +45,11 @@
   background: #D9D9D9;
 }
 
-.prices__call-us {
+.icon__arrow_active {
+  transform: rotate(180deg);
+}
+
+.prices__callUs {
   justify-content: space-between;
   align-items: flex-end;
   position: relative;
@@ -70,7 +78,7 @@
   border-radius: 20px;
   overflow: hidden;
   &:hover {
-    transition: 0.5s;
+    // transition: 0.5s; //дает побочку при нажатии виден фон белый
     box-shadow: 0px 1px 8px #E06733;
   } 
   span{
@@ -106,6 +114,10 @@
   background-color: #D6E7D2;
 }
 
+.active__title {  
+  color: #E06733;
+}
+
 @keyframes fadeInPrices {
   from {
     transform: translateY(-10px);
@@ -119,6 +131,8 @@
 
 .accordion__body {
   justify-content: space-between;
+  padding: 0px 40px 0px 40px;
+  background-color: #D6E7D2;
   height: 90px;
   font-family: Inter, sans-serif;
   color: #717171;
@@ -126,16 +140,18 @@
   animation: fadeInPrices 0.5s;
 }
 
-.accordion__body_desription{
+.accordion__body_description {
   font-size: 10px;
-  line-height: 10px;
   text-align: start;
+  line-height: 10px;
 }
-.accordion__body_desription-price{
-  font-size: 16px;
+
+.accordion__body_descriptionPrice {
+  font-size: 14px;
   font-weight: 700;
   text-align: start;
 }
+
 .accordion__body_btn {
   width: 86px;
   height: 25px;
@@ -146,23 +162,6 @@
   p {
     margin-top: 2px;
   }
-}
-
-.accordion__body {
-  padding: 0px 40px 0px 40px;
-  background-color: #D6E7D2;
-}
-
-.accordion__body_description {
-  font-size: 10px;
-  text-align: start;
-  line-height: 10px;
-}
-
-.accordion__body_description-price {
-  font-size: 14px;
-  font-weight: 700;
-  text-align: start;
 }
 
 @media screen and (max-width:1439px) {
@@ -182,7 +181,7 @@
     }
   }
 
-  .prices__call-us {
+  .prices__callUs {
     padding-top: 101px;
     p {
       font-size: 25px;
@@ -197,7 +196,7 @@
     flex-wrap: wrap;
     height: 600px;
     width: 300px;
-    padding: 40px 50px 50px 45px;
+    padding: 40px 38px 50px 38px;
   }
 
   .prices__image {
@@ -254,7 +253,7 @@
     }
   }  
 
-  .prices__call-us {
+  .prices__callUs {
     justify-content: space-between ;
     align-items: center;
     top: 0px;

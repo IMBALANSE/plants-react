@@ -1,4 +1,4 @@
-@import "variable.scss";
+@import "variables.scss";
 
 *,
 *::before,
@@ -48,15 +48,6 @@ h2 {
 main {
   position: relative;
   top: -1px;
-}
-
-.header,
-.about,
-.prices,
-.consultation,
-.footer
-{
-  background-color: #EDF2EC;
 }
 
 //это независимый класс, который просто добавляет стили flex

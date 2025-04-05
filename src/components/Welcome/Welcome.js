@@ -1,7 +1,8 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom'; // Импортируйте useNavigate
 import leafsImage from '../../assets/images/leafs.png';
-import './Welcome.scss';
+// import './Welcome.scss';
+import styles from './Welcome.module.scss'; 
 
 
 const Welcome = () => {
@@ -12,10 +13,10 @@ const Welcome = () => {
   };
 
   return (
-    <section className="welcome flex__row">
-      <div className="welcome__wrapper flex__row">
-        <img className="welcome__image" src={leafsImage} alt="leafs" />
-        <div className="welcome__content flex__column">
+    <section className={`${styles.welcome} flex__row` }>
+      <div className={`${styles.welcome__wrapper} flex__row` }>
+        <img className={styles.welcome__image} src={leafsImage} alt="leafs" />
+        <div className={`${styles.welcome__content} flex__column`}>
           <h1>We grow <span >plants</span> and give you oxygen</h1>
           <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
           <button className="button" onClick={handleLearnMoreClick}>LEARN MORE</button>

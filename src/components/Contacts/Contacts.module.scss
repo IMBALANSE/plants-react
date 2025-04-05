@@ -26,11 +26,15 @@
   background-color: #AEA1A1;
 }
 
+.contacts__arrow_active {
+  transform: rotate(180deg);
+}
+
 // ********* Стили для выпадающего списка ******
 
 //Этот hover влияет на изменение цвета внутри contact-dropdown   
 //transition: 0.5s; Анимация на любые действия с этим блоком
-.contacts-dropdown {
+.contacts__dropdown {
   justify-content: space-between;
   align-items: center;
   width: 450px;
@@ -54,7 +58,7 @@
   }
 }
 
-.contacts-dropdown.open {
+.contacts__dropdown.open {
   background-color: #86df72;
 }
 
@@ -171,15 +175,15 @@
     }
   }
 
-  .contact__container-select{
+  .contact__container_select{
     height: 316px;
   }
 
-  .contacts-dropdown {
+  .contacts__dropdown {
     margin-top: 45px;
   }
 
-  .contacts-dropdown.open {
+  .contacts__dropdown.open {
     margin-top: 0px;
   }
 
@@ -204,11 +208,11 @@
     }
   }
 
-  .contact__container-select{
+  .contact__container_select{
     height: 180px;
   }
 
-  .contact__container-select.open{
+  .contact__container_select.open{
     height: 350px;
   }
 
@@ -228,13 +232,13 @@
     }
   }
 
-  .contacts-dropdown {
+  .contacts__dropdown {
     width: 300px;
     margin-top: 50px;
     padding: 20px 20px 20px 20px;
   }
 
-  .contacts-dropdown.open {
+  .contacts__dropdown.open {
     margin-top: 0px;
   }
 

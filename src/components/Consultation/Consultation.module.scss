@@ -1,8 +1,9 @@
 //В блоке welcome и Consultation не получается резиновость изза того что картинка не уходит вниз по макету, соответственно у меня пока не получается додуматься как этот вопрос решить, сроки поджимают
-@import "../../styles/variable.scss";
+@import "../../styles/variables.scss";
 
 .consultation {
   justify-content: center;
+  background-color: $Sections-color;
 }
 
 .consultation__wrapper { 

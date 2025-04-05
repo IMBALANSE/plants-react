@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import "./ClientsApi.scss"; // Импортируем файл стилей
+// import "./ClientsApi.scss"; // Импортируем файл стилей
+import styles from './ClientsApi.module.scss'; 
 
 const ClientsApi = () => {
   const [clients, setClients] = useState([]);
@@ -23,14 +24,14 @@ const ClientsApi = () => {
   
 // Условный рендеринг: если isLoading равно true, показываем "Loading..."
   return (
-    <div className="clients-container flex__column">
+    <div className={`${styles.clientsApi__container} flex__column`} >
       <h1>Our clients</h1>
       {isLoading ? ( 
         <div className="loading">Loading...</div>
       ) : (
-        <div className="clients__list">
+        <div className={styles.clientsApi__list} >
           {clients.map((client) => (
-            <div key={client.id} className="client__card">
+            <div key={client.id} className={styles.clientsApi__card} >
               <h2>
                 {client.firstName} {client.lastName}
               </h2>
