@@ -26,19 +26,19 @@ const Price = () => {
 */
   return (
     <section className={styles.prices} id="price">
-      <div className={`${styles.prices__wrapper} flex__row` }>
-        <div className={`${styles.prices__content} flex__column` } >
+      <div className={`${styles.prices__wrapper} ${styles.prices__wrapper_row}` }>
+        <div className={`${styles.prices__content} ${styles.prices__content_column} ` } >
           <h2>Prices</h2>
-          <div className={`${styles.prices__list} flex__column` } >
+          <div className={`${styles.prices__list} ${styles.prices__list_column} ` } >
             {accordionData.map((item, index) => (
               <div key={index} className={`${styles.accordion__item} ${activeIndex === index ? styles.active : ""}`}> {/*start если активный элем совпадает с индексом, то присовим этому элем. класс active */}
-                <div className= {`${styles.accordion__header} ${activeIndex === index ? styles.active : ""} flex__row ` }  onClick={() => toggleAccordion(index)}>  {/*28,03,25 Все начинается с функции toggleAccordion, он меняет состояние activeIndex, Заголовок каждого элемента аккордеона (accordion__header) содержит обработчик клика onClick, который вызывает функцию toggleAccordion с индексом текущего элемента.  */}
+                <div className= {`${styles.accordion__header} ${styles.accordion__header_row} ${activeIndex === index ? styles.active : ""} `}  onClick={() => toggleAccordion(index)}>  {/*28,03,25 Все начинается с функции toggleAccordion, он меняет состояние activeIndex, Заголовок каждого элемента аккордеона (accordion__header) содержит обработчик клика onClick, который вызывает функцию toggleAccordion с индексом текущего элемента.  */}
                   <p className={`${ activeIndex === index ? styles.active__title : ""  } ` } >{item.title}</p>
                   <img className={`${styles.icon__arrow} ${activeIndex === index ? styles.icon__arrow_active : ""} ` }src={arrowSvg} alt="arrow"  /> {/*Иконка стрелки (icon__arrow) поворачивается на 180 градусов, когда элемент аккордеона раскрыт */}
                 </div>
                 {/*  В JS выражение a && b работает так: если a истинно, то возвращается b. Если a ложно, то возвращается a. Если activeIndex === index истинно (то есть текущий элем. аккордеона активен), то будет отрисован блок <div className="accordion__body">...</div> */}
                 {activeIndex === index && (
-                  <div className={`${styles.accordion__body} flex__column` } >
+                  <div className={`${styles.accordion__body} ${styles.accordion__body_column}` } >
                     <p className={styles.accordion__body_description}  >{item.description}</p>
                     <p className={styles.accordion__body_descriptionPrice}  ><span>{item.price}</span> / per hour</p>
                     <div className={styles.accordion__body_btn} >
@@ -50,7 +50,7 @@ const Price = () => {
             ))}
           </div>
         </div>
-        <div className={`${styles.prices__callUs} flex__column` } >
+        <div className={`${styles.prices__callUs} ${styles.prices__callUs_column} ` } >
           <p>Our best <span>gardeners</span> are ready to help you</p>
           <a href="#contacts"><button className="button" >CONTACT US</button></a>
           <img className={styles.prices__image} src={leafsSmallImage} alt="leafs_small" />

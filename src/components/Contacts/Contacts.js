@@ -31,17 +31,17 @@ const Contacts = () => {
 
   return (
     <section className={styles.contacts} id="contacts">
-      <div className={`${styles.contacts__wrapper} flex__row` } >
-        <img className={`${styles.contact__woman } ${ (selectedCity) || (isOptionsVisible !== false)  ? styles.open : "" }` } src={gardener_womanImage} alt="gardener-woman" />
+      <div className={`${styles.contacts__wrapper} ${styles.contacts__wrapper_row}` } >
+        <img className={`${styles.contact__woman} ${ (selectedCity) || (isOptionsVisible !== false)  ? styles.open : "" }` } src={gardener_womanImage} alt="gardener-woman" />
         <h2>Contact us</h2>
         <div className={`${styles.contact__container_select  } ${ (selectedCity) || (isOptionsVisible !== false)  ? styles.open : "" }` }>
-          <div className={`${styles.contacts__dropdown } ${ (selectedCity) || (isOptionsVisible !== false)  ? styles.open : ""} flex__row ` }   id="contacts__dropdown" onClick={handleDropdownClick}> {/* Добавим стили изменяющие цвет блока contacts__dropdown при нажатии и чтобы не менялся цвет при выборе города (select__option) */}
+          <div className={`${styles.contacts__dropdown} ${styles.contacts__dropdown_row} ${ (selectedCity) || (isOptionsVisible !== false)  ? styles.open : ""} ` }   id="contacts__dropdown" onClick={handleDropdownClick}> {/* Добавим стили изменяющие цвет блока contacts__dropdown при нажатии и чтобы не менялся цвет при выборе города (select__option) */}
             <p >{selectedCity ? cities[selectedCity].name : 'City'}</p> {/*Квадратные скобки [] в JavaScript используются для доступа к свойствам объекта по ключу, который может быть динамическим (например, переменной). это обрабатывается с помощью тернарного оператора: Если выбран один из городов, то текст будет равен cities[selectedCity].name , иначе строка 'City' */}
             <img className={`${styles.contacts__arrow} ${isOptionsVisible !== false ? styles.contacts__arrow_active : ""} ` }  src={arrowSvgWhite} alt="arrow" />
           </div>
           {isOptionsVisible && ( 
             <div className={styles.contacts__options} id="contacts__options">
-              <ul className={`${styles.select__options} flex__columm` } >
+              <ul  >
                  {/* Object.keys(cities) возвращает массив ключей объекта cities. В данном случае это будут строки: ['canandaigua', 'new-york', 'yonkers', 'sherrill']. А Метод map проходит по каждому ключу и создает новый массив элементов <li>, которые будут отображаться в списке. */}
                 {Object.keys(cities).map(key => ( 
                   <li key={key} className={styles.select__option} onClick={() => handleOptionClick(key)}> {/* 

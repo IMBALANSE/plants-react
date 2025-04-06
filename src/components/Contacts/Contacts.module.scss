@@ -1,3 +1,5 @@
+@import "../../styles/mixins.scss";
+
 .contacts {
   position: relative;
   bottom: 2px;
@@ -13,6 +15,9 @@
     font-family: Inika, sans-serif;
     font-size: 40px;
     font-weight: 700;
+  }
+  &_row {
+    @include row;
   }
 }
 
@@ -55,6 +60,9 @@
   &:hover {
     box-shadow: 2px 2px 15px #4a9a1874;
     transition: 0.5s;
+  }
+  &_row {
+    @include row;
   }
 }
 
@@ -101,6 +109,7 @@
     color: #E06733;
     transition: 0.7s;
   }
+
 }
 
 //анимация через animation, через transition мучался долго не получалось - изучить позже

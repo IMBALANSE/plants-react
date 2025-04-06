@@ -122,17 +122,17 @@ const Service = () => {
   return (
     <section className={styles.service} id="service">
       <div className={styles.service__wrapper} >
-        <div className= {`${styles.service__header} flex__row` }>
+        <div className= {`${styles.service__header} ${styles.service__header_row}` }>
           <h2>Service and our projects</h2>
-          <div className={`${styles.service__buttons } flex__row` }>
+          <div className={`${styles.service__buttons} ${styles.service__buttons_row} ` }>
             <button className={styles.service__button} data-name="garden">Gardens</button>
             <button className={styles.service__button} data-name="lawn">Lawn</button>
             <button className={styles.service__button} data-name="planting">Planting</button>
           </div>
         </div>
 
-        <div className={`${styles.service__body} flex__row` }>
-          <div className={`${styles.service__item} flex__column` } data-name="garden">
+        <div className={`${styles.service__body} ${styles.service__body_row}` }>
+          <div className={`${styles.service__item}`} data-name="garden">
             <picture className={styles.service__item__image}>
               <source media="(max-width: 1440px)" srcset={Garden_careImage_1_768} />
               <img src={Garden_careImage_1} alt="Garden care" />
@@ -142,7 +142,7 @@ const Service = () => {
               <p >Lorem Ipsum has been the industry</p>
             </div>
           </div>
-          <div className={`${styles.service__item} flex__column` } data-name="planting">
+          <div className={`${styles.service__item}`} data-name="planting">
             <picture className={styles.service__item__image}>
               <source media="(max-width: 1440px)" srcset={Garden_careImage_2_768} />
               <img src={Garden_careImage_2} alt="Planting" />
@@ -152,7 +152,7 @@ const Service = () => {
               <p >Lorem Ipsum has been the industry</p>
             </div>
           </div>
-          <div className={`${styles.service__item} flex__column` } data-name="lawn">
+          <div className={`${styles.service__item}`} data-name="lawn">
             <picture className={styles.service__item__image}>
               <source media="(max-width: 1440px)" srcset={Garden_careImage_3_768} />
               <img src={Garden_careImage_3} alt="Lawn care" />
@@ -162,7 +162,7 @@ const Service = () => {
               <p >Lorem Ipsum has been the industry</p>
             </div>
           </div>
-          <div className={`${styles.service__item} flex__column` } data-name="planting">
+          <div className={`${styles.service__item}`} data-name="planting">
             <picture className={styles.service__item__image}>
               <source media="(max-width: 1440px)" srcset={Garden_careImage_4_768} />
               <img src={Garden_careImage_4} alt="Planting" />
@@ -172,7 +172,7 @@ const Service = () => {
               <p >Lorem Ipsum has been the industry</p>
             </div>
           </div>
-          <div className={`${styles.service__item} flex__column` } data-name="garden">
+          <div className={`${styles.service__item}`} data-name="garden">
             <picture className={styles.service__item__image}>
               <source media="(max-width: 1440px)" srcset={Garden_careImage_5_768} />
               <img src={Garden_careImage_5} alt="Garden care" />
@@ -182,7 +182,7 @@ const Service = () => {
               <p >Lorem Ipsum has been the industry</p>
             </div>
           </div>
-          <div className={`${styles.service__item} flex__column` } data-name="planting">
+          <div className={`${styles.service__item}`} data-name="planting">
             <picture className={styles.service__item__image}>
               <source media="(max-width: 1440px)" srcset={Garden_careImage_6_768} />
               <img src={Garden_careImage_6} alt="Planting" />

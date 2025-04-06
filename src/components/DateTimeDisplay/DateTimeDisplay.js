@@ -20,7 +20,7 @@ const DateTimeDisplay = () => {
   const time = currentTime.toLocaleTimeString(); // ... время "15:30:45" (для русской локали), "3:30:45 PM" (для американской)
 
   return (
-    <div className = {`${styles.DateTimeDisplay__wrapper} flex__row` } >
+    <div className = {`${styles.DateTimeDisplay__wrapper} ${styles.DateTimeDisplay__wrapper_row}` } >
       <p>{dayOfWeek}  {date}  {time}</p>
     </div>
   );

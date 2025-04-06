@@ -24,10 +24,10 @@ const ClientsApi = () => {
   
 // Условный рендеринг: если isLoading равно true, показываем "Loading..."
   return (
-    <div className={`${styles.clientsApi__container} flex__column`} >
+    <div className={`${styles.clientsApi__container} ${styles.clientsApi__container_column}`} >
       <h1>Our clients</h1>
       {isLoading ? ( 
-        <div className="loading">Loading...</div>
+        <div className={styles.loading}>Loading...</div>
       ) : (
         <div className={styles.clientsApi__list} >
           {clients.map((client) => (

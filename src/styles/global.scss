@@ -50,16 +50,17 @@ main {
   top: -1px;
 }
 
+
 //это независимый класс, который просто добавляет стили flex
-.flex__row {
-  display: flex;
-}
+// .flex__row {
+//   display: flex;
+// }
 
 //это независимый класс, который просто добавляет стили flex с расположением в колонку
-.flex__column {
-  display: flex;
-  flex-direction: column;
-}
+// .flex__column {
+//   display: flex;
+//   flex-direction: column;
+// }
 
 .grid {
   display: grid;

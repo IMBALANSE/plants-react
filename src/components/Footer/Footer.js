@@ -9,8 +9,8 @@ import styles from './Footer.module.scss';
 const Footer = () => {
   return (
     <div class={styles.footer}  >
-      <div class={`${styles.footer__wrapper} flex__row` } >
-        <div class={`${styles.footer__content} flex__row` } >
+      <div class={`${styles.footer__wrapper} ${styles.footer__wrapper_row} ` } >
+        <div class={`${styles.footer__content} ${styles.footer__content_row}` } >
           <p>©</p>
           <p>2025</p>
           <a href="https://github.com/IMBALANSE"><p class={styles.footer__link} >github</p></a>
@@ -18,7 +18,7 @@ const Footer = () => {
         <div>
           <a href="https://imbalanse.github.io/rsschool-cv/"><p class={styles.footer__link}>RAZIL VALUEV</p></a>
         </div>
-        <ul class={`${styles.footer__list_social} flex__row` } >
+        <ul class={`${styles.footer__list_social} ${styles.footer__list_social_row}` } >
           <li><a href="https://instagram.com"><img class={styles.footer__link_social} src={instagramSvg} alt="instagram" /></a></li>
           <li><a href="https://github.com/IMBALANSE"><img class={styles.footer__link_social} src={facebookSvg}  alt="facebook" /></a></li>
           <li><a href="https://twitter.com"><img class={styles.footer__link_social} src={twitterSvg} alt="twitter" /></a></li>

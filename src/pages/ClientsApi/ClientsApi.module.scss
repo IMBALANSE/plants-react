@@ -1,9 +1,14 @@
+@import "../../styles/mixins.scss";
+
 .clientsApi__container {
   align-items: center;
   padding: 20px;
   text-align: center;
   h1 {
     margin-bottom: 30px;
+  }
+  &_column {
+    @include column;
   }
 }
 

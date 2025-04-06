@@ -19,14 +19,14 @@ const Header = () => {
   return ( 
     <header className={`${styles.header} ${isOpen ? styles.open : ""}`}  id="home">
       <DateTimeDisplay />
-      <div className={`${styles.header__wrapper} flex__row`} >
-        <div className="flex__row">
-          <a className="" href="/">
+      <div className={`${styles.header__wrapper} ${styles.header__wrapper_row}`} >
+        <div >
+          <a href="/">
             <img src={logo} alt="logo-plant" />Plants
           </a> {/**<!-- внутри ссылки svg логотип и текст рядом --> */}
         </div>
         <div onClick={toggleMenu} className={styles['header__burger-icon']}  id="navbar-burger-item"> 
-          <button className={`${styles['burger-icon']} flex__column `} id="navbar-burger-icon">
+          <button className={`${styles['burger-icon']} ${styles['burger-icon_column']} `} id="navbar-burger-icon">
             <span className={styles['burger-icon__line']}></span>
             <span className={styles['burger-icon__line']}></span>
             <span className={styles['burger-icon__line']}></span>
@@ -34,7 +34,7 @@ const Header = () => {
           </button>
         </div>
         <nav className={`${styles.header__nav} `} id="navbar"> {/**<!-- блок навигации --> */}
-          <ul className={`${styles['header__nav-list']} flex__row `} > 
+          <ul className={`${styles['header__nav-list']} ${styles['header__nav-list_row']} `} > 
             <li className={`${styles['header__nav-item']} `} ><Link to="/">Home</Link></li>{/*Если в хедере ссылки на другие страницы, то для перехода по страницам, посмотри файл "Другие страницы" */}
             <li className={`${styles['header__nav-item']} `}><a href="#about-us">About us</a></li> 
             <li className={`${styles['header__nav-item']} `}><a href="#service">Service</a></li>

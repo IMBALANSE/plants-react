@@ -1,3 +1,5 @@
+@import "../../styles/mixins.scss";
+
 .service__wrapper {
   max-width: 1440px;
   height: 1300px;
@@ -16,6 +18,9 @@
     height: 94px;
     line-height: normal;
   }
+  &_row {
+    @include row;
+  }
 }
 
 .service__buttons {
@@ -26,6 +31,9 @@
   width: 100%;
   max-width: 559px;
   height: 50px;
+  &_row {
+    @include row;
+  }
 }
 
 .service__button {
@@ -55,12 +63,18 @@
 .service__body {
   flex-wrap: wrap;
   justify-content: space-between;
+  &_row {
+    @include row;
+  }
 }
 
 .service__item {
   width: 330px;
   height: 450px;
   margin-bottom: 55px;
+  &_column {
+    @include column;
+  }
 }
 
 //display: block; без него идет отступ по умолчанию для строчных элементов

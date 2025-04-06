@@ -1,4 +1,5 @@
 @import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
 
 .prices {
   background-color: $Sections-color;
@@ -10,6 +11,9 @@
   height: 560px;
   margin: 0 auto;
   padding: 40px 109px 115px 109px;
+  &_row {
+    @include row;
+  }
 }
 
 .prices__content {
@@ -23,6 +27,9 @@
     font-size: 40px;
     color: black;
   }
+  &_column {
+    @include column;
+  }
 }
 
 .prices__list {
@@ -34,6 +41,9 @@
   border: 1px solid #4CAF50;;
   border-radius: 20px;
   background-color: #fff;
+  &_column {
+    @include column;
+  }
 }
 
 .icon__arrow {
@@ -68,6 +78,9 @@
   }
   a :hover  {
     cursor: pointer;
+  }
+  &_column {
+    @include column;
   }
 }
 
@@ -108,6 +121,9 @@
     font-size: 20px;
     color: #000;
   }
+  &_row {
+    @include row;
+  }
 }
 
 .accordion__header.active {  
@@ -138,6 +154,9 @@
   color: #717171;
   text-align: center;
   animation: fadeInPrices 0.5s;
+  &_column {
+    @include column;
+  }
 }
 
 .accordion__body_description {

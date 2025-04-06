@@ -1,7 +1,12 @@
+@import "../../styles/mixins.scss";
+
 .DateTimeDisplay__wrapper {
   justify-content: center;
   position: absolute;
   width: 100%;  
   font-family: Inter, sans-serif;
   color: #636060;
+  &_row {
+    @include row;
+  }
 }
