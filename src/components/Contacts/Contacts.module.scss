@@ -1,4 +1,3 @@
-@import "../../styles/mixins.scss";
 
 .contacts {
   position: relative;
@@ -6,6 +5,7 @@
 }
 
 .contacts__wrapper {
+  display: flex;
   justify-content: space-between;
   max-width: 1440px;
   height: 550px;
@@ -15,9 +15,6 @@
     font-family: Inika, sans-serif;
     font-size: 40px;
     font-weight: 700;
-  }
-  &_row {
-    @include row;
   }
 }
 
@@ -40,6 +37,7 @@
 //Этот hover влияет на изменение цвета внутри contact-dropdown   
 //transition: 0.5s; Анимация на любые действия с этим блоком
 .contacts__dropdown {
+  display: flex;
   justify-content: space-between;
   align-items: center;
   width: 450px;
@@ -60,9 +58,6 @@
   &:hover {
     box-shadow: 2px 2px 15px #4a9a1874;
     transition: 0.5s;
-  }
-  &_row {
-    @include row;
   }
 }
 

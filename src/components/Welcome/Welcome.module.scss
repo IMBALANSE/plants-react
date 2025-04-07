@@ -1,15 +1,13 @@
 //В блоке welcome и Consultation не получается резиновость изза того что картинка не уходит вниз по макету, соответственно у меня пока не получается додуматься как этот вопрос решить, сроки поджимают
 @import "../../styles/variables.scss";
-@import "../../styles/mixins.scss";
 
 .welcome {
+  display: flex;
    justify-content: center;
-   &_row {
-    @include row;
-  }
 }
 
 .welcome__wrapper {
+  display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
@@ -17,9 +15,6 @@
   max-width: 1440px;
   height: 532px;
   padding: 62px 109px 62px 109px;
-  &_row {
-    @include row;
-  }
 }
 
 .welcome__image {
@@ -29,6 +24,8 @@
 }
 
 .welcome__content {
+  display: flex;
+  flex-direction: column;
   justify-content: space-between;
   width: 549px;
   height: 340px;
@@ -42,9 +39,6 @@
     line-height: 35px;
     color: #636060;
     text-align: start;
-  }
-  &_column {
-    @include column;
   }
 }
 

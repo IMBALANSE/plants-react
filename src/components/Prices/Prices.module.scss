@@ -1,22 +1,21 @@
 @import "../../styles/variables.scss";
-@import "../../styles/mixins.scss";
 
 .prices {
   background-color: $Sections-color;
 }
 
 .prices__wrapper {
+  display: flex;
   justify-content: space-between;
   max-width: 1440px;
   height: 560px;
   margin: 0 auto;
   padding: 40px 109px 115px 109px;
-  &_row {
-    @include row;
-  }
 }
 
 .prices__content {
+  display: flex;
+  flex-direction: column;
   justify-content: space-between;
   height: 391px;
   h2 {
@@ -27,12 +26,11 @@
     font-size: 40px;
     color: black;
   }
-  &_column {
-    @include column;
-  }
 }
 
 .prices__list {
+  display: flex;
+  flex-direction: column;
   position: relative;
   justify-content: space-between;
   width: 332px;
@@ -41,9 +39,6 @@
   border: 1px solid #4CAF50;;
   border-radius: 20px;
   background-color: #fff;
-  &_column {
-    @include column;
-  }
 }
 
 .icon__arrow {
@@ -60,6 +55,8 @@
 }
 
 .prices__callUs {
+  display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: flex-end;
   position: relative;
@@ -78,9 +75,6 @@
   }
   a :hover  {
     cursor: pointer;
-  }
-  &_column {
-    @include column;
   }
 }
 
@@ -108,6 +102,7 @@
 }
 
 .accordion__header {
+  display: flex;
   justify-content: space-between;
   align-items: center; 
   height: 50px;
@@ -120,9 +115,6 @@
     font-weight: 700;
     font-size: 20px;
     color: #000;
-  }
-  &_row {
-    @include row;
   }
 }
 
@@ -146,6 +138,8 @@
 }
 
 .accordion__body {
+  display: flex;
+  flex-direction: column;
   justify-content: space-between;
   padding: 0px 40px 0px 40px;
   background-color: #D6E7D2;
@@ -154,9 +148,6 @@
   color: #717171;
   text-align: center;
   animation: fadeInPrices 0.5s;
-  &_column {
-    @include column;
-  }
 }
 
 .accordion__body_description {

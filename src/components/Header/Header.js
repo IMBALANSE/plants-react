@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom'; // Импортируем Link для возможности перехода по страницам 
 import logo from '../../assets/images/icons/logo_plant.svg'; 
 import DateTimeDisplay from '../DateTimeDisplay/DateTimeDisplay'
-// import './Header.scss';
 import styles from './Header.module.scss'; 
 
 const Header = () => {
@@ -19,14 +18,14 @@ const Header = () => {
   return ( 
     <header className={`${styles.header} ${isOpen ? styles.open : ""}`}  id="home">
       <DateTimeDisplay />
-      <div className={`${styles.header__wrapper} ${styles.header__wrapper_row}`} >
+      <div className={`${styles.header__wrapper} `} >
         <div >
           <a href="/">
             <img src={logo} alt="logo-plant" />Plants
           </a> {/**<!-- внутри ссылки svg логотип и текст рядом --> */}
         </div>
         <div onClick={toggleMenu} className={styles['header__burger-icon']}  id="navbar-burger-item"> 
-          <button className={`${styles['burger-icon']} ${styles['burger-icon_column']} `} id="navbar-burger-icon">
+          <button className={`${styles['burger-icon']} `} id="navbar-burger-icon">
             <span className={styles['burger-icon__line']}></span>
             <span className={styles['burger-icon__line']}></span>
             <span className={styles['burger-icon__line']}></span>
@@ -34,7 +33,7 @@ const Header = () => {
           </button>
         </div>
         <nav className={`${styles.header__nav} `} id="navbar"> {/**<!-- блок навигации --> */}
-          <ul className={`${styles['header__nav-list']} ${styles['header__nav-list_row']} `} > 
+          <ul className={`${styles['header__nav-list']} `} > 
             <li className={`${styles['header__nav-item']} `} ><Link to="/">Home</Link></li>{/*Если в хедере ссылки на другие страницы, то для перехода по страницам, посмотри файл "Другие страницы" */}
             <li className={`${styles['header__nav-item']} `}><a href="#about-us">About us</a></li> 
             <li className={`${styles['header__nav-item']} `}><a href="#service">Service</a></li>

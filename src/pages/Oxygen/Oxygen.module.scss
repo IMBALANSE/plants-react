@@ -1,7 +1,7 @@
 @import "../../styles/variables.scss";
-@import "../../styles/mixins.scss";
 
 .oxygen__wrapper {
+  display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
@@ -9,12 +9,11 @@
   height: 532px;
   margin: 0 auto;
   padding: 62px 109px 62px 109px;
-  &_row {
-    @include row;
-  }
 }
 
 .oxygen__content {
+  display: flex;
+  flex-direction: column;
   justify-content: space-between;
   width: 549px;
   height: 450px;
@@ -28,9 +27,6 @@
     line-height: 35px;
     color: #636060;
     text-align: start;
-  }
-  &_column {
-    @include column;
   }
 }
 

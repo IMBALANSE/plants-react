@@ -6,9 +6,9 @@ import styles from './Oxygen.module.scss';
 const Oxygen = () => {
   return (
     <section className={styles.oxygen} >
-      <div className={`${styles.oxygen__wrapper} ${styles.oxygen__wrapper_row}` } >
+      <div className={`${styles.oxygen__wrapper}` } >
         <img className={styles.oxygen__image} src={Garden_careImage_4} alt="leafs" />
-        <div className={`${styles.oxygen__content} ${styles.oxygen__content_column} `}  >
+        <div className={`${styles.oxygen__content} `}  >
           <h1>
             Useful amount of <span >oxygen</span> in
             the room

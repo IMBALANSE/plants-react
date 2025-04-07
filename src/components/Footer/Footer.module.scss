@@ -1,5 +1,4 @@
 @import "../../styles/variables.scss";
-@import "../../styles/mixins.scss";
 
 //width: 100%; до 13,03,25 была max-width: 1440px;, что мешало работать Flex внутри footer__wrapper 
 .footer {
@@ -14,17 +13,16 @@
 }
  
 .footer__wrapper {
+  display: flex;
   justify-content: space-between;
   align-items: center;
   max-width: 1222px;
   height: 50px;
   margin: 0px auto;
-  &_row {
-    @include row;
-  }
 }
 
 .footer__content {
+  display: flex;
   justify-content: space-between;
   align-items: center;
   width: 182px;
@@ -35,9 +33,6 @@
     font-weight: 400;
     font-size: 20px;
     color: #000;
-  }
-  &_row {
-    @include row;
   }
 }
 
@@ -53,15 +48,13 @@
 }
 
 .footer__list_social {
+  display: flex;
   justify-content: space-between;
   align-items: center;
   width: 188px;
   height: 50px;
   padding: 9px 0px 9px 0px;
   list-style: none;
-  &_row {
-    @include row;
-  }
 }
 
 .footer__link_social {

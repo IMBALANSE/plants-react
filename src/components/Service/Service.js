@@ -122,16 +122,16 @@ const Service = () => {
   return (
     <section className={styles.service} id="service">
       <div className={styles.service__wrapper} >
-        <div className= {`${styles.service__header} ${styles.service__header_row}` }>
+        <div className= {`${styles.service__header}` }>
           <h2>Service and our projects</h2>
-          <div className={`${styles.service__buttons} ${styles.service__buttons_row} ` }>
+          <div className={`${styles.service__buttons} ` }>
             <button className={styles.service__button} data-name="garden">Gardens</button>
             <button className={styles.service__button} data-name="lawn">Lawn</button>
             <button className={styles.service__button} data-name="planting">Planting</button>
           </div>
         </div>
 
-        <div className={`${styles.service__body} ${styles.service__body_row}` }>
+        <div className={`${styles.service__body}` }>
           <div className={`${styles.service__item}`} data-name="garden">
             <picture className={styles.service__item__image}>
               <source media="(max-width: 1440px)" srcset={Garden_careImage_1_768} />

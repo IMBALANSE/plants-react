@@ -1,5 +1,4 @@
 @import "../../styles/variables.scss";
-@import "../../styles/mixins.scss";
 
 //align-items: baseline; выравнивание элементов в хедере по одной линии
 .header {
@@ -7,17 +6,17 @@
 }
 
 .header__wrapper {
+  display: flex;
   align-items: baseline; 
   justify-content: space-between;
   max-width: 1440px;
   margin: 0 auto;
   padding: 42px 109px 42px 111px;
-  &_row {
-    @include row;
-  }
+
 }
 
 .header__nav-list {
+  display: flex;
   justify-content: space-between;
   width: 452px;
   padding: 0;
@@ -27,16 +26,12 @@
   a {
     transition: 0.5s;
   }
-  &_row {
-    @include row;
-  }
 }
 
 .burger-icon {
+  display: flex;
+  flex-direction: column;
   border: none;
-  &_column {
-    @include column;
-  }
 }
 
 .header__nav-item :hover {

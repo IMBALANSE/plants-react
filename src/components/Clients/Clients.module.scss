@@ -1,7 +1,7 @@
 @import "../../styles/variables.scss";
-@import "../../styles/mixins.scss";
 
 .clients__wrapper {
+  display: flex;
   justify-content: space-between;
   align-items: center; 
   flex-wrap: wrap;
@@ -9,13 +9,12 @@
   height: 666px;
   margin: 0 auto;
   padding: 93px 109px 94px 109px;
-  &_row {
-    @include row;
-  }
 }
 
 
 .clients__content {
+  display: flex;
+  flex-direction: column;
   justify-content: space-between;
   max-width: 605px;
   height: 350px;
@@ -36,9 +35,6 @@
   }
   span {
     color: $h2-highlight-color;
-  }
-  &_column {
-    @include column;
   }
 }
 

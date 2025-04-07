@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-// import "./ClientsApi.scss"; // Импортируем файл стилей
-import styles from './ClientsApi.module.scss'; 
+// import "./ClientsList.scss"; // Импортируем файл стилей
+import styles from './ClientsList.module.scss'; 
 
-const ClientsApi = () => {
+const ClientsList = () => {
   const [clients, setClients] = useState([]);
   const [isLoading, setIsLoading] = useState(true); // Добавляем состояние для отслеживания загрузки
 
@@ -24,14 +24,14 @@ const ClientsApi = () => {
   
 // Условный рендеринг: если isLoading равно true, показываем "Loading..."
   return (
-    <div className={`${styles.clientsApi__container} ${styles.clientsApi__container_column}`} >
+    <div className={`${styles.ClientsList__container}`} >
       <h1>Our clients</h1>
       {isLoading ? ( 
         <div className={styles.loading}>Loading...</div>
       ) : (
-        <div className={styles.clientsApi__list} >
+        <div className={styles.ClientsList__list} >
           {clients.map((client) => (
-            <div key={client.id} className={styles.clientsApi__card} >
+            <div key={client.id} className={styles.ClientsList__card} >
               <h2>
                 {client.firstName} {client.lastName}
               </h2>
@@ -45,7 +45,7 @@ const ClientsApi = () => {
   );
 };
 
-export default ClientsApi;
+export default ClientsList;
 
 
 

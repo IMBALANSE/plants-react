@@ -13,10 +13,10 @@ const Welcome = () => {
   };
 
   return (
-    <section className={`${styles.welcome} ${styles.welcome_row}` }>
-      <div className={`${styles.welcome__wrapper} ${styles.welcome__wrapper_row}` }>
+    <section className={`${styles.welcome}`}>
+      <div className={`${styles.welcome__wrapper}`}>
         <img className={styles.welcome__image} src={leafsImage} alt="leafs" />
-        <div className={`${styles.welcome__content} ${styles.welcome__content_column}`}>
+        <div className={`${styles.welcome__content}`}>
           <h1>We grow <span >plants</span> and give you oxygen</h1>
           <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
           <button className="button" onClick={handleLearnMoreClick}>LEARN MORE</button>

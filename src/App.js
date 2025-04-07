@@ -6,7 +6,7 @@ import About from './components/About/About';
 import Service from './components/Service/Service';
 import Price from './components/Prices/Prices';
 import Clients from './components/Clients/Clients';
-import ClientsApi from './pages/ClientsApi/ClientsApi'; 
+import ClientsList from './pages/ClientsList/ClientsList'; 
 import Consultation from './components/Consultation/Consultation';
 import ConsultationForm from './pages/ConsultationForm/ConsultationForm';
 import Contacts from './components/Contacts/Contacts';
@@ -34,7 +34,7 @@ const App = () => {
               </>
             } />
             <Route path="/oxygen" element={<Oxygen />} />
-            <Route path="/Clients" element={<ClientsApi />} />
+            <Route path="/Clients" element={<ClientsList />} />
             <Route path="/consultation" element={<ConsultationForm />} />
           </Routes>
         </main>

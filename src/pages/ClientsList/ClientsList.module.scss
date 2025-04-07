@@ -1,14 +1,12 @@
-@import "../../styles/mixins.scss";
 
-.clientsApi__container {
+.ClientsList__container {
+  display: flex;
+  flex-direction: column;
   align-items: center;
   padding: 20px;
   text-align: center;
   h1 {
     margin-bottom: 30px;
-  }
-  &_column {
-    @include column;
   }
 }
 
@@ -20,12 +18,12 @@
 }
 
 // Для адаптивности блоков связка width и max-width. Занимает 100% ширины родительского элемента 
-.clientsApi__list {
+.ClientsList__list {
   width: 100%; 
   max-width: 500px; 
 }
 
-.clientsApi__card {
+.ClientsList__card {
   width: 100%;
   border: 1px solid #ccc;
   border-radius: 8px;

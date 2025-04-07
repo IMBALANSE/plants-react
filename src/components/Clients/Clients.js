@@ -12,8 +12,8 @@ const Clients = () => {
   };
   return (
     <section className={styles.clients}  id="clients-us">
-      <div className={`${styles.clients__wrapper} ${styles.clients__wrapper_row}` }>
-        <div className={`${styles.clients__content} ${styles.clients__content_column}`} >
+      <div className={`${styles.clients__wrapper}` }>
+        <div className={`${styles.clients__content}`} >
           <h2 className={`${styles.clients__header} `} >Our <span >clients </span>  who have used<br /> services</h2>
           <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
           <button className="button" onClick={handleWatchClick}>WATCH</button>
