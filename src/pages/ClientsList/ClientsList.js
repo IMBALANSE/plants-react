@@ -1,27 +1,8 @@
-import React, { useState, useEffect } from "react";
-// import "./ClientsList.scss"; // Импортируем файл стилей
 import styles from './ClientsList.module.scss'; 
+import { useUsers } from './useUsers.jsx';
 
 const ClientsList = () => {
-  const [clients, setClients] = useState([]);
-  const [isLoading, setIsLoading] = useState(true); // Добавляем состояние для отслеживания загрузки
-
-  useEffect(() => {
-    const fetchClients = async () => {
-      try {
-        const response = await fetch("https://dummyjson.com/users");
-        const data = await response.json();
-        setClients(data.users.slice(0, 5)); // Берем первых пять пользователей
-      } catch (error) {
-        console.error("Ошибка при загрузке данных:", error);
-      } finally {
-        setIsLoading(false); // Устанавливаем isLoading в false после завершения загрузки
-      }
-    };
-
-    fetchClients();
-  }, []);
-  
+  const {users, isLoading} = useUsers();
 // Условный рендеринг: если isLoading равно true, показываем "Loading..."
   return (
     <div className={`${styles.ClientsList__container}`} >
@@ -30,7 +11,7 @@ const ClientsList = () => {
         <div className={styles.loading}>Loading...</div>
       ) : (
         <div className={styles.ClientsList__list} >
-          {clients.map((client) => (
+          {users.map((client) => (
             <div key={client.id} className={styles.ClientsList__card} >
               <h2>
                 {client.firstName} {client.lastName}

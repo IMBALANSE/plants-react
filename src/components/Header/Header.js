@@ -34,11 +34,11 @@ const Header = () => {
         </div>
         <nav className={`${styles.header__nav} `} id="navbar"> {/**<!-- блок навигации --> */}
           <ul className={`${styles['header__nav-list']} `} > 
-            <li className={`${styles['header__nav-item']} `} ><Link to="/">Home</Link></li>{/*Если в хедере ссылки на другие страницы, то для перехода по страницам, посмотри файл "Другие страницы" */}
-            <li className={`${styles['header__nav-item']} `}><a href="#about-us">About us</a></li> 
-            <li className={`${styles['header__nav-item']} `}><a href="#service">Service</a></li>
-            <li className={`${styles['header__nav-item']} `}><a href="#price">Price</a></li>
-            <li className={`${styles['header__nav-item']} `}><a href="#contacts">Contacts</a></li>
+            <li className={`${styles['header__nav-item']} `} ><Link className={styles['header__nav-link']} to="/">Home</Link></li>{/*Если в хедере ссылки на другие страницы, то для перехода по страницам, посмотри файл "Другие страницы" */}
+            <li className={`${styles['header__nav-item']} `}><a className={`${styles['header__nav-link']}`} href="#about-us">About us</a></li> 
+            <li className={`${styles['header__nav-item']} `}><a className={`${styles['header__nav-link']}`} href="#service">Service</a></li>
+            <li className={`${styles['header__nav-item']} `}><a className={`${styles['header__nav-link']}`} href="#price">Price</a></li>
+            <li className={`${styles['header__nav-item']} `}><a className={`${styles['header__nav-link']}`} href="#contacts">Contacts</a></li>
           </ul>
         </nav>
       </div>

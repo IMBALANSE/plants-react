@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import leafsSmallImage from '../../assets/images/leafs_small.png';
 import arrowSvg from '../../assets/images/icons/arrow.svg';
-// import './Prices.scss';
 import styles from './Prices.module.scss'; 
 
 const Price = () => {

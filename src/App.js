@@ -1,19 +1,11 @@
 import React from 'react';
-import Header from './components/Header/Header';
-import Welcome from './components/Welcome/Welcome';
-import Oxygen from './pages/Oxygen/Oxygen';
-import About from './components/About/About';
-import Service from './components/Service/Service';
-import Price from './components/Prices/Prices';
-import Clients from './components/Clients/Clients';
-import ClientsList from './pages/ClientsList/ClientsList'; 
-import Consultation from './components/Consultation/Consultation';
-import ConsultationForm from './pages/ConsultationForm/ConsultationForm';
-import Contacts from './components/Contacts/Contacts';
-import Footer from './components/Footer/Footer';
-
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-
+import Header from './components/Header/Header';
+import Oxygen from './pages/Oxygen/Oxygen';
+import ClientsList from './pages/ClientsList/ClientsList'; 
+import ConsultationForm from './pages/ConsultationForm/ConsultationForm';
+import Footer from './components/Footer/Footer';
+import MainPage from './pages/MainPage';
 
 const App = () => {
   return (
@@ -22,19 +14,9 @@ const App = () => {
         <Header />
         <main className="main-content">
           <Routes>
-            <Route path="/" element={
-              <>
-                <Welcome />
-                <About />
-                <Service />
-                <Price />
-                <Clients />
-                <Consultation />
-                <Contacts />
-              </>
-            } />
+            <Route path="/" element={<MainPage />} /> {/* Основной маршрут */}
             <Route path="/oxygen" element={<Oxygen />} />
-            <Route path="/Clients" element={<ClientsList />} />
+            <Route path="/clients" element={<ClientsList />} />
             <Route path="/consultation" element={<ConsultationForm />} />
           </Routes>
         </main>

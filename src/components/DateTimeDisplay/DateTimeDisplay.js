@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-// import './DateTimeDisplay.scss'; // Импортируем файл стилей
 import styles from './DateTimeDisplay.module.scss'; 
 
 const DateTimeDisplay = () => {

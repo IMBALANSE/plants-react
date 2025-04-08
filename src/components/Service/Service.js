@@ -11,7 +11,6 @@ import Garden_careImage_5 from '../../assets/images/img_5.png';
 import Garden_careImage_5_768 from '../../assets/images/img_5_768.png';
 import Garden_careImage_6 from '../../assets/images/img_6.png';
 import Garden_careImage_6_768 from '../../assets/images/img_6_768.png';
-// import './Service.scss';
 import styles from './Service.module.scss'; 
 
 /* - useState: Используется для хранения активных фильтров. activeFilters — это массив, который содержит текущие выбранные фильтры.

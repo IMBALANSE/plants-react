@@ -1,7 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom'; // Импортируйте useNavigate
 import ClientsImage from '../../assets/images/Clients.png';
-// import './Clients.scss';
 import styles from './Clients.module.scss'; 
 
 const Clients = () => {

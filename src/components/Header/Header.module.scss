@@ -3,28 +3,30 @@
 //align-items: baseline; выравнивание элементов в хедере по одной линии
 .header {
   background-color: $Sections-color;
-}
-
-.header__wrapper {
-  display: flex;
-  align-items: baseline; 
-  justify-content: space-between;
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: 42px 109px 42px 111px;
-
-}
-
-.header__nav-list {
-  display: flex;
-  justify-content: space-between;
-  width: 452px;
-  padding: 0;
-  font-family: Inika, sans-serif;
-  color: #010201;
-  list-style: none;
-  a {
-    transition: 0.5s;
+  &__wrapper {
+    display: flex;
+    align-items: baseline; 
+    justify-content: space-between;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 42px 109px 42px 111px;
+  
+  }
+  &__nav-list {
+    display: flex;
+    justify-content: space-between;
+    width: 452px;
+    padding: 0;
+    font-family: Inika, sans-serif;
+    color: #010201;
+    list-style: none;
+  }
+  &__nav-link {
+    transition: 0.7s;
+  }
+  &__nav-item :hover {
+    font-weight: 700;
+    color: #E06733;
   }
 }
 
@@ -32,11 +34,6 @@
   display: flex;
   flex-direction: column;
   border: none;
-}
-
-.header__nav-item :hover {
-  font-weight: 700;
-  color: #E06733;
 }
 
 @media screen and (max-width:1439px) {

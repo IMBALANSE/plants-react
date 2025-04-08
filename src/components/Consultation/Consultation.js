@@ -1,7 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom'; // Импортируйте useNavigate
 import leafsImage from '../../assets/images/leafs.png';
-// import './Consultation.scss';
 import styles from './Consultation.module.scss'; 
 
 const Consultation = () => {

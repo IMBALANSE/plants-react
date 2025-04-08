@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import arrowSvgWhite from '../../assets/images/icons/arrow_white.svg'; 
 import gardener_womanImage from '../../assets/images/contact_woman.png';
-// import './Contacts.scss';
 import styles from './Contacts.module.scss'; 
 
 const Contacts = () => {

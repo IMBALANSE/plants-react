@@ -1,5 +1,4 @@
 import React, {useState} from 'react'; // React — основная библиотека для создания компонентов. 
-// import './ConsultationForm.scss';
 import styles from './ConsultationForm.module.scss'; 
 
 //1. Используем хук useState для хранения данных формы. В formData хранятся значения всех полей. Изначально все поля пустые.
