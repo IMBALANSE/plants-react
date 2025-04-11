@@ -1,75 +1,86 @@
 @import "../../styles/variables.scss";
 
-.oxygen__wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  max-width: 1440px;
-  height: 532px;
-  margin: 0 auto;
-  padding: 62px 109px 62px 109px;
-}
-
-.oxygen__content {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 549px;
-  height: 450px;
-  margin: 0;
-  span {
-    color: $h1-highlight-color;
+.oxygen {
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1440px;
+    height: 532px;
+    margin: 0 auto;
+    padding: 62px 109px 62px 109px;
   }
-  p {
+  
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 549px;
+    height: 450px;
+    margin: 0;
+  }
+  
+  &__subtitle {
     font-family: Inter, sans-serif;
     font-size: 20px;
     line-height: 35px;
     color: #636060;
     text-align: start;
   }
+  
+  &__highlight {
+    color: $h1-highlight-color;
+  }
 }
 
-@media screen and (max-width:1439px) {
 
-  .oxygen__wrapper {
-    width: 100%;
-    max-width: 768px;
-    height: 520px;
-    padding: 40px 50px 70px 50px;
-    h1 {
+@media screen and (max-width:1439px) {
+  .oxygen {
+    &__wrapper {
+      width: 100%;
+      max-width: 768px;
+      height: 520px;
+      padding: 40px 50px 70px 50px;
+    }
+  
+    &__title {
       line-height: 35px;
     }
-  }
-
-  .oxygen__content {
-    max-width: 346px;
-    height: 400px;
-    p {
+  
+    &__content {
+      max-width: 346px;
+      height: 400px;
+    }
+    
+    &__subtitle {
       font-size: 16px;
       line-height: 25px;
       position: relative;
       left: 4px;
     }
+  
+    &__image {
+      max-width: 280px;
+      max-height: 254px;
+      order: 1; 
+    }
   }
-
-  .oxygen__image {
-    max-width: 280px;
-    max-height: 254px;
-    order: 1; 
-  }
+ 
 }
 
 @media screen and (max-width:767px) {
-
-  .oxygen__wrapper {
-    flex-direction: column;
-    height: 670px;
-    padding: 25px 24px;
+  .oxygen_{
+    &__wrapper {
+      flex-direction: column;
+      height: 670px;
+      padding: 25px 24px;
+    }
+  
+    &__content {
+      max-width: 346px;
+      height: 315px;
+    }
   }
 
-  .oxygen__content {
-    max-width: 346px;
-    height: 315px;
-  }
 }

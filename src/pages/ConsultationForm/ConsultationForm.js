@@ -9,7 +9,7 @@ const ConsultationForm = () => {
     phone: '',
     email: '',
   });
-
+ 
   //2.  Обработчик изменений: Функция handleChange вызывается при изменении значения любого из полей формы. Она извлекает name и value из события (e.target), а затем обновляет состояние formData, сохраняя предыдущие значения с помощью оператора расширения (...formData) и изменяя только то поле, которое было обновлено ([name]: value).
 
   /*Разберем, что происходит внутри этой функции:
@@ -39,11 +39,11 @@ const ConsultationForm = () => {
 
   return (
     <div className={styles.consultation__form} >
-      <h1>Request for consultation</h1>
+      <h1 className={styles.consultation__title}>Request for consultation</h1>
       <form onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor="name">Имя:</label>
-          <input
+        <div className={styles['consultation__form-field']}>
+          <label className={styles['consultation__form-label']} htmlFor="name">Имя:</label>
+          <input className={styles['consultation__form-input']}
             type="text"
             id="name"
             name="name"
@@ -52,9 +52,9 @@ const ConsultationForm = () => {
             required
           />
         </div>
-        <div>
-          <label htmlFor="surname">Фамилия:</label>
-          <input
+        <div className={styles['consultation__form-field']}>
+          <label className={styles['consultation__form-label']}  htmlFor="surname">Фамилия:</label>
+          <input className={styles['consultation__form-input']}
             type="text"
             id="surname"
             name="surname"
@@ -63,9 +63,9 @@ const ConsultationForm = () => {
             required
           />
         </div>
-        <div>
-          <label htmlFor="phone">Телефон:</label>
-          <input
+        <div className={styles['consultation__form-field']}>
+          <label className={styles['consultation__form-label']}  htmlFor="phone">Телефон:</label>
+          <input className={styles['consultation__form-input']}
             type="tel"
             id="phone"
             name="phone"
@@ -74,9 +74,9 @@ const ConsultationForm = () => {
             required
           />
         </div>
-        <div>
-          <label htmlFor="email">E-mail:</label>
-          <input
+        <div className={styles['consultation__form-field']}>
+          <label className={styles['consultation__form-label']}  htmlFor="email">E-mail:</label>
+          <input className={styles['consultation__form-input']}
             type="email"
             id="email"
             name="email"

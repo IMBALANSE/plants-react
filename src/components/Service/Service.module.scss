@@ -1,93 +1,96 @@
+.service {
+  &__wrapper {
+    max-width: 1440px;
+    height: 1300px;
+    margin: 0 auto;
+    padding: 40px 109px 121px 109px;
+  }
+  
+  &__control {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1007px;
+    height: 94px;
+    margin-bottom: 90px;
+  }
 
-.service__wrapper {
-  max-width: 1440px;
-  height: 1300px;
-  margin: 0 auto;
-  padding: 40px 109px 121px 109px;
-}
-
-.service__header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1007px;
-  height: 94px;
-  margin-bottom: 90px;
-  h2 {
+  &__title {
     width: 306px;
     height: 94px;
     line-height: normal;
   }
-}
-
-.service__buttons {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  position: relative;
-  top: 7px;
-  width: 100%;
-  max-width: 559px;
-  height: 50px;
-}
-
-.service__button {
-  width: 161px;
-  height: 50px;
-  background-color: #EDF2EC;
-  border-radius: 5px;
-  border-width: 1px;
-  border-color: #E06733; 
-  border-style: solid;
-  font-family: Inika, sans-serif;
-  font-size: 20px;
-  color: #E06733;
-  &:hover {
-    transition: 0.5s;
-    text-shadow: 0px 1px 5px #E06733; 
-    cursor: pointer;
+  
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: relative;
+    top: 7px;
+    width: 100%;
+    max-width: 559px;
+    height: 50px;
   }
-}
+  
+  &__button {
+    width: 161px;
+    height: 50px;
+    background-color: #EDF2EC;
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: #E06733; 
+    border-style: solid;
+    font-family: Inika, sans-serif;
+    font-size: 20px;
+    color: #E06733;
 
-.service__button-active {
-  color: #FFFFFF;
-  background-color: #E06733; 
-  transition: 0.3s;
-}
-
-.service__body {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.service__item {
-  display: flex;
-  flex-direction: column;
-  width: 330px;
-  height: 450px;
-  margin-bottom: 55px;
-}
-
-//display: block; без него идет отступ по умолчанию для строчных элементов
-.service__item__image {
-  &:hover {
-    border-radius: 20px 20px 0px 0px;
-    transition: 0.7s;
-    box-shadow: 0px 4px 4px rgba(1, 2, 1, 0.25);
+    &:hover {
+      transition: 0.5s;
+      text-shadow: 0px 1px 5px #E06733; 
+      cursor: pointer;
+    }
   }
-  img {
+  
+  &__button-active {
+    color: #FFFFFF;
+    background-color: #E06733; 
+    transition: 0.3s;
+  }
+  
+  &__body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  &__item {
+    display: flex;
+    flex-direction: column;
+    width: 330px;
+    height: 450px;
+    margin-bottom: 55px;
+  }
+
+  &__item-image {
     display: block; 
   }
-}
 
-// border: 1px solid #E3E1D5; забыл solid, поэтому не видел границы 
-.service__item__discription {
-  width: 330px;
-  height: 100px;
-  border: 1px solid #E3E1D5; 
-  border-radius: 0px 0px 20px 20px;
-  h3{
+  &__item-picture {
+    &:hover {
+      border-radius: 20px 20px 0px 0px;
+      transition: 0.7s;
+      box-shadow: 0px 4px 4px rgba(1, 2, 1, 0.25);
+    }
+  }
+
+  &__item-discription {
+    width: 330px;
+    height: 100px;
+    border: 1px solid #E3E1D5; 
+    border-radius: 0px 0px 20px 20px;
+  }
+
+  &__item-title {
     margin: 10px 0px 14px 0px;
     font-family: Inter, sans-serif;
     font-size: 20px;
@@ -95,7 +98,8 @@
     color: #E06733;
     text-align: center;
   }
-  p{
+
+  &__item-subtitle {
     font-family: Inter, sans-serif;
     color: #717171;
     text-align: center;
@@ -113,34 +117,36 @@
 }
 
 @media screen and (max-width:1439px) {
+  .service{
+    &__wrapper {
+      max-height: 1780px; 
+      max-width: 768px;
+      height: 100%; 
+      padding: 60px 50px 70px;
+    }
+  
+    &__control {
+      flex-direction: column;
+      align-items: flex-start;
+      height: 177px;
+      margin-bottom: 47px;
+    }
+  
+    &__buttons {
+      top: 7px;
+    }
+  
+    &__item {
+      width: 280px;
+      margin-bottom: 37px;
+    }
 
-  .service__wrapper {
-    max-height: 1780px; 
-    max-width: 768px;
-    height: 100%; 
-    padding: 60px 50px 70px;
-  }
+    &__item-discription {
+      width: 280px;
+      height: 100px;
+    }
 
-  .service__header {
-    flex-direction: column;
-    align-items: flex-start;
-    height: 177px;
-    margin-bottom: 47px;
-  }
-
-  .service__buttons {
-    top: 7px;
-  }
-
-  .service__item {
-    width: 280px;
-    margin-bottom: 37px;
-  }
-
-  .service__item__discription {
-    width: 280px;
-    height: 100px;
-    p{
+    &__item-subtitle {
       width: 201px;
       margin: 0 auto;
     }
@@ -148,35 +154,41 @@
 }
 
 @media screen and (max-width:767px) {
-
-  .service__wrapper {
-    max-width: 380px;
-    max-height: 3150px; 
-    height: 100%; /**/
-    padding: 30px 25px 0px 25px;
-  }
-
-  .service__header {
-    height: 176px;
-    h2 {
+  .service {
+    &__wrapper {
+      max-width: 380px;
+      max-height: 3150px; 
+      height: 100%; /**/
+      padding: 30px 25px 0px 25px;
+    }
+  
+    &__control {
+      height: 176px;
+    }
+  
+    &__title {
       width: 187px;
       height: 69px;
     }
-  }
 
-  .service__buttons {
-    width: 252px;
-    height: 79px;
-  }
-
-  .service__button {
-    width: 121px;
-    height: 35px;
-    font-size: 15px;
-  }
-
-  .service__item {
-    margin-bottom: 34px;
-    padding-left: 24px;
+    &__buttons {
+      width: 252px;
+      height: 79px;
+    }
+  
+    &__button {
+      width: 121px;
+      height: 35px;
+      font-size: 15px;
+    }
+  
+    &__item {
+      margin-bottom: 34px;
+      padding-left: 24px;
+    }
   }
 }
+
+
+ //display: block; без него идет отступ по умолчанию для строчных элементов
+  // border: 1px solid #E3E1D5; забыл solid, поэтому не видел границы 

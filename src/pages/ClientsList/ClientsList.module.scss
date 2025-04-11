@@ -1,35 +1,38 @@
-
-.ClientsList__container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-  text-align: center;
-  h1 {
+.clients-list {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  &__title {
     margin-bottom: 30px;
+  }
+  
+  &__loading {
+    font-family: Inter, sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #E06733 ; 
+  }
+  
+  // Для адаптивности блоков связка width и max-width. Занимает 100% ширины родительского элемента 
+  &__list {
+    width: 100%; 
+    max-width: 500px; 
+  }
+  
+  &__card {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin: 10px 0;
+    padding: 16px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   }
 }
 
-.loading {
-  font-family: Inter, sans-serif;
-  font-size: 24px;
-  font-weight: 700;
-  color: #E06733 ; 
-}
-
-// Для адаптивности блоков связка width и max-width. Занимает 100% ширины родительского элемента 
-.ClientsList__list {
-  width: 100%; 
-  max-width: 500px; 
-}
-
-.ClientsList__card {
-  width: 100%;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  margin: 10px 0;
-  padding: 16px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
 
 

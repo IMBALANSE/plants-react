@@ -5,14 +5,14 @@ const ClientsList = () => {
   const {users, isLoading} = useUsers();
 // Условный рендеринг: если isLoading равно true, показываем "Loading..."
   return (
-    <div className={`${styles.ClientsList__container}`} >
-      <h1>Our clients</h1>
+    <div className={styles['clients-list__container']} >
+      <h1 className={styles['clients-list__title']}>Our clients</h1>
       {isLoading ? ( 
-        <div className={styles.loading}>Loading...</div>
+        <div className={styles['clients-list__loading']}>Loading...</div>
       ) : (
-        <div className={styles.ClientsList__list} >
+        <div className={styles['clients-list__list']} >
           {users.map((client) => (
-            <div key={client.id} className={styles.ClientsList__card} >
+            <div key={client.id} className={styles['clients-list__card']} >
               <h2>
                 {client.firstName} {client.lastName}
               </h2>

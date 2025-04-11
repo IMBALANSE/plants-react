@@ -1,43 +1,49 @@
+.consultation{
+  &__form {
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #EDF2EC;
+  }
 
-.consultation__form {
-  width: 100%;
-  max-width: 400px;
-  margin: 20px auto;
-  padding: 20px;
-  border-radius: 10px;
-  background-color: #EDF2EC;
-  h1 {
+  &__title {
     margin-bottom: 20px;
     font-size: 28px;
     color: #333;
     text-align: center;
   }
-  div {
+
+  &__form-field {
     margin-bottom: 15px;
   }
-  label {
+
+  &__form-label {
     display: block;
     margin-bottom: 5px;
     font-family: 'Inter';
     font-weight: bold;
     color: #555;
   }
-  input {
+
+  &__form-input {
     width: 100%;
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 16px;
   }
-  input:focus {
+  
+  &__form-input:focus {
     border-color: #E06733;
     box-shadow: 0 0 5px #E06733;
     outline: none;
   }
-}
 
-.consultation__button  {
-  display: block; 
-  margin: 0 auto; 
-  background-color: #fff;
+  &__button  {
+    display: block; 
+    margin: 0 auto; 
+    background-color: #fff;
+  }
 }

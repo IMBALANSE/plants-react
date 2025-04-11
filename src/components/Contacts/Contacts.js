@@ -31,11 +31,11 @@ const Contacts = () => {
   return (
     <section className={styles.contacts} id="contacts">
       <div className={`${styles.contacts__wrapper}` } >
-        <img className={`${styles.contact__woman} ${ (selectedCity) || (isOptionsVisible !== false)  ? styles.open : "" }` } src={gardener_womanImage} alt="gardener-woman" />
-        <h2>Contact us</h2>
-        <div className={`${styles.contact__container_select  } ${ (selectedCity) || (isOptionsVisible !== false)  ? styles.open : "" }` }>
+        <img className={`${styles.contacts__woman} ${ (selectedCity) || (isOptionsVisible !== false)  ? styles.open : "" }` } src={gardener_womanImage} alt="gardener-woman" />
+        <h2 className={styles.contacts__title}>Contact us</h2>
+        <div className={`${styles.contacts__container_select  } ${ (selectedCity) || (isOptionsVisible !== false)  ? styles.open : "" }` }>
           <div className={`${styles.contacts__dropdown} ${ (selectedCity) || (isOptionsVisible !== false)  ? styles.open : ""} ` }   id="contacts__dropdown" onClick={handleDropdownClick}> {/* Добавим стили изменяющие цвет блока contacts__dropdown при нажатии и чтобы не менялся цвет при выборе города (select__option) */}
-            <p >{selectedCity ? cities[selectedCity].name : 'City'}</p> {/*Квадратные скобки [] в JavaScript используются для доступа к свойствам объекта по ключу, который может быть динамическим (например, переменной). это обрабатывается с помощью тернарного оператора: Если выбран один из городов, то текст будет равен cities[selectedCity].name , иначе строка 'City' */}
+            <p className={styles.contacts__city_word}>{selectedCity ? cities[selectedCity].name : 'City'}</p> {/*Квадратные скобки [] в JavaScript используются для доступа к свойствам объекта по ключу, который может быть динамическим (например, переменной). это обрабатывается с помощью тернарного оператора: Если выбран один из городов, то текст будет равен cities[selectedCity].name , иначе строка 'City' */}
             <img className={`${styles.contacts__arrow} ${isOptionsVisible !== false ? styles.contacts__arrow_active : ""}` }  src={arrowSvgWhite} alt="arrow" />
           </div>
           {isOptionsVisible && ( 
@@ -59,13 +59,13 @@ const Contacts = () => {
           {selectedCity && ( 
           
             <div className={styles.city__container} >
-              <p>City:</p>
-              <p className={styles.grey}>{cities[selectedCity].name}</p>
-              <p>Phone:</p>
-              <p className={styles.grey}>{cities[selectedCity].phone}</p>
-              <p>Office address:</p>
-              <p className={styles.grey}>{cities[selectedCity].address}</p>
-              <button className={styles.button1} onClick={() => window.open(`tel: ${cities[selectedCity].phone}`, '_self')}>Call us</button> {/* При клике на кнопку "Call us" открывается стандартное приложение для звонков на номер выбранного города. Почему то стили срабатывают только обновления стр.*/}
+              <p className={styles.city__title}>City:</p>
+              <p className={styles.city__value}>{cities[selectedCity].name}</p>
+              <p className={styles.city__title}>Phone:</p>
+              <p className={styles.city__value}>{cities[selectedCity].phone}</p>
+              <p className={styles.city__title}>Office address:</p>
+              <p className={styles.city__value}>{cities[selectedCity].address}</p>
+              <button className={styles.city__button} onClick={() => window.open(`tel: ${cities[selectedCity].phone}`, '_self')}>Call us</button> {/* При клике на кнопку "Call us" открывается стандартное приложение для звонков на номер выбранного города. Почему то стили срабатывают только обновления стр.*/}
             </div>
           )}
         </div>

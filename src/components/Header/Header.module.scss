@@ -3,6 +3,7 @@
 //align-items: baseline; выравнивание элементов в хедере по одной линии
 .header {
   background-color: $Sections-color;
+
   &__wrapper {
     display: flex;
     align-items: baseline; 
@@ -10,8 +11,8 @@
     max-width: 1440px;
     margin: 0 auto;
     padding: 42px 109px 42px 111px;
-  
   }
+
   &__nav-list {
     display: flex;
     justify-content: space-between;
@@ -21,9 +22,11 @@
     color: #010201;
     list-style: none;
   }
+
   &__nav-link {
     transition: 0.7s;
   }
+
   &__nav-item :hover {
     font-weight: 700;
     color: #E06733;
@@ -37,7 +40,6 @@
 }
 
 @media screen and (max-width:1439px) {
-
   .header__wrapper {
     max-width: 768px;
     height: 117px;
@@ -46,15 +48,16 @@
 }
 
 @media screen and (max-width:767px) {
+  .header{
+    &__wrapper {
+      height: 96px;
+      padding: 32px 25px;
+    }
 
-  .header__nav-list {
-    display: block;
-    width: 252px;
-  }
-
-  .header__wrapper {
-    height: 96px;
-    padding: 32px 25px;
+    &__nav-list {
+      display: block;
+      width: 252px;
+    }
   }
 
   //************************* BURGER MENU ***********************
@@ -69,22 +72,32 @@
     height: 35px;
     border: 1px solid #717171;
     border-radius: 5px;
-    span:nth-child(1){
-      opacity: 0;
+    
+    .burger-icon__line{
+      &:nth-child(1){
+        opacity: 0;
+      }
+
+      &:nth-child(2){
+        position: relative;
+        top: 3px;
+        transform: rotate(45deg);
+      }
+
+      &:nth-child(3){
+        position: relative;
+        top: -6px;
+        transform: rotate(-45deg);
+      }
+
+      &:nth-child(4){
+        opacity: 0;
+      }
     }
-    span:nth-child(2){
-      position: relative;
-      top: 3px;
-      transform: rotate(45deg);
-    }
-    span:nth-child(3){
-      position: relative;
-      top: -6px;
-      transform: rotate(-45deg);
-    }
-    span:nth-child(4){
-      opacity: 0;
-    }
+  }
+
+  .header.open .header__nav {
+    transform: translateX(-100%);
   }
 
   //плашка, которая выходит из закулисья, внутри нее nav-list  
@@ -100,12 +113,6 @@
     background-color: rgba(139, 160, 126, 0.6);
     transition: transform 0.5s; 
   }
-
-  .header.open .header__nav {
-    transform: translateX(-100%);
-  }
-
-
 
   //Расположение Иконка палочек т.е. до нажатия
   .header__burger-icon { 

@@ -50,22 +50,6 @@ main {
   top: -1px;
 }
 
-
-//это независимый класс, который просто добавляет стили flex
-// .flex__row {
-//   display: flex;
-// }
-
-//это независимый класс, который просто добавляет стили flex с расположением в колонку
-// .flex__column {
-//   display: flex;
-//   flex-direction: column;
-// }
-
-.grid {
-  display: grid;
-}
-
 //box-shadow: 0px 4px 4px rgba(1, 2, 1, 0.25); /*расшифр x, y, размытие, растяжение (размер тени)-тут его нет rgba(r, g, b, a)
 .button {
   position: relative;
@@ -137,7 +121,7 @@ main {
   }
 
   .button {
-    width: 100px;
+    width: 120px;
     height: 34px;
     font-size: 12px;
   }

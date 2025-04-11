@@ -2,23 +2,24 @@
 
 .prices {
   background-color: $Sections-color;
-}
 
-.prices__wrapper {
-  display: flex;
-  justify-content: space-between;
-  max-width: 1440px;
-  height: 560px;
-  margin: 0 auto;
-  padding: 40px 109px 115px 109px;
-}
-
-.prices__content {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 391px;
-  h2 {
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1440px;
+    height: 560px;
+    margin: 0 auto;
+    padding: 40px 109px 115px 109px;
+  }
+  
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 391px;
+  }
+  
+  &__title {
     position: relative;
     top: -2px;
     font-family: Inter, sans-serif;
@@ -26,19 +27,129 @@
     font-size: 40px;
     color: black;
   }
+  
+  &__list {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: space-between;
+    width: 332px;
+    min-height: 282px;
+    padding: 34px 41px;
+    border: 1px solid #4CAF50;;
+    border-radius: 20px;
+    background-color: #fff;
+  }
+  
+  &__call-us {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    position: relative;
+    top: -2px;
+    width: 452px;
+  }
+  
+  &__call-us-title {
+    font-family: Inter, sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 50px;
+    color: #000;
+    text-align: end;
+  }
+  
+  &__highlight {
+    color: $h1-highlight-color;
+  }
 }
 
-.prices__list {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  justify-content: space-between;
-  width: 332px;
-  min-height: 282px;
-  padding: 34px 41px;
-  border: 1px solid #4CAF50;;
-  border-radius: 20px;
-  background-color: #fff;
+.accordion {
+  &__item {
+    justify-content: space-between;
+    max-height: 154px;
+    border: 1px solid #4CAF50; 
+    border-radius: 20px;
+    overflow: hidden;
+    
+    &:hover {
+      // transition: 0.5s; //дает побочку при нажатии виден фон белый
+      box-shadow: 0px 0px 10px #E06733;
+      z-index: 2;
+    } 
+  }
+  
+  &__item-price {
+    color: #E06733;
+  }
+  
+  &__item.active {
+    display: block;
+    height: 154px;
+    border: 1px solid #EDF2EC ;
+    border-color: #4CAF50;
+    background-color: #D6E7D2;
+  }
+  
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    height: 50px;
+    padding: 0px 40px 0px 40px;
+    background-color: #EDF2EC;
+    cursor: pointer; 
+  }
+  
+  &__title {      // для <p> Basics, Standart, Pro care<
+    font-family: Inter, sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: #000;
+  }
+  
+  &__header.active {  
+    background-color: #D6E7D2;
+  }
+  
+  &__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0px 40px 0px 40px;
+    background-color: #D6E7D2;
+    height: 90px;
+    font-family: Inter, sans-serif;
+    color: #717171;
+    text-align: center;
+    animation: fadeInPrices 0.5s;
+  }
+
+  &__body_description {
+    font-size: 10px;
+    text-align: start;
+    line-height: 10px;
+  }
+
+  &__body_descriptionPrice {
+    font-size: 14px;
+    font-weight: 700;
+    text-align: start;
+  }
+
+  &__body-btn {
+    width: 86px;
+    height: 25px;
+    border-radius: 10px;
+    color: #717171;
+    background-color: #fff;
+    cursor: pointer;
+  }
+
+  &__body-btn-text {
+    margin-top: 2px;
+  }
 }
 
 .icon__arrow {
@@ -52,74 +163,6 @@
 
 .icon__arrow_active {
   transform: rotate(180deg);
-}
-
-.prices__callUs {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-end;
-  position: relative;
-  top: -2px;
-  width: 452px;
-  span {
-    color: $h1-highlight-color;
-  }
-  p {
-    font-family: Inter, sans-serif;
-    font-size: 40px;
-    font-weight: 700;
-    line-height: 50px;
-    color: #000;
-    text-align: end;
-  }
-  a :hover  {
-    cursor: pointer;
-  }
-}
-
-.accordion__item {
-  justify-content: space-between;
-  max-height: 154px;
-  border: 1px solid #4CAF50; 
-  border-radius: 20px;
-  overflow: hidden;
-  &:hover {
-    // transition: 0.5s; //дает побочку при нажатии виден фон белый
-    box-shadow: 0px 1px 8px #E06733;
-  } 
-  span{
-    color: #E06733;
-  }
-}
-
-.accordion__item.active {
-  display: block;
-  height: 154px;
-  border: 1px solid #EDF2EC ;
-  border-color: #4CAF50;
-  background-color: #D6E7D2;
-}
-
-.accordion__header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center; 
-  height: 50px;
-  padding: 0px 40px 0px 40px;
-  background-color: #EDF2EC;
-  cursor: pointer; 
-  // для <p> Basics, Standart, Pro care<
-  p {  
-    font-family: Inter, sans-serif;
-    font-weight: 700;
-    font-size: 20px;
-    color: #000;
-  }
-}
-
-.accordion__header.active {  
-  background-color: #D6E7D2;
 }
 
 .active__title {  
@@ -137,63 +180,29 @@
   }
 }
 
-.accordion__body {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 0px 40px 0px 40px;
-  background-color: #D6E7D2;
-  height: 90px;
-  font-family: Inter, sans-serif;
-  color: #717171;
-  text-align: center;
-  animation: fadeInPrices 0.5s;
-}
-
-.accordion__body_description {
-  font-size: 10px;
-  text-align: start;
-  line-height: 10px;
-}
-
-.accordion__body_descriptionPrice {
-  font-size: 14px;
-  font-weight: 700;
-  text-align: start;
-}
-
-.accordion__body_btn {
-  width: 86px;
-  height: 25px;
-  border-radius: 10px;
-  color: #717171;
-  background-color: #fff;
-  cursor: pointer;
-  p {
-    margin-top: 2px;
-  }
-}
-
 @media screen and (max-width:1439px) {
-
-  .prices__wrapper {
-    max-width: 768px;
-    height: 585px;
-    padding: 40px 50px 50px 50px;
-  }
-
-  .prices__content {
-    height: 381px;
-    h2 {
+  .prices {
+    &__wrapper {
+      max-width: 768px;
+      height: 585px;
+      padding: 40px 50px 50px 50px;
+    }
+  
+    &__content {
+      height: 381px;
+    }
+  
+    &__title {
       width: 135px;
       font-size: 35px;
       text-align: center;
     }
-  }
-
-  .prices__callUs {
-    padding-top: 101px;
-    p {
+  
+    &__call-us {
+      padding-top: 101px;
+    }
+  
+    &__call-us-title {
       font-size: 25px;
       line-height: 35px;
     }
@@ -201,82 +210,89 @@
 }
 
 @media screen and (max-width:767px) {
+  .prices {
+    &__wrapper {
+      flex-wrap: wrap;
+      height: 600px;
+      width: 300px;
+      padding: 40px 38px 50px 38px;
+    }
+  
+    &__image {
+      display: none;
+    }
+  
+    &__content {
+      align-items: center;
+      height: 318px;
+    }
 
-  .prices__wrapper {
-    flex-wrap: wrap;
-    height: 600px;
-    width: 300px;
-    padding: 40px 38px 50px 38px;
-  }
-
-  .prices__image {
-    display: none;
-  }
-
-  .prices__content {
-    align-items: center;
-    height: 318px;
-    h2 {
+    &__title {
       font-size: 25px;
       padding-bottom: 21px;
     }
-  }
-
-  .prices__list {
-    width: 224px;
-    min-height: 235px;
-    padding: 29px 22px;
-  }
-
-  .accordion__item.active {
-    display: block;
-    height: 122px;
-  }
-
-  .accordion__body {
-    height: 80px;
-    padding: 0px 20px;
-    background-color: #D6E7D2;
-  }
-
-  .accordion__body_btn {
-    width: 86px;
-    height: 22px;
-    margin: 0px 0px 3px 0px;
-    border-radius: 10px;
-    color: #717171;
-    background-color: #fff;
-    p {
-      font-size: 14px;
+  
+    &__list {
+      width: 224px;
+      min-height: 235px;
+      padding: 29px 22px;
     }
-  }
-
-  .accordion__body_description {
-    font-size: 10px;
-  }
-
-  .accordion__header {
-    height: 40px;
-    padding: 0px 20px ;
-    p {  
-      font-size: 15px;
+  
+    &__call-us { 
+      justify-content: space-between ;
+      align-items: center;
+      top: 0px;
+      width: 230px;
+      height: 120px;
+      margin-top: -15px;
+      margin-left: -2px;
+      padding: 0;
     }
-  }  
-
-  .prices__callUs {
-    justify-content: space-between ;
-    align-items: center;
-    top: 0px;
-    width: 230px;
-    height: 120px;
-    margin-top: -15px;
-    margin-left: -2px;
-    padding: 0;
-    p {
+  
+    &__call-us-title {
       width: 230px;
       font-size: 20px;
       line-height: 35px;
       text-align: center;
+    }
+  }
+  
+  .accordion {
+    &__item.active {
+      display: block;
+      height: 122px;
+    }
+  
+    &__body {
+      height: 80px;
+      padding: 0px 20px;
+      background-color: #D6E7D2;
+    }
+  
+    &__body-btn {
+      width: 86px;
+      height: 22px;
+      margin: 0px 0px 3px 0px;
+      border-radius: 10px;
+      color: #717171;
+      background-color: #fff;
+    }
+  
+    &__body-btn-text {
+      font-size: 14px;
+    }
+  
+    &__body_description {
+      font-size: 10px;
+    }
+  
+    &__header {
+      height: 40px;
+      padding: 0px 20px ;
+    }  
+  
+    &__title {  
+      font-size: 15px;
     }
   }
 }

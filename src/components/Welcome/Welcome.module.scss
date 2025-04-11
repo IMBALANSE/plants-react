@@ -3,10 +3,9 @@
 
 .welcome {
   display: flex;
-   justify-content: center;
-}
+  justify-content: center;
 
-.welcome__wrapper {
+  &__wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -15,25 +14,28 @@
   max-width: 1440px;
   height: 532px;
   padding: 62px 109px 62px 109px;
-}
+  }
 
-.welcome__image {
-  position: relative; /*подгон подгон подгон подгон подгон подгон Welcome*/ 
-  right: 8px;
-  bottom: 1px;
-}
+  &__image {
+    position: relative; /*подгон подгон подгон подгон подгон подгон Welcome*/ 
+    right: 8px;
+    bottom: 1px;
+  }
 
-.welcome__content {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 549px;
-  height: 340px;
-  margin: 0;
-  span {
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 549px;
+    height: 340px;
+    margin: 0;
+  }
+
+  &__highlight {
     color: $h1-highlight-color;
   }
-  p {
+
+  &__subtitle {
     font-family: Inter, sans-serif;
     font-size: 20px;
     line-height: 35px;
@@ -43,52 +45,56 @@
 }
 
 @media screen and (max-width:1439px) {
+  .welcome {
+    &__wrapper {
+      align-items: flex-start;
+      width: 100%;
+      max-width: 768px;
+      height: 420px;
+      padding: 40px 50px 70px 50px;
+    }
 
-  .welcome__wrapper {
-    align-items: flex-start;
-    width: 100%;
-    max-width: 768px;
-    height: 420px;
-    padding: 40px 50px 70px 50px;
-  }
+    &__content {
+      max-width: 346px;
+      height: 310px;
+    }
 
-  .welcome__content {
-    max-width: 346px;
-    height: 310px;
-    p {
+    &__subtitle  {
       font-size: 16px;
       line-height: 25px;
       position: relative;
       left: 4px;
     }
-  }
 
-  // order: 1; отвечает за порядок расположения элементов внутри контейнера
-  .welcome__image {
-    right: 0px;
-    bottom: 0px;
-    max-width: 280px;
-    max-height: 254px;
-    order: 1; 
+    &__image {
+      right: 0px;
+      bottom: 0px;
+      max-width: 280px;
+      max-height: 254px;
+      order: 1; 
+    }
   }
 }
 
 @media screen and (max-width:767px) {
- 
-  .welcome__wrapper {
-    justify-content: center;
-    height: 300px;
-    padding: 25px 24px;
-  }
+  .welcome {
+    &__wrapper {
+      justify-content: center;
+      height: 300px;
+      padding: 25px 24px;
+    }
 
-  .welcome__image {
-    display: none;
-  }
+    &__image {
+      display: none;
+    }
 
-  .welcome__content {
-    max-width: 346px;
-    height: 250px;
+    &__content {
+      max-width: 346px;
+      height: 250px;
+    }
   }
 }
+
+  // order: 1; отвечает за порядок расположения элементов внутри контейнера
 
 

@@ -121,74 +121,73 @@ const Service = () => {
   return (
     <section className={styles.service} id="service">
       <div className={styles.service__wrapper} >
-        <div className= {`${styles.service__header}` }>
-          <h2>Service and our projects</h2>
+        <div className= {`${styles.service__control}` }>
+          <h2 className={styles.service__title} >Service and our projects</h2>
           <div className={`${styles.service__buttons} ` }>
             <button className={styles.service__button} data-name="garden">Gardens</button>
             <button className={styles.service__button} data-name="lawn">Lawn</button>
             <button className={styles.service__button} data-name="planting">Planting</button>
           </div>
         </div>
-
         <div className={`${styles.service__body}` }>
           <div className={`${styles.service__item}`} data-name="garden">
-            <picture className={styles.service__item__image}>
+            <picture className={styles['service__item-picture']}>
               <source media="(max-width: 1440px)" srcset={Garden_careImage_1_768} />
-              <img src={Garden_careImage_1} alt="Garden care" />
+              <img className={styles['service__item-image']} src={Garden_careImage_1} alt="Garden care" />
             </picture>
-            <div className={styles.service__item__discription} >
-              <h3 >Garden care</h3>
-              <p >Lorem Ipsum has been the industry</p>
+            <div className={styles['service__item-discription']} >
+              <h3 className= {styles['service__item-title']}  >Garden care</h3>
+              <p  className= {styles['service__item-subtitle']} >Lorem Ipsum has been the industry</p>
             </div>
           </div>
           <div className={`${styles.service__item}`} data-name="planting">
-            <picture className={styles.service__item__image}>
+            <picture className={styles['service__item-picture']}>
               <source media="(max-width: 1440px)" srcset={Garden_careImage_2_768} />
-              <img src={Garden_careImage_2} alt="Planting" />
+              <img className={styles['service__item-image']} src={Garden_careImage_2} alt="Planting" />
             </picture>
-            <div className={styles.service__item__discription}>
-              <h3 >Planting</h3>
-              <p >Lorem Ipsum has been the industry</p>
+            <div className={styles['service__item-discription']}>
+              <h3 className= {styles['service__item-title']}  >Planting</h3>
+              <p  className= {styles['service__item-subtitle']} >Lorem Ipsum has been the industry</p>
             </div>
           </div>
           <div className={`${styles.service__item}`} data-name="lawn">
-            <picture className={styles.service__item__image}>
+            <picture className={styles['service__item-picture']}>
               <source media="(max-width: 1440px)" srcset={Garden_careImage_3_768} />
-              <img src={Garden_careImage_3} alt="Lawn care" />
+              <img className={styles['service__item-image']} src={Garden_careImage_3} alt="Lawn care" />
             </picture>
-            <div className={styles.service__item__discription}>
-              <h3 >Lawn care</h3>
-              <p >Lorem Ipsum has been the industry</p>
+            <div className={styles['service__item-discription']}>
+              <h3 className= {styles['service__item-title']}  >Lawn care</h3>
+              <p  className= {styles['service__item-subtitle']} >Lorem Ipsum has been the industry</p>
             </div>
           </div>
           <div className={`${styles.service__item}`} data-name="planting">
-            <picture className={styles.service__item__image}>
+            <picture className={styles['service__item-picture']}>
               <source media="(max-width: 1440px)" srcset={Garden_careImage_4_768} />
-              <img src={Garden_careImage_4} alt="Planting" />
+              <img className={styles['service__item-image']} src={Garden_careImage_4} alt="Planting" />
             </picture>
-            <div className={styles.service__item__discription}>
-              <h3 >Planting</h3>
-              <p >Lorem Ipsum has been the industry</p>
+            <div className={styles['service__item-discription']}>
+              <h3 className= {styles['service__item-title']}  >Planting</h3>
+              <p  className= {styles['service__item-subtitle']} >Lorem Ipsum has been the industry</p>
             </div>
           </div>
           <div className={`${styles.service__item}`} data-name="garden">
-            <picture className={styles.service__item__image}>
+            <picture className={styles['service__item-picture']}>
               <source media="(max-width: 1440px)" srcset={Garden_careImage_5_768} />
-              <img src={Garden_careImage_5} alt="Garden care" />
+              <img className={styles['service__item-image']} src={Garden_careImage_5} alt="Garden care" />
             </picture>
-            <div className={styles.service__item__discription}>
-              <h3 >Garden care</h3>
-              <p >Lorem Ipsum has been the industry</p>
+            <div className={styles['service__item-discription']}>
+              <h3 className= {styles['service__item-title']}  >Garden care</h3>
+              <p  className= {styles['service__item-subtitle']} >Lorem Ipsum has been the industry</p>
             </div>
           </div>
           <div className={`${styles.service__item}`} data-name="planting">
-            <picture className={styles.service__item__image}>
+            <picture className={styles['service__item-picture']}>
               <source media="(max-width: 1440px)" srcset={Garden_careImage_6_768} />
-              <img src={Garden_careImage_6} alt="Planting" />
+              <img className={styles['service__item-image']} src={Garden_careImage_6} alt="Planting" />
             </picture>
-            <div className={styles.service__item__discription}>
-              <h3 >Planting</h3>
-              <p >Lorem Ipsum has been the industry</p>
+            <div className={styles['service__item-discription']}>
+              <h3 className= {styles['service__item-title']}  >Planting</h3>
+              <p  className= {styles['service__item-subtitle']} >Lorem Ipsum has been the industry</p>
             </div>
           </div>
         </div>

@@ -2,33 +2,33 @@
 
 .about{
   background-color: $Sections-color;
-}
 
-.about__wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  max-width: 1440px;
-  height: 666px;
-  margin: 0 auto;
-  padding: 93px 109px 94px 109px;
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1440px;
+    height: 666px;
+    margin: 0 auto;
+    padding: 93px 109px 94px 109px;
+  }
 
-}
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 605px;
+    height: 350px;
+    margin: 0;
+  }
 
-
-.about__content {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  max-width: 605px;
-  height: 350px;
-  margin: 0;
-  h2 {
+  &__title {
     position: relative;
     top: 3px;
   }
-  p {
+
+  &__subtitle {
     position: relative;
     top: 5px;
     margin: 0;
@@ -38,65 +38,75 @@
     color: #636060;
     text-align: start;
   }
-  span {
-    color: $h2-highlight-color;
-  }
+
+  &__highlight {
+      color: $h2-highlight-color;
+    }
 }
 
 @media screen and (max-width:1439px) {
 
-  .about__wrapper{
-    flex-direction: column;   
-    max-width: 768px;
-    height: 783px;
-    padding: 40px 50px 95px 50px;
-  }
+  .about {
+    &__wrapper{
+      flex-direction: column;   
+      max-width: 768px;
+      height: 783px;
+      padding: 40px 50px 95px 50px;
+    }
+  
+    &__content {
+      justify-content: space-between;
+      max-width: 668px;    
+      height: 350px;
+    }
 
-  .about__content {
-    justify-content: space-between;
-    max-width: 668px;    
-    height: 350px;
-    h2{
+    &__header {
+      text-align: center; 
+    }
+  
+    &__img {
+      display: block;
+      width: 250px;
+      height: 258px;
+    }
+
+    &__title{
       top: 0px;
       max-width: 605px;
       margin: 0 auto;
     }
-    p{
+
+    &__subtitle{
       top: 0px;
       height: 208px;
     }
-  }
-  .about__header {
-    text-align: center; 
-  }
-
-  .about__img {
-    display: block;
-    width: 250px;
-    height: 258px;
   }
 }
 
  @media screen and (max-width:767px) {
 
-  .about__wrapper{
-    max-width: 366px;
-    height: 516px;
-    padding: 30px 25px 28px;
-  }
+  .about {
+    &__wrapper{
+      max-width: 366px;
+      height: 516px;
+      padding: 30px 25px 28px;
+    }
+  
+    &__content {
+      max-width: 346px;
+      height: 287px;
+    }
 
-  .about__content {
-    max-width: 346px;
-    height: 287px;
-    p{
+    &__subtitle{
       font-size: 15px;
       line-height: 25px;
     }
+  
+    &__img {
+      width: 150px;
+      height: 147px;
+    }
   }
 
-  .about__img {
-    width: 150px;
-    height: 147px;
-  }
 } 
 
