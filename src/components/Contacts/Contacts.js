@@ -28,15 +28,21 @@ const Contacts = () => {
     setIsOptionsVisible(false);
   };
 
+  const isVisible = isOptionsVisible !== false;
+  const openClass = (selectedCity || isVisible) ? styles.open : "";
+  const cityName = selectedCity ? cities[selectedCity].name : 'City' ; /*Квадратные скобки [] в JavaScript используются для доступа к свойствам объекта по ключу, который может быть динамическим (например, переменной). это обрабатывается с помощью тернарного оператора: Если выбран один из городов, то текст будет равен cities[selectedCity].name , иначе строка 'City' */
+  const activeArrow = isVisible ? styles.contacts__arrow_active : "";
+  const handleCallClick = () => window.open(`tel: ${cities[selectedCity].phone}`, '_self');
+
   return (
     <section className={styles.contacts} id="contacts">
-      <div className={`${styles.contacts__wrapper}` } >
-        <img className={`${styles.contacts__woman} ${ (selectedCity) || (isOptionsVisible !== false)  ? styles.open : "" }` } src={gardener_womanImage} alt="gardener-woman" />
+      <div className={styles.contacts__wrapper} >
+        <img className={`${styles.contacts__woman} ${openClass}`} src={gardener_womanImage} alt="gardener-woman" />
         <h2 className={styles.contacts__title}>Contact us</h2>
-        <div className={`${styles.contacts__container_select  } ${ (selectedCity) || (isOptionsVisible !== false)  ? styles.open : "" }` }>
-          <div className={`${styles.contacts__dropdown} ${ (selectedCity) || (isOptionsVisible !== false)  ? styles.open : ""} ` }   id="contacts__dropdown" onClick={handleDropdownClick}> {/* Добавим стили изменяющие цвет блока contacts__dropdown при нажатии и чтобы не менялся цвет при выборе города (select__option) */}
-            <p className={styles.contacts__city_word}>{selectedCity ? cities[selectedCity].name : 'City'}</p> {/*Квадратные скобки [] в JavaScript используются для доступа к свойствам объекта по ключу, который может быть динамическим (например, переменной). это обрабатывается с помощью тернарного оператора: Если выбран один из городов, то текст будет равен cities[selectedCity].name , иначе строка 'City' */}
-            <img className={`${styles.contacts__arrow} ${isOptionsVisible !== false ? styles.contacts__arrow_active : ""}` }  src={arrowSvgWhite} alt="arrow" />
+        <div className={`${styles.contacts__container_select} ${openClass}`}>
+          <div className={`${styles.contacts__dropdown} ${openClass}`} id="contacts__dropdown" onClick={handleDropdownClick}> {/* Добавим стили изменяющие цвет блока contacts__dropdown при нажатии и чтобы не менялся цвет при выборе города (select__option) */}
+            <p className={styles.contacts__city_word}>{cityName}</p> 
+            <img className={`${styles.contacts__arrow} ${activeArrow}`} src={arrowSvgWhite} alt="arrow" />
           </div>
           {isOptionsVisible && ( 
             <div className={styles.contacts__options} id="contacts__options">
@@ -65,7 +71,12 @@ const Contacts = () => {
               <p className={styles.city__value}>{cities[selectedCity].phone}</p>
               <p className={styles.city__title}>Office address:</p>
               <p className={styles.city__value}>{cities[selectedCity].address}</p>
-              <button className={styles.city__button} onClick={() => window.open(`tel: ${cities[selectedCity].phone}`, '_self')}>Call us</button> {/* При клике на кнопку "Call us" открывается стандартное приложение для звонков на номер выбранного города. Почему то стили срабатывают только обновления стр.*/}
+              <button 
+                className={styles.city__button} 
+                onClick={handleCallClick}
+              >
+                Call us
+              </button> {/* При клике на кнопку "Call us" открывается стандартное приложение для звонков на номер выбранного города. Почему то стили срабатывают только обновления стр.*/}
             </div>
           )}
         </div>

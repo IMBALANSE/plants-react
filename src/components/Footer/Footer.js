@@ -7,17 +7,17 @@ import styles from './Footer.module.scss';
 
 const Footer = () => {
   return (
-    <div className={styles.footer}  >
-      <div className={`${styles.footer__wrapper}` } >
-        <div className={`${styles.footer__content}` } >
+    <div className={styles.footer}>
+      <div className={styles.footer__wrapper} >
+        <div className={styles.footer__content} >
           <p className={styles.footer__paragraph}>©</p>
           <p className={styles.footer__paragraph}>2025</p>
-          <a href="https://github.com/IMBALANSE"><p className={styles.footer__link} >github</p></a>
+          <a href="https://github.com/IMBALANSE"><p className={styles.footer__link}>github</p></a>
         </div>
         <div>
           <a href="https://imbalanse.github.io/rsschool-cv/"><p className={styles.footer__link}>RAZIL VALUEV</p></a>
         </div>
-        <ul className={`${styles.footer__list_social}` } >
+        <ul className={styles.footer__list_social} >
           <li><a href="https://instagram.com"><img className={styles.footer__link_social} src={instagramSvg} alt="instagram" /></a></li>
           <li><a href="https://github.com/IMBALANSE"><img className={styles.footer__link_social} src={facebookSvg}  alt="facebook" /></a></li>
           <li><a href="https://twitter.com"><img className={styles.footer__link_social} src={twitterSvg} alt="twitter" /></a></li>

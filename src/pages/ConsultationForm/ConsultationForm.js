@@ -85,7 +85,7 @@ const ConsultationForm = () => {
             required
           />
         </div>
-        <button className={` ${styles.consultation__button} button`}   type="submit">SEND</button>
+        <button className={`${styles.consultation__button} button`} type="submit">SEND</button>
       </form>
     </div>
   );

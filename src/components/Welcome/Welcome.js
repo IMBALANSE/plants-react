@@ -12,12 +12,12 @@ const Welcome = () => {
   };
 
   return (
-    <section className={`${styles.welcome}`}>
-      <div className={`${styles.welcome__wrapper}`}>
+    <section className={styles.welcome}>
+      <div className={styles.welcome__wrapper}>
         <img className={styles.welcome__image} src={leafsImage} alt="leafs" />
-        <div className={`${styles.welcome__content}`}>
-          <h1>We grow <span className={`${styles.welcome__highlight}`} >plants</span> and give you oxygen</h1>
-          <p className={`${styles.welcome__subtitle}`}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+        <div className={styles.welcome__content}>
+          <h1>We grow <span className={styles.welcome__highlight} >plants</span> and give you oxygen</h1>
+          <p className={styles.welcome__subtitle}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
           <button className="button" onClick={handleLearnMoreClick}>LEARN MORE</button>
         </div>
       </div>

@@ -4,10 +4,10 @@ import styles from './Oxygen.module.scss';
 
 const Oxygen = () => {
   return (
-    <section className={styles.oxygen} >
-      <div className={`${styles.oxygen__wrapper}` } >
+    <section className={styles.oxygen}>
+      <div className={styles.oxygen__wrapper}>
         <img className={styles.oxygen__image} src={Garden_careImage_4} alt="leafs" />
-        <div className={`${styles.oxygen__content} `}  >
+        <div className={styles.oxygen__content}>
           <h1 className={styles.oxygen__title}>
             Useful amount of <span className={styles.oxygen__highlight}>oxygen</span> in
             the room

@@ -14,14 +14,15 @@ const Header = () => {
   /* 1 При изменении состояния isOpen (т.е. При нажатии на блок с полосками header__burger-icon) изменится условие, устанавливающее комбинацию классов .header.open в хедере, которые в свою очередь: 1) управляют стилями палочек бургер меню navbar-burger-icon 2) позиционируют блок с навигацией header__nav, пока не нажали на палочки он всегда скрыт справа за viewport, при смене состояния isOpen через анимацию сдвигается на на свою ширину влево (через transform: translateX(-100%) )
   2) при разрешении до 768 px элементы навигации header__nav-item (Home, about ...) становятся блочными display: block; и выстраиваются в каждую строчку 
   Сам класс хедер используется в глобальных стилях подкрашивается фон */
+  const openClass = isOpen ? styles.open : "";
 
   return ( 
-    <header className={`${styles.header} ${isOpen ? styles.open : ""}`}  id="home">
+    <header className={`${styles.header} ${openClass}`}  id="home">
       <DateTimeDisplay />
-      <div className={`${styles.header__wrapper} `} >
+      <div className={styles.header__wrapper} >
         <div >
           <a href="/">
-            <img src={logo} alt="logo-plant" />Plants
+            <img src={logo} alt="logo-plant"/>Plants
           </a> {/**<!-- внутри ссылки svg логотип и текст рядом --> */}
         </div>
         <div onClick={toggleMenu} className={styles['header__burger-icon']}  id="navbar-burger-item"> 
@@ -32,7 +33,7 @@ const Header = () => {
             <span className={styles['burger-icon__line']}></span>
           </button>
         </div>
-        <nav className={`${styles.header__nav} `} id="navbar"> {/**<!-- блок навигации --> */}
+        <nav className={styles.header__nav} id="navbar"> {/**<!-- блок навигации --> */}
           <ul className={`${styles['header__nav-list']} `} > 
             <li className={`${styles['header__nav-item']} `} ><Link className={styles['header__nav-link']} to="/">Home</Link></li>{/*Если в хедере ссылки на другие страницы, то для перехода по страницам, посмотри файл "Другие страницы" */}
             <li className={`${styles['header__nav-item']} `}><a className={`${styles['header__nav-link']}`} href="#about-us">About us</a></li> 
