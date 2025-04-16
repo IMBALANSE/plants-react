@@ -65,6 +65,7 @@ MIT
 
 ## Команда
 -  Razil Valiev — Frontend Developer
+- https://izhevsk.hh.ru/resume/a6e17125ff0bcbee1c0039ed1f757852364662?hhtmFrom=resume_list
 
 ## Контакты
 -  Email: inlinz18@yandex.ru

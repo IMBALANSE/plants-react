@@ -1,6 +1,5 @@
 @import "../../styles/variables.scss";
 
-//width: 100%; до 13,03,25 была max-width: 1440px;, что мешало работать Flex внутри footer__wrapper 
 .footer {
   position: relative;
   top: -5px;
@@ -93,7 +92,6 @@
 }
 
 @media screen and (max-width:767px) {
-
   .footer {
     padding: 4px 25px;
 

@@ -1,13 +1,13 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom'; // Импортируйте useNavigate
+import { useNavigate } from 'react-router-dom';
 import leafsImage from '../../assets/images/leafs.png';
 import styles from './Consultation.module.scss'; 
 
 const Consultation = () => {
-  const navigate = useNavigate(); // Используйте useNavigate для навигации
+  const navigate = useNavigate(); 
 
   const handleConsultationClick = () => {
-    navigate('/consultation'); // Переход на страницу /learn-more
+    navigate('/consultation'); 
   };
 
   return (

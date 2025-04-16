@@ -3,7 +3,7 @@ import { useUsers } from './useUsers.jsx';
 
 const ClientsList = () => {
   const {users, isLoading} = useUsers();
-// Условный рендеринг: если isLoading равно true, показываем "Loading..."
+
   return (
     <div className={styles['clients-list__container']} >
       <h1 className={styles['clients-list__title']}>Our clients</h1>

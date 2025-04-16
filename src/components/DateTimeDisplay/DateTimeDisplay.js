@@ -7,16 +7,15 @@ const DateTimeDisplay = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentTime(new Date());
-    }, 1000); // Обновляем время каждую секунду
-
-    // Очистка таймера при размонтировании компонента
+    }, 1000);
+    
     return () => clearInterval(timer); 
   }, []);
 
   const daysOfWeek = ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'];
   const dayOfWeek = daysOfWeek[currentTime.getDay()];
-  const date = currentTime.toLocaleDateString(); // Метод возв Дату в России: "02.03.2025", в США: "3/2/2025"
-  const time = currentTime.toLocaleTimeString(); // ... время "15:30:45" (для русской локали), "3:30:45 PM" (для американской)
+  const date = currentTime.toLocaleDateString(); 
+  const time = currentTime.toLocaleTimeString(); 
 
   return (
     <div className = {styles.DateTimeDisplay__wrapper} >

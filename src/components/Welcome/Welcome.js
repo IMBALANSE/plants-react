@@ -1,14 +1,14 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom'; // Импортируйте useNavigate
+import { useNavigate } from 'react-router-dom'; 
 import leafsImage from '../../assets/images/leafs.png';
 import styles from './Welcome.module.scss'; 
 
 
 const Welcome = () => {
-  const navigate = useNavigate(); // useNavigate для навигации
+  const navigate = useNavigate(); 
 
   const handleLearnMoreClick = () => {
-    navigate('/oxygen'); // Переход на страницу /oxygen
+    navigate('/oxygen');
   };
 
   return (
@@ -26,11 +26,3 @@ const Welcome = () => {
 };
 
 export default Welcome;
-
-/* Компонент начинается с import React from 'react'; 
-Затем импортируем картинки которые хотим видеть внутри комп-та
-Затем стили
-с объявления константы именем будущего компонента, где используем стрелочную функцию, где в теле функции используем return и одну скобку, затем пишем весь код html который будет означаать этот компонент
-+
-Импортируем хуки, которые все начинаются с use в нашем случае useNavigate из библиотеки 'react-router-dom', который служит для навигации и дает возможность переключаться на другие страницы
-*/

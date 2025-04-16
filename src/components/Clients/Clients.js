@@ -1,13 +1,13 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom'; // Импортируйте useNavigate
+import { useNavigate } from 'react-router-dom'; 
 import ClientsImage from '../../assets/images/Clients.png';
 import styles from './Clients.module.scss'; 
 
 const Clients = () => {
-  const navigate = useNavigate(); // Используйте useNavigate для навигации
+  const navigate = useNavigate(); 
 
   const handleWatchClick = () => {
-    navigate('/Clients'); // Переход на страницу /learn-more
+    navigate('/Clients'); 
   };
   return (
     <section className={styles.clients} id="clients-us">
