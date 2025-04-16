@@ -15,7 +15,7 @@ const Footer = () => {
           <a href="https://github.com/IMBALANSE"><p className={styles.footer__link}>github</p></a>
         </div>
         <div>
-          <a href="https://imbalanse.github.io/rsschool-cv/"><p className={styles.footer__link}>RAZIL VALUEV</p></a>
+          <a href="https://izhevsk.hh.ru/resume/a6e17125ff0bcbee1c0039ed1f757852364662?hhtmFrom=resume_list"><p className={styles.footer__link}>RAZIL VALIEV</p></a>
         </div>
         <ul className={styles.footer__list_social} >
           <li><a href="https://instagram.com"><img className={styles.footer__link_social} src={instagramSvg} alt="instagram" /></a></li>
