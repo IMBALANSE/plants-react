@@ -6,6 +6,7 @@ Plants — это веб-приложение для любителей дома
 - [Технологии](#технологии)
 - [Установка и запуск](#установка-и-запуск)
 - [Лицензия](#лицензия)
+- [Design](#design)
 - [Deploy](#deploy)
 - [To do](#to-do)
 - [Команда](#команда)
@@ -55,6 +56,9 @@ Plants — это веб-приложение для любителей дома
 ## Лицензия
 MIT
 
+## Design
+[Смотреть макет Figma](https://www.figma.com/design/jBzoTP7PhzKaxt8olJHv1L/Plants--Copy-?node-id=0-1&t=kwn19KeKyugzui9l-0) 
+
 ## Deploy
 Приложение развернуто на Github 
 
@@ -68,5 +72,5 @@ MIT
 - https://izhevsk.hh.ru/resume/a6e17125ff0bcbee1c0039ed1f757852364662?hhtmFrom=resume_list
 
 ## Контакты
--  Email: inlinz18@yandex.ru
 -  Telegram: @lambarzol
+-  Email: inlinz18@yandex.ru
